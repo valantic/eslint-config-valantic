@@ -14,7 +14,7 @@
   "author": "movento",
   "license": "ISC",
   "private": true,
-  "devDependencies": {
+  "dependencies": {
     "eslint-config-airbnb-base": "^3.0.1"
   }
 }
