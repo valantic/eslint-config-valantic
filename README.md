@@ -18,7 +18,7 @@ After installing the config package, you still need to create a `.eslintrc.js` i
 // .eslintrc.js
 
 module.exports ={
-  "extends": "movento",
+  "extends": "movento", // Use movento/legacy if your working with ES5 code
   "rules": {
     // Use for project specific settings
   }
