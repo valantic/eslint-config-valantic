@@ -48,3 +48,5 @@ Now you can execute the linter with the following command.
 ```
 $ npm run eslint <app|file.js>
 ```
+
+NOTE: don't use the `$ eslint` command, since this will call the global ESLint package, which will not be able to find the movento config inside your project!
