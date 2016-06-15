@@ -1,0 +1,25 @@
+{
+  "name": "eslint-config-movento",
+  "version": "1.0.0",
+  "description": "ESLint config default of movento.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eslint": "eslint app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://movento2.codebasehq.com/frontend-configs/javascript.git"
+  },
+  "author": "movento",
+  "license": "ISC",
+  "private": true,
+  "dependencies": {
+    "babel-tape-runner": "^1.3.1",
+    "eslint": "^2.9.0",
+    "eslint-find-rules": "^1.9.2",
+    "eslint-plugin-import": "^1.7.0",
+    "eslint-config-airbnb-base": "^3.0.1",
+    "tape": "^4.5.1"
+  }
+}

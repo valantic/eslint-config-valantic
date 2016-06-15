@@ -1,0 +1,91 @@
+// movento JSHint
+// v1.0.0
+
+// Please use ESLint if possible!
+
+// http://jshint.com/docs
+{
+  "maxerr": 50,
+  "esversion": 5,
+
+  // Environments
+  "browser": true,
+  "browserify": false,
+  "couch": false,
+  "devel": true,
+  "dojo": false,
+  "jasmine": false,
+  "jquery": true,
+  "mocha": false,
+  "mootools": false,
+  "node": true,
+  "nonstandard": false,
+  "phantom": false,
+  "prototypejs": false,
+  "qunit": false,
+  "rhino": false,
+  "shelljs": false,
+  "typed": false,
+  "worker": false,
+  "wsh": false,
+  "yui": false,
+
+  // Custom Globals
+  "globals": {},
+
+  // Enforcing
+  "bitwise": true,
+  "camelcase": true,
+  "curly": true,
+  "eqeqeq": true,
+  "forin": true,
+  "freeze": true,
+  "immed": true,
+  "indent": 2,
+  "latedef": false,
+  "newcap": true,
+  "noarg": true,
+  "nocomma": true,
+  "noempty": true,
+  "nonbsp": true,
+  "nonew": true,
+  "plusplus": false,
+  "quotmark": "single",
+  "undef": true,
+  "unused": true,
+  "strict": true,
+  "maxparams": 3,
+  "maxdepth": 4,
+  "maxstatements": 50,
+  "maxcomplexity": false,
+  "maxlen": 120,
+  "notypeof": false,
+  "varstmt": false,
+
+  // Relaxing
+  "asi": false,
+  "boss": false,
+  "debug": false,
+  "elision": false,
+  "eqnull": false,
+  "evil": false,
+  "expr": false,
+  "funcscope": false,
+  "futurehostile": true,
+  "globalstrict": false,
+  "iterator": false,
+  "lastsemic": false,
+  "laxbreak": false,
+  "laxcomma": false,
+  "loopfunc": false,
+  "moz": false,
+  "multistr": false,
+  "noyield": false,
+  "proto": false,
+  "scripturl": false,
+  "shadow": "outer",
+  "singleGroups": true,
+  "sub": false,
+  "supernew": false,
+  "validthis": false
+}
