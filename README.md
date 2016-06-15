@@ -1,5 +1,20 @@
 # JavaScript
 
+**Changes to the frontend configs repositories or project specific settings are only allowed in agreement with the frontend  or project team.**
+
+To ensure a high an consistent code quality for JavaScript we use ESLint.
+
+[http://eslint.org](http://eslint.org)
+
+If for any reason you're not able to use ESLint, please use one of the following fallbacks in your IDE.
+
+* JSHint
+** [http://jshint.com](http://jshint.com)
+* JSLint
+** [http://www.jslint.com](http://www.jslint.com)
+
+The configs for this linters can be found in the `/other-linters` folder
+
 ## Install
 
 Use npm to install the ESlint config to your project.
