@@ -2,9 +2,8 @@ module.exports = {
   'rules': {
     'curly': 2,
     
-    // require default case in switch statements
-    // encourages use of dot notation whenever possible
-    'dot-notation': [2, 'property'],
+    // enforce consistent newlines before and after dots
+    'dot-location': [2, 'property'],
     
     // disallow reassignment of function parameters
     // disallow parameter object manipulation

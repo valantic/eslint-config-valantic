@@ -1,5 +1,8 @@
 module.exports = {
   'rules': {
+    // require or disallow trailing commas
+    'comma-dangle': [2, 'never'],
+
     // disallow use of constant expressions in conditions
     'no-constant-condition': 2,
 
