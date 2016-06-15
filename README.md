@@ -9,9 +9,9 @@ To ensure a high an consistent code quality for JavaScript we use ESLint.
 If for any reason you're not able to use ESLint, please use one of the following fallbacks in your IDE.
 
 * JSHint
-** [http://jshint.com](http://jshint.com)
+  * [http://jshint.com](http://jshint.com)
 * JSLint
-** [http://www.jslint.com](http://www.jslint.com)
+  * [http://www.jslint.com](http://www.jslint.com)
 
 The configs for this linters can be found in the `/other-linters` folder
 
