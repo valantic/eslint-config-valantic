@@ -33,8 +33,8 @@ After installing the config package, you still need to create a `.eslintrc.js` i
 // .eslintrc.js
 
 module.exports ={
-  "extends": "movento", // Use movento/legacy if your working with ES5 code
-  "rules": {
+  'extends': 'movento', // Use movento/legacy if your working with ES5 code
+  'rules': {
     // Use for project specific settings
   }
 };
@@ -50,7 +50,7 @@ Go to `PhpStorm > Preferences` and search for ESLint or navigate to `Languages &
 
 ### Console
 
-You can also lint your code from the console. To do this, add a script to your `.eslintrc.js`.
+You can also lint your code from the console. To do this, add a script to your `package.json`.
 
 ```
 "scripts": {
