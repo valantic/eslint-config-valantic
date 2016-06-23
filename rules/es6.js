@@ -1,7 +1,8 @@
 module.exports = {
+  rules: {
     // require or disallow method and property shorthand syntax for object literals
     'object-shorthand': [1, 'always', {
-        'avoidQuotes': true
+      'avoidQuotes': true
     }],
 
     // enforce spacing between rest and spread operators and their expressions
@@ -12,4 +13,5 @@ module.exports = {
 
     // require rest parameters instead of arguments
     'prefer-rest-params': 1
+  }
 };
