@@ -68,10 +68,11 @@ module.exports = {
     }],
 
     // enforce consistent line breaks inside braces
-    'object-curly-newline': [2, {
-      'multiline': true,
-      'minProperties': 2
-    }],
+    // - Currently (2016-06-23) not working with single properties
+    // 'object-curly-newline': [2, {
+    //   'multiline': true,
+    //   'minProperties': 2
+    // }],
 
     // enforce placing object properties on separate lines
     // - Encourage cleaner code style
