@@ -1,5 +1,9 @@
 module.exports = {
   'rules': {
+    // enforce return statements in callbacks of array methods
+    'array-callback-return': 1,
+
+    // enforce consistent brace style for all control statements
     'curly': 2,
     
     // enforce consistent newlines before and after dots

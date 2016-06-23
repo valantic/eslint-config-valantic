@@ -3,6 +3,9 @@ module.exports = {
     // enforces consistent naming when capturing the current execution context
     'consistent-this': [2, '_that'],
 
+    // require or disallow named function expressions
+    'func-names': 0,
+
     // this option enforces minimum and maximum identifier lengths
     // (variable names, property names etc.)
     'id-length': [1, {
@@ -31,7 +34,7 @@ module.exports = {
 
     // allow/disallow an empty newline after var statement
     // - Force cleaner code style
-    'newline-after-var': [2, 'always'],
+    'newline-after-var': [1, 'always'],
 
     // http://eslint.org/docs/rules/newline-before-return
     // - Force cleaner code style
@@ -45,6 +48,10 @@ module.exports = {
 
     // disallow if as the only statement in an else block
     'no-lonely-if': 1,
+
+    // disallow mixes of different operators
+    // - Force cleaner code style
+    'no-mixed-operators': 2,
 
     // disallow multiple empty lines and only one newline at the end
     'no-multiple-empty-lines': [2, { 'max': 1, 'maxEOF': 1 }],
@@ -60,9 +67,18 @@ module.exports = {
       'skipBlankLines': true
     }],
 
+    // enforce consistent line breaks inside braces
+    'object-curly-newline': [2, {
+      'multiline': true,
+      'minProperties': 2
+    }],
+
     // enforce placing object properties on separate lines
     // - Encourage cleaner code style
-    'object-property-newline': 1,
+    // - Number of attributes is handled by object-curly-newline
+    'object-property-newline': [1, {
+      allowMultiplePropertiesPerLine: true
+    }],
 
     // require assignment operator shorthand where possible or prohibit it entirely
     // - Encourage cleaner code style
@@ -72,16 +88,23 @@ module.exports = {
     // - Encourage cleaner code style
     'operator-linebreak': [1, 'before'],
 
+    // require quotes around object literal property names
+    // - Force cleaner code style
+    'quote-props': [2, 'consistent-as-needed'],
+
     // do not require jsdoc
     // http://eslint.org/docs/rules/require-jsdoc
     // - Force code documentation
-    'require-jsdoc': [2, {
+    'require-jsdoc': [1, {
       'require': {
         'FunctionDeclaration': true,
         'MethodDefinition': true,
         'ClassDeclaration': true
       }
     }],
+
+    // enforce consistent spacing before function definition opening parenthesis
+    'space-before-function-paren': [2, "never"],
 
     // Require or disallow spaces before/after unary operators
     // - Force cleaner code style

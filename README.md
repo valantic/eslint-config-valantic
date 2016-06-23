@@ -15,6 +15,10 @@ If for any reason you're not able to use ESLint, please use one of the following
 
 The configs for this linters can be found in the `/other-linters` folder
 
+## Version
+
+Our config is currently optimized for ESLint v2.13.1. To check for updates, see [http://eslint.org/blog/](http://eslint.org/blog/)
+
 ## Install
 
 Use npm to install the ESlint config to your project.
@@ -65,3 +69,8 @@ $ npm run eslint <app|file.js>
 ```
 
 NOTE: don't use the `$ eslint` command, since this will call the global ESLint package, which will not be able to find the movento config inside your project!
+
+## ToDo's
+
+* Functions style not like Airbnb
+* Should we really disable prefer-rest-params?
