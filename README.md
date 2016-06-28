@@ -6,6 +6,8 @@ To ensure a high an consistent code quality for JavaScript we use ESLint.
 
 [http://eslint.org](http://eslint.org)
 
+### Alternatives
+
 If for any reason you're not able to use ESLint, please use one of the following fallbacks in your IDE.
 
 * JSHint
@@ -14,6 +16,20 @@ If for any reason you're not able to use ESLint, please use one of the following
   * [http://www.jslint.com](http://www.jslint.com)
 
 The configs for this linters can be found in the `/other-linters` folder
+
+## Code style
+
+At movento the JavaScript code style is based on the Airbnb JavaScript codes style for ES2015.
+
+[https://github.com/airbnb/javascript](https://github.com/airbnb/javascript)
+
+### Exceptions
+
+We've made some internal adjustments to the code style, to meet our daily needs or to follow ember.js conventions. See the files inside ```./rules/``` to learn more about this adjustments.
+ 
+#### Some of the most important adjustments
+
+* We NEVER use a whitespace before function parenthesis (space-before-function-paren).
 
 ## Version
 
@@ -69,8 +85,3 @@ $ npm run eslint <app|file.js>
 ```
 
 NOTE: don't use the `$ eslint` command, since this will call the global ESLint package, which will not be able to find the movento config inside your project!
-
-## ToDo's
-
-* Functions style not like Airbnb
-* Should we really disable prefer-rest-params?
