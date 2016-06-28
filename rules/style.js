@@ -11,7 +11,7 @@ module.exports = {
     'id-length': [1, {
       'min': 3,
       'properties': 'always',
-      'exceptions': ['i', 'j', 'e', '$', '_', 'id']
+      'exceptions': ['i', 'j', 'e', '$', '_', 'id', 'DS']
     }],
 
     // enforces empty lines around comments
