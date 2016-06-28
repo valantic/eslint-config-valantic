@@ -1,7 +1,8 @@
 module.exports = {
   'rules': {
     // enforce return statements in callbacks of array methods
-    'array-callback-return': 1,
+    // - allowed to use .map() instead forEach without a return value
+    'array-callback-return': 0,
 
     // enforce consistent brace style for all control statements
     'curly': 2,
