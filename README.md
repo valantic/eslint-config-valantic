@@ -62,7 +62,7 @@ module.exports ={
 
 ## Use
 
-Now your ready to enable ESLint in your editor!
+Now your ready to enable ESLint in your editor or use it on the command line!
 
 ### PhpStorm
 
@@ -85,3 +85,15 @@ $ npm run eslint <app|file.js>
 ```
 
 NOTE: don't use the `$ eslint` command, since this will call the global ESLint package, which will not be able to find the movento config inside your project!
+
+### Ember.js
+
+To test your code with ember, you have the following options.
+
+#### Test in console
+
+Run ```$ ember test``` in the console, to see the ESLint test result in the console.
+
+#### Test in browser
+
+Run ```$ ember serve``` from the console and open http://localhost:4200/tests?filter=eslint in your browser to get a very detailed view of your ESLint test result.
