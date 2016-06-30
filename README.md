@@ -91,8 +91,8 @@ NOTE: don't use the `$ eslint` command, since this will call the global ESLint p
 By default ember uses JSHint. To replace the JSHint test with ESLint execute the following commands when setting up a new Ember.js project:
 
 ```
-$ ember install ember-cli-eslint
 $ npm uninstall --save-dev ember-cli-jshint
+$ ember install ember-cli-eslint
 ```
 
 Make also sure, you removed all unneeded ```.jshintrc``` from the project.
