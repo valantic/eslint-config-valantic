@@ -3,6 +3,7 @@ module.exports = {
     'eslint-config-airbnb-base/legacy',
     'eslint-config-movento/rules/best-practices',
     'eslint-config-movento/rules/errors',
+    'eslint-config-movento/rules/import',
     'eslint-config-movento/rules/legacy',
     'eslint-config-movento/rules/node',
     'eslint-config-movento/rules/strict',
