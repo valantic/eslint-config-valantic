@@ -53,8 +53,8 @@ After installing the config package, you still need to create a `.eslintrc.js` i
 // .eslintrc.js
 
 module.exports ={
-  'extends': 'movento', // Use movento/legacy if your working with ES5 code
-  'rules': {
+  extends: 'movento', // Use movento/legacy if your working with ES5 code
+  rules: {
     // Use for project specific settings
   }
 };
@@ -98,6 +98,27 @@ $ ember install ember-cli-eslint
 Make also sure, you removed all unneeded ```.jshintrc``` from the project.
 
 For more information visit the ember-cli-eslint repository: https://github.com/ember-cli/ember-cli-eslint
+
+#### Linter for tests
+
+The test files of Ember.js are mostly created automatically and don't always follow owr standards. Therefore you should loosen the rules a bit inside the ```./tests``` folder a bit
+
+```
+// ./tests/.eslintrc.js
+module.exports = {
+  extends: 'movento',
+  env: {
+    'embertest': true
+  },
+  rules: {
+    'require-jsdoc': 0,
+    'valid-jsdoc': 0, // Disable jsdoc, because ember generated test doesn't include that
+    'newline-after-var': 0,
+    'prefer-const': 0,
+    'prefer-rest-params': 0
+  }
+};
+```
 
 Now, you're able to test your Ember.js project files with one of the following options.
 
