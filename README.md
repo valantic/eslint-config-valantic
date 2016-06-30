@@ -97,6 +97,8 @@ $ npm uninstall --save-dev ember-cli-jshint
 
 Make also sure, you removed all unneeded ```.jshintrc``` from the project.
 
+For more information visit the ember-cli-eslint repository: https://github.com/ember-cli/ember-cli-eslint
+
 Now, you're able to test your Ember.js project files with one of the following options.
 
 #### Test in console
