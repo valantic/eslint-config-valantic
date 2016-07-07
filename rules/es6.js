@@ -1,5 +1,5 @@
 module.exports = {
-  rules: {
+  'rules': {
     // enforces no braces where they can be omitted
     // http://eslint.org/docs/rules/arrow-body-style
     // - Force a more consistent coding style

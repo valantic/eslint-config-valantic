@@ -11,5 +11,15 @@ module.exports = {
     'eslint-config-movento/rules/style',
     'eslint-config-movento/rules/variables',
     'eslint-config-movento/settings/import_core-modules.js'
-  ]
+  ],
+  env: {
+    browser: true,
+    node: true,
+    amd: false,
+    mocha: false,
+    jasmine: false
+  },
+  ecmaFeatures: {},
+  globals: {},
+  rules: {}
 };

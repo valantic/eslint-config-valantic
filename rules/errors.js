@@ -15,8 +15,15 @@ module.exports = {
 
     // ensure JSDoc comments are valid
     // http://eslint.org/docs/rules/valid-jsdoc
+    // - force uniform jsdoc style
     'valid-jsdoc': [2, {
-      'requireReturn': false
+      'requireReturnDescription': false,
+      'requireReturn': false,
+      'prefer': {
+        'return': 'returns',
+        'arg': 'param', 
+        'argument': 'param'
+      }
     }]
   }
 };

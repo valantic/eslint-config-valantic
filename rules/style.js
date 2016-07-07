@@ -14,6 +14,18 @@ module.exports = {
       'exceptions': ['i', 'j', 'e', '$', '_', 'id', 'DS']
     }],
 
+    // enforce consistent spacing between keys and values in object literal properties
+    // http://eslint.org/docs/rules/key-spacing
+    // - Allow value alignment for multiline
+    'key-spacing': [2, {
+      'singleLine': {
+        'mode': 'strict'
+      },
+      'multiLine': {
+        'mode': 'minimum'
+      }
+    }],
+
     // enforces empty lines around comments
     // - Force cleaner comment style
     'lines-around-comment': [2, {
