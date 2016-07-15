@@ -1,6 +1,6 @@
 # JavaScript
 
-**Changes to the frontend configs repositories or project specific settings are only allowed in agreement with the frontend  or project team.**
+> **Changes to the frontend configs repositories or project specific settings are only allowed in agreement with the frontend  or project team.**
 
 To ensure a high an consistent code quality for JavaScript we use ESLint.
 
@@ -40,7 +40,7 @@ Our config is currently optimized for ESLint v2.13.1. To check for updates, see 
 Use npm to install the ESlint config to your project.
 
 ```
-$ npm install --save-dev git+https://movento2.codebasehq.com/frontend-configs/javascript.git eslint-config-airbnb-base eslint-plugin-import eslint
+$ npm install --save-dev git+https://movento2.codebasehq.com/frontend-configs/javascript.git eslint-config-airbnb-base@3.x eslint-plugin-import eslint@2.x
 ```
 
 NOTE: the package will only install the airbnb config, but not eslint itself. So make sure you do it yourself as discribed above!
