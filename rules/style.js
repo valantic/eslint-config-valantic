@@ -79,6 +79,13 @@ module.exports = {
       'skipBlankLines': true
     }],
 
+    // disallow dangling underscores in identifiers (no-underscore-dangle)
+    // http://eslint.org/docs/rules/no-underscore-dangle
+    // - Allow to touch private values of this
+    'no-underscore-dangle': [2, {
+      'allowAfterThis': true
+    }],
+
     // enforce consistent line breaks inside braces
     // - Currently (2016-06-23) not working with single properties
     // 'object-curly-newline': [2, {
