@@ -1,8 +1,8 @@
 # JavaScript
 
-**Changes to the frontend configs repositories or project specific settings are only allowed in agreement with the frontend  or project team.**
+**Changes to the frontend configs repositories or project specific settings are only allowed in agreement with the frontend or project team.**
 
-To ensure a high an consistent code quality for JavaScript we use ESLint.
+To ensure a high and consistent code quality for JavaScript we use ESLint.
 
 [http://eslint.org](http://eslint.org)
 
@@ -23,6 +23,8 @@ At movento the JavaScript code style is based on the Airbnb JavaScript codes sty
 
 [https://github.com/airbnb/javascript](https://github.com/airbnb/javascript)
 
+(Current version: 3.0.1)
+
 ### Exceptions
 
 We've made some internal adjustments to the code style, to meet our daily needs or to follow ember.js conventions. See the files inside ```./rules/``` to learn more about this adjustments.
@@ -40,7 +42,7 @@ Our config is currently optimized for ESLint v2.13.1. To check for updates, see 
 Use npm to install the ESlint config to your project.
 
 ```
-$ npm install --save-dev git+https://movento2.codebasehq.com/frontend-configs/javascript.git eslint-config-airbnb-base eslint-plugin-import eslint
+$ npm install --save-dev git+https://movento2.codebasehq.com/frontend-configs/javascript.git eslint-config-airbnb-base@^3.0.1 eslint-plugin-import@^1.8.1 eslint@^2.13.1
 ```
 
 NOTE: the package will only install the airbnb config, but not eslint itself. So make sure you do it yourself as discribed above!
@@ -93,6 +95,7 @@ By default ember uses JSHint. To replace the JSHint test with ESLint execute the
 ```
 $ npm uninstall --save-dev ember-cli-jshint
 $ ember install ember-cli-eslint
+$ npm install babel-eslint@^6.1.2
 ```
 
 Make also sure, you removed all unneeded ```.jshintrc``` from the project.
@@ -101,7 +104,7 @@ For more information visit the ember-cli-eslint repository: https://github.com/e
 
 #### Linter for tests
 
-The test files of Ember.js are mostly created automatically and don't always follow owr standards. Therefore you should loosen the rules a bit inside the ```./tests``` folder a bit
+The test files of Ember.js are mostly created automatically and don't always follow own standards. Therefore you should loosen the rules a bit inside the ```./tests``` folder a bit
 
 ```
 // ./tests/.eslintrc.js
