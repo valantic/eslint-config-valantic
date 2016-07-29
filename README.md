@@ -45,7 +45,9 @@ Use npm to install the ESlint config to your project.
 $ npm install --save-dev git+https://movento2.codebasehq.com/frontend-configs/javascript.git eslint-config-airbnb-base@3.x eslint-plugin-import eslint@2.x
 ```
 
-NOTE: the package will only install the airbnb config, but not eslint itself. So make sure you do it yourself as discribed above!
+NOTE: the package will only install the airbnb config, but not ESLint itself. So make sure you do it yourself as described above!
+
+NOTE: since the ember-cli-eslint does not yet support ESLint 3.x we're still using the 2.x version until further notice.
 
 ## Setup
 
