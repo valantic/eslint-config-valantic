@@ -49,6 +49,8 @@ NOTE: the package will only install the airbnb config, but not ESLint itself. So
 
 NOTE: since the ember-cli-eslint does not yet support ESLint 3.x we're still using the 2.x version until further notice.
 
+NOTE: do not upgrade eslint-config-airbnb-base to version "5.x.x" since it expects Eslint 3.x.x and we currently cannot support this.
+
 ## Setup
 
 After installing the config package, you still need to create a `.eslintrc.js` inside your project, where you tell ESLint to use the movento config.
