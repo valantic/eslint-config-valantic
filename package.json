@@ -15,6 +15,8 @@
   "license": "ISC",
   "private": true,
   "dependencies": {
-    "eslint-config-airbnb-base": "^3.0.1"
+    "eslint": "~2.13.1",
+    "eslint-config-airbnb-base": "^3.0.1",
+    "eslint-plugin-import": "^1.12.0"
   }
 }
