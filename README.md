@@ -23,7 +23,7 @@ At movento the JavaScript code style is based on the Airbnb JavaScript codes sty
 
 [https://github.com/airbnb/javascript](https://github.com/airbnb/javascript)
 
-(Current version: 3.0.1)
+(Current version: 8.0.0)
 
 ### Exceptions
 
@@ -35,7 +35,7 @@ We've made some internal adjustments to the code style, to meet our daily needs 
 
 ## Version
 
-Our config is currently optimized for ESLint v2.13.1. To check for updates, see [http://eslint.org/blog/](http://eslint.org/blog/)
+Our config is currently optimized for ESLint v3.7.1. To check for updates, see [http://eslint.org/blog/](http://eslint.org/blog/)
 
 ## Install
 
@@ -46,10 +46,6 @@ $ npm install --save-dev git+https://movento2.codebasehq.com/frontend-configs/ja
 ```
 
 NOTE: the package will only install the airbnb config, but not ESLint itself. So make sure you do it yourself as described above!
-
-NOTE: since the ember-cli-eslint does not yet support ESLint 3.x we're still using the 2.x version until further notice.
-
-NOTE: do not upgrade eslint-config-airbnb-base to version "5.x.x" since it expects Eslint 3.x.x and we currently cannot support this.
 
 ## Setup
 
