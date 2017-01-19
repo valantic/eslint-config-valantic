@@ -23,7 +23,7 @@ At movento the JavaScript code style is based on the Airbnb JavaScript codes sty
 
 [https://github.com/airbnb/javascript](https://github.com/airbnb/javascript)
 
-(Current version: 9.0.0)
+(Current version: 11.*)
 
 ### Exceptions
 
