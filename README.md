@@ -23,7 +23,7 @@ At movento the JavaScript code style is based on the Airbnb JavaScript codes sty
 
 [https://github.com/airbnb/javascript](https://github.com/airbnb/javascript)
 
-(Current version: 8.0.0)
+(Current version: 9.0.0)
 
 ### Exceptions
 
@@ -35,7 +35,7 @@ We've made some internal adjustments to the code style, to meet our daily needs 
 
 ## Version
 
-Our config is currently optimized for ESLint v3.7.1. To check for updates, see [http://eslint.org/blog/](http://eslint.org/blog/)
+Our config is currently optimized for ESLint v3.13.1. To check for updates, see [http://eslint.org/blog/](http://eslint.org/blog/)
 
 ## Install
 
