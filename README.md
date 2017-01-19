@@ -42,7 +42,7 @@ Our config is currently optimized for ESLint v3.7.1. To check for updates, see [
 Use npm to install the ESlint config to your project.
 
 ```
-$ npm install --save-dev git+https://movento2.codebasehq.com/frontend-configs/javascript.git eslint-config-airbnb-base@3.x eslint-plugin-import eslint@2.x
+$ npm install --save-dev git+https://movento2.codebasehq.com/frontend-configs/javascript.git eslint-config-airbnb-base@11.x eslint-plugin-import eslint@3.x
 ```
 
 NOTE: the package will only install the airbnb config, but not ESLint itself. So make sure you do it yourself as described above!
@@ -95,7 +95,7 @@ By default ember uses JSHint. To replace the JSHint test with ESLint execute the
 ```
 $ npm uninstall --save-dev ember-cli-jshint
 $ ember install ember-cli-eslint
-$ npm install babel-eslint@^6.1.2
+$ npm install babel-eslint@^7.1.1
 ```
 
 Make also sure, you removed all unneeded ```.jshintrc``` from the project.
