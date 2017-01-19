@@ -11,7 +11,20 @@ module.exports = {
     'id-length': [1, {
       'min': 3,
       'properties': 'always',
-      'exceptions': ['i', 'j', 'e', '$', '_', 'id', 'DS']
+      'exceptions': [
+        '$',
+        'a',
+        'b',
+        'e',
+        'i',
+        'in', // ember-cp-validations
+        'j',
+        '_', // _Lowdash
+        'fs', // ember
+        'gt', // ember-cp-validations
+        'id',
+        'DS' // ember-data
+      ]
     }],
 
     // enforce consistent spacing between keys and values in object literal properties
@@ -29,13 +42,15 @@ module.exports = {
     // enforces empty lines around comments
     // - Force cleaner comment style
     'lines-around-comment': [2, {
-      'beforeBlockComment': true
+      'beforeBlockComment': true,
+      'allowBlockStart': true,
+      'allowObjectStart': true
     }],
 
     // specify the maximum length of a line in your program
     // http://eslint.org/docs/rules/max-len
     // - Weaken max line length rule
-    'max-len': [1, 110, 2, {
+    'max-len': [1, 130, 2, {
       'ignoreTrailingComments': true,
       'ignoreUrls': true
     }],

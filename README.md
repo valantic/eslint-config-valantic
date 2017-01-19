@@ -102,6 +102,28 @@ Make also sure, you removed all unneeded ```.jshintrc``` from the project.
 
 For more information visit the ember-cli-eslint repository: https://github.com/ember-cli/ember-cli-eslint
 
+#### Environment specific linting
+When using Ember.js it's also possible to use different linters for different environments. This allows us to sharpen or release the error level for certain environments.
+
+```
+const EmberApp = require('ember-cli/lib/broccoli/ember-app');
+
+const configuration = {
+  "extends": "movento",
+  "rules": {
+    // ...
+  }
+};
+
+// To reduce the amount of errors for the client, we reduced the error level for all non development environments
+if (EmberApp && EmberApp.env() !== 'development') {
+  configuration.rules['no-warning-comments'] = 0;
+  configuration.rules['no-console'] = 0;
+}
+
+module.exports = configuration;
+```
+
 #### Linter for tests
 
 The test files of Ember.js are mostly created automatically and don't always follow our standards. Therefore you should loosen the rules a bit inside the ```./tests``` folder a bit
