@@ -42,7 +42,7 @@ Our config is currently optimized for ESLint v3.13.1. To check for updates, see 
 Use npm to install the ESlint config to your project.
 
 ```
-$ npm install --save-dev git+https://movento2.codebasehq.com/frontend-configs/javascript.git eslint-config-airbnb-base@11.x eslint-plugin-import eslint@3.x
+$ npm install --save-dev git+https://movento2.codebasehq.com/frontend-configs/javascript.git#1.5.0 eslint-config-airbnb-base@11.x eslint-plugin-import eslint@3.x
 ```
 
 NOTE: the package will only install the airbnb config, but not ESLint itself. So make sure you do it yourself as described above!
