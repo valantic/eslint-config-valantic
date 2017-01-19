@@ -94,7 +94,7 @@ By default ember uses JSHint. To replace the JSHint test with ESLint execute the
 
 ```
 $ npm uninstall --save-dev ember-cli-jshint
-$ ember install ember-cli-eslint
+$ ember install ember-cli-eslint@3
 $ npm install babel-eslint@^7.1.1
 ```
 
