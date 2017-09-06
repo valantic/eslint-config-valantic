@@ -98,7 +98,8 @@ module.exports = {
     // http://eslint.org/docs/rules/no-underscore-dangle
     // - Allow to touch private values of this
     'no-underscore-dangle': [2, {
-      'allowAfterThis': true
+      'allowAfterThis': true,
+      'allow': ['_that']
     }],
 
     // enforce consistent line breaks inside braces
