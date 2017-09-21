@@ -154,7 +154,7 @@ module.exports = {
   rules: {
     'require-jsdoc': 0,
     'valid-jsdoc': 0, // Disable jsdoc, because ember generated test doesn't include that
-    'newline-after-var': 0,
+    'padding-line-between-statements': 0,
     'prefer-const': 0,
     'prefer-rest-params': 0
   }

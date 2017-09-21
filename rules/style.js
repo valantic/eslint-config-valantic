@@ -9,9 +9,9 @@ module.exports = {
     // this option enforces minimum and maximum identifier lengths
     // (variable names, property names etc.)
     'id-length': [1, {
-      'min': 3,
-      'properties': 'always',
-      'exceptions': [
+      min: 3,
+      properties: 'always',
+      exceptions: [
         '$',
         'a',
         'b',
@@ -31,41 +31,33 @@ module.exports = {
     // http://eslint.org/docs/rules/key-spacing
     // - Allow value alignment for multiline
     'key-spacing': [2, {
-      'singleLine': {
-        'mode': 'strict'
+      singleLine: {
+        mode: 'strict'
       },
-      'multiLine': {
-        'mode': 'minimum'
+      multiLine: {
+        mode: 'minimum'
       }
     }],
 
     // enforces empty lines around comments
     // - Force cleaner comment style
     'lines-around-comment': [2, {
-      'beforeBlockComment': true,
-      'allowBlockStart': true,
-      'allowObjectStart': true
+      beforeBlockComment: true,
+      allowBlockStart: true,
+      allowObjectStart: true
     }],
 
     // specify the maximum length of a line in your program
     // http://eslint.org/docs/rules/max-len
     // - Weaken max line length rule
     'max-len': [1, 130, 2, {
-      'ignoreTrailingComments': true,
-      'ignoreUrls': true
+      ignoreTrailingComments: true,
+      ignoreUrls: true
     }],
 
     // enforce a maximum number of parameters in function definitions
     // - Force max number of function params
     'max-params': [2, 3],
-
-    // allow/disallow an empty newline after var statement
-    // - Force cleaner code style
-    'newline-after-var': [1, 'always'],
-
-    // http://eslint.org/docs/rules/newline-before-return
-    // - Force cleaner code style
-    'newline-before-return': 2,
 
     // disallow bitwise operators
     'no-bitwise': 1,
@@ -81,7 +73,7 @@ module.exports = {
     'no-mixed-operators': 2,
 
     // disallow multiple empty lines and only one newline at the end
-    'no-multiple-empty-lines': [2, { 'max': 1, 'maxEOF': 1 }],
+    'no-multiple-empty-lines': [2, {'max': 1, 'maxEOF': 1}],
 
     // disallow negated conditions
     // http://eslint.org/docs/rules/no-negated-condition
@@ -91,15 +83,16 @@ module.exports = {
     // disallow trailing whitespace at the end of lines
     // - Weaken for better IDE support
     'no-trailing-spaces': [1, {
-      'skipBlankLines': true
+      ignoreComments: true,
+      skipBlankLines: true
     }],
 
     // disallow dangling underscores in identifiers (no-underscore-dangle)
     // http://eslint.org/docs/rules/no-underscore-dangle
     // - Allow to touch private values of this
     'no-underscore-dangle': [2, {
-      'allowAfterThis': true,
-      'allow': ['_that']
+      allowAfterThis: true,
+      allow: ['_that']
     }],
 
     // enforce consistent line breaks inside braces
@@ -119,10 +112,41 @@ module.exports = {
     // require assignment operator shorthand where possible or prohibit it entirely
     // - Encourage cleaner code style
     'operator-assignment': [1, 'always'],
-    
+
     // enforce operators to be placed before or after line breaks
     // - Encourage cleaner code style
     'operator-linebreak': [1, 'before'],
+
+    // Require or disallow padding lines between statements
+    // http://eslint.org/docs/rules/padding-line-between-statements
+    'padding-line-between-statements': [
+      "error",
+      {
+        blankLine: "always",
+        prev: ["const", "let", "var"],
+        next: "*"
+      },
+      {
+        blankLine: "any",
+        prev: ["const", "let", "var"],
+        next: ["const", "let", "var"]
+      },
+      {
+        blankLine: "always",
+        prev: "directive",
+        next: "*"
+      },
+      {
+        blankLine: "any",
+        prev: "directive",
+        next: "directive"
+      },
+      {
+        blankLine: "always",
+        prev: "*",
+        next: "return"
+      }
+    ],
 
     // require quotes around object literal property names
     // - Force cleaner code style
@@ -132,10 +156,10 @@ module.exports = {
     // http://eslint.org/docs/rules/require-jsdoc
     // - Force code documentation
     'require-jsdoc': [1, {
-      'require': {
-        'FunctionDeclaration': true,
-        'MethodDefinition': true,
-        'ClassDeclaration': true
+      require: {
+        FunctionDeclaration: true,
+        MethodDefinition: true,
+        ClassDeclaration: true
       }
     }],
 
@@ -145,7 +169,7 @@ module.exports = {
     // Require or disallow spaces before/after unary operators
     // - Force cleaner code style
     'space-unary-ops': 2,
-    
+
     // require regex literals to be wrapped in parentheses
     // - Force cleaner code style
     'wrap-regex': 2
