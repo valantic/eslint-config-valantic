@@ -42,10 +42,10 @@ Our config is currently optimized for ESLint v3.13.1. To check for updates, see 
 Use npm to install the ESlint config to your project.
 
 ```
-$ npm install --save-dev git+https://movento2.codebasehq.com/frontend-configs/javascript.git#1.5.0 eslint-config-airbnb-base@11.x eslint-plugin-import eslint@3.x
+$ npm install --save-dev git+https://movento2.codebasehq.com/frontend-configs/javascript.git#2.0.0
 ```
 
-NOTE: the package will only install the airbnb config, but not ESLint itself. So make sure you do it yourself as described above!
+NOTE: Starting with version 2.0.0 all needed dependencies will be installed automatically. Before that you had to install them separately (see old readme files.)
 
 ## Setup
 
@@ -154,3 +154,13 @@ Run ```$ ember test``` in the console, to see the ESLint test result in the cons
 #### Test in browser
 
 Run ```$ ember serve``` from the console and open http://localhost:4200/tests?filter=eslint in your browser to get a very detailed view of your ESLint test result.
+
+## Rule hints
+
+### valid-jsdoc
+
+Tests function documentation for certain information
+
+#### PhpStorm
+
+In case your PhpStorm is using `@return` instead of the required `@returns`: Write the return tag yourself for once and select the correct type from the suggestion list. PhpStorm will keep your last preference and use it from now on. See also https://youtrack.jetbrains.com/issue/WEB-7516#comment=27-611256
