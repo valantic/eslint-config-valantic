@@ -23,7 +23,7 @@ At movento the JavaScript code style is based on the Airbnb JavaScript codes sty
 
 [https://github.com/airbnb/javascript](https://github.com/airbnb/javascript)
 
-(Current version: 11.*)
+(Current version: 12.*)
 
 ### Exceptions
 
@@ -35,17 +35,33 @@ We've made some internal adjustments to the code style, to meet our daily needs 
 
 ## Version
 
-Our config is currently optimized for ESLint v3.13.1. To check for updates, see [http://eslint.org/blog/](http://eslint.org/blog/)
+Our config is currently optimized for ESLint 4.6.0. To check for updates, see [http://eslint.org/blog/](http://eslint.org/blog/)
+
+## Uninstall old version
+
+### uninstall < 2.0.0
+
+```
+npm uninstall --save-dev eslint eslint-config-airbnb-base eslint-config-movento eslint-plugin-import
+```
+
+### uninstall 2.0.0+
+
+```
+npm uninstall --save-dev eslint-config-movento
+```
 
 ## Install
 
 Use npm to install the ESlint config to your project.
 
+Note: Starting with version 2.0.0 all needed dependencies will be installed automatically. Before that you had to install them separately (see old readme files).
+
+### Install current version
+
 ```
 $ npm install --save-dev git+https://movento2.codebasehq.com/frontend-configs/javascript.git#2.0.0
 ```
-
-NOTE: Starting with version 2.0.0 all needed dependencies will be installed automatically. Before that you had to install them separately (see old readme files.)
 
 ## Setup
 
@@ -94,8 +110,8 @@ By default ember uses JSHint. To replace the JSHint test with ESLint execute the
 
 ```
 $ npm uninstall --save-dev ember-cli-jshint
-$ ember install ember-cli-eslint@3
-$ npm install babel-eslint@^7.1.1
+$ ember install ember-cli-eslint@4.2.0
+$ npm install babel-eslint@^8.0.0
 ```
 
 Make also sure, you removed all unneeded ```.jshintrc``` from the project.
