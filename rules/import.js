@@ -1,5 +1,6 @@
 module.exports = {
-  'rules': {
+  plugins: ['import'],
+  rules: {
     'import/extensions': [1, 'never'],
     'import/no-extraneous-dependencies': 0,
     'import/no-mutable-exports': 1,
