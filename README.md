@@ -60,7 +60,7 @@ Note: Starting with version 2.0.0 all needed dependencies will be installed auto
 ### Install current version
 
 ```
-$ npm install --save-dev git+https://git.movento.com/movento-public/eslint-config-movento.git#2.0.0
+$ npm install --save-dev git+https://git.movento.com/movento-public/eslint-config-movento.git#3.0.0
 ```
 
 ## Setup
