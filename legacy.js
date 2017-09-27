@@ -1,14 +1,14 @@
 module.exports = {
   extends: [
     'eslint-config-airbnb-base/legacy',
-    'eslint-config-movento/rules/best-practices',
-    'eslint-config-movento/rules/errors',
-    'eslint-config-movento/rules/import',
-    'eslint-config-movento/rules/legacy',
-    'eslint-config-movento/rules/node',
-    'eslint-config-movento/rules/strict',
-    'eslint-config-movento/rules/style',
-    'eslint-config-movento/rules/variables'
+    './rules/best-practices',
+    './rules/errors',
+    './rules/import',
+    './rules/legacy',
+    './rules/node',
+    './rules/strict',
+    './rules/style',
+    './rules/variables'
   ].map(require.resolve),
   env: {
     browser: true,

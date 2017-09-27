@@ -1,15 +1,14 @@
 {
   "name": "eslint-config-movento",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "ESLint config default of movento. ESLint v4.6.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "eslint": "eslint app"
+    "test": "eslint tests/** --config index.js; exit 0"
   },
   "repository": {
     "type": "git",
-    "url": "https://movento2.codebasehq.com/frontend-configs/javascript.git"
+    "url": "https://git.movento.com/movento-public/eslint-config-movento.git"
   },
   "author": "movento",
   "license": "ISC",
