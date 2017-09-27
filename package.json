@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://movento2.codebasehq.com/frontend-configs/javascript.git"
+    "url": "https://git.movento.com/movento-public/eslint-config-movento.git"
   },
   "author": "movento",
   "license": "ISC",
