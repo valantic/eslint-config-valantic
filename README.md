@@ -1,6 +1,6 @@
 # JavaScript
 
-**Changes to the frontend configs repositories or project specific settings are only allowed in agreement with the frontend or project team.**
+> **Changes to the frontend configs repositories or project specific settings are only allowed in agreement with the frontend or project team.**
 
 To ensure a high and consistent code quality for JavaScript we use ESLint.
 
