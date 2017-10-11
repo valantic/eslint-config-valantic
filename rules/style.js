@@ -19,6 +19,8 @@ module.exports = {
         'i',
         'in', // ember-cp-validations
         'j',
+        'x',
+        'y',
         '_', // _Lowdash
         'fs', // ember
         'gt', // ember-cp-validations
