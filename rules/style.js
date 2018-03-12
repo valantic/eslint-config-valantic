@@ -1,5 +1,5 @@
 module.exports = {
-  'rules': {
+  rules: {
     // enforces consistent naming when capturing the current execution context
     'consistent-this': [2, '_that'],
 
@@ -19,6 +19,8 @@ module.exports = {
         'i',
         'in', // ember-cp-validations
         'j',
+        'x',
+        'y',
         '_', // _Lowdash
         'fs', // ember
         'gt', // ember-cp-validations
@@ -26,6 +28,10 @@ module.exports = {
         'DS' // ember-data
       ]
     }],
+
+    // Enforce the location of arrow function bodies with implicit returns
+    // https://eslint.org/docs/rules/implicit-arrow-linebreak
+    'implicit-arrow-linebreak': [2, 'beside'],
 
     // enforce consistent spacing between keys and values in object literal properties
     // http://eslint.org/docs/rules/key-spacing
@@ -73,7 +79,7 @@ module.exports = {
     'no-mixed-operators': 2,
 
     // disallow multiple empty lines and only one newline at the end
-    'no-multiple-empty-lines': [2, {'max': 1, 'maxEOF': 1}],
+    'no-multiple-empty-lines': [2, { max: 1, maxEOF: 1 }],
 
     // disallow negated conditions
     // http://eslint.org/docs/rules/no-negated-condition
@@ -106,7 +112,7 @@ module.exports = {
     // - Encourage cleaner code style
     // - Number of attributes is handled by object-curly-newline
     'object-property-newline': [1, {
-      allowMultiplePropertiesPerLine: true
+      allowAllPropertiesOnSameLine: true // allowMultiplePropertiesPerLine is deprecated
     }],
 
     // require assignment operator shorthand where possible or prohibit it entirely
@@ -120,31 +126,46 @@ module.exports = {
     // Require or disallow padding lines between statements
     // http://eslint.org/docs/rules/padding-line-between-statements
     'padding-line-between-statements': [
-      "error",
+      'error',
       {
-        blankLine: "always",
-        prev: ["const", "let", "var"],
-        next: "*"
+        blankLine: 'always',
+        prev: ['const', 'let', 'var'],
+        next: '*'
       },
       {
-        blankLine: "any",
-        prev: ["const", "let", "var"],
-        next: ["const", "let", "var"]
+        blankLine: 'any',
+        prev: ['const', 'let', 'var'],
+        next: ['const', 'let', 'var']
       },
       {
-        blankLine: "always",
-        prev: "directive",
-        next: "*"
+        blankLine: 'always',
+        prev: '*',
+        next: 'case'
       },
       {
-        blankLine: "any",
-        prev: "directive",
-        next: "directive"
+        blankLine: 'always',
+        prev: '*',
+        next: 'default'
       },
       {
-        blankLine: "always",
-        prev: "*",
-        next: "return"
+        blankLine: 'always',
+        prev: 'directive',
+        next: '*'
+      },
+      {
+        blankLine: 'any',
+        prev: 'directive',
+        next: 'directive'
+      },
+      {
+        blankLine: 'always',
+        prev: '*',
+        next: 'if'
+      },
+      {
+        blankLine: 'always',
+        prev: '*',
+        next: 'return'
       }
     ],
 
@@ -155,16 +176,18 @@ module.exports = {
     // do not require jsdoc
     // http://eslint.org/docs/rules/require-jsdoc
     // - Force code documentation
-    'require-jsdoc': [1, {
+    'require-jsdoc': [2, {
       require: {
         FunctionDeclaration: true,
         MethodDefinition: true,
-        ClassDeclaration: true
+        ClassDeclaration: true,
+        ArrowFunctionExpression: true,
+        FunctionExpression: true
       }
     }],
 
     // enforce consistent spacing before function definition opening parenthesis
-    'space-before-function-paren': [2, "never"],
+    'space-before-function-paren': [2, 'never'],
 
     // Require or disallow spaces before/after unary operators
     // - Force cleaner code style
