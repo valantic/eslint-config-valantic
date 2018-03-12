@@ -4,7 +4,7 @@ module.exports = {
     // - Adding improved support for ember
     'new-cap': [2, {
       'newIsCap': true,
-      "capIsNewExceptions": ["A"]
+      'capIsNewExceptions': ['A']
     }],
 
     // require or disallow method and property shorthand syntax for object literals
@@ -16,9 +16,6 @@ module.exports = {
     'rest-spread-spacing': [2, 'never'],
 
     // require const declarations for variables that are never reassigned after declared
-    'prefer-const': 1,
-
-    // require rest parameters instead of arguments
-    'prefer-rest-params': 1
+    'prefer-const': 1
   }
 };

@@ -38,6 +38,53 @@ function Tests() {
   }
 
   /**
+   * Test prefer-rest-params
+   *
+   * Use ...args over 'arguments'
+   *
+   * @returns {any}
+   */
+  function testNoUnusedVars() {
+    return arguments[0];
+  }
+
+  /**
+   * There should be a blank line before each if block
+   *
+   * @param   {boolean}   foo       A property
+   * @param   {boolean}   baa       A property
+   * @param   {string}    aString   A property
+   *
+   * @returns {boolean}
+   */
+  function testPaddingLineBetweenStatements(foo, baa, aString) {
+    if (foo) { // This is ok
+      return true;
+    }
+    if (baa) { // This is not ok
+      return false;
+    }
+
+    switch (aString) {
+      case 'case1':
+        return true;
+      case 'case2':
+        return false;
+
+      case 'case3': // This is ok
+        return true;
+
+      case 'case4':
+        // falls through
+
+      case 'case5': // This is ok
+        return true;
+      default:
+        return false;
+    }
+  }
+
+  /**
    * A caller for all tests to make it look like valid code
    */
   function init() {
@@ -46,6 +93,8 @@ function Tests() {
 
     testValidJsdoc1();
     testValidJsdoc2();
+    testNoUnusedVars();
+    testPaddingLineBetweenStatements();
   }
 
   return {
