@@ -127,7 +127,7 @@ module.exports = configuration;
 
 #### Linter for tests
 
-The test files of Ember.js are mostly created automatically and don't always follow our standards. Therefore you should loosen the rules a bit inside the ```./tests``` folder a bit
+The test files of Ember.js are mostly created automatically and don't always follow our standards. Therefore you should loosen the rules inside the ```./tests``` folder a bit.
 
 ```
 // ./tests/.eslintrc.js
