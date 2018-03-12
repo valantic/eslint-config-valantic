@@ -29,7 +29,7 @@ Our config is currently optimized for ESLint 4.18.2. To check for updates, see [
 ### uninstall < 2.0.0, >= 4.0.0
 
 ```
-npm uninstall --save-dev eslint eslint-config-airbnb-base eslint-config-valantic eslint-plugin-import
+npm uninstall --save-dev eslint eslint-plugin-import eslint-config-valantic
 ```
 
 ### uninstall >= 2.0.0
@@ -45,7 +45,7 @@ Use npm to install the ESlint config to your project.
 ### Install current version
 
 ```
-$ npm install --save-dev eslint eslint-config-airbnb-base eslint-plugin-import git+https://github.com/valantic/eslint-config-valantic.git#3.0.0
+$ npm install --save-dev eslint eslint-plugin-import git+https://github.com/valantic/eslint-config-valantic.git#4.0.0
 ```
 
 ## Setup
