@@ -1,5 +1,5 @@
 module.exports = {
-  'rules': {
+  rules: {
     // enforce return statements in callbacks of array methods
     // - allowed to use .map() instead forEach without a return value
     'array-callback-return': 0,
@@ -25,6 +25,7 @@ module.exports = {
     
     // disallow usage of configurable warning terms in comments: e.g. todo
     'no-warning-comments': [1, {
-      'terms': ['todo', 'fixme', 'xxx', 'console', 'stupid', 'dumb', 'fuck']
-    }]  }
+      terms: ['todo', 'fixme', 'xxx', 'console', 'stupid', 'dumb', 'fuck']
+    }]
+  }
 };

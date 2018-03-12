@@ -1,5 +1,5 @@
 module.exports = {
-  'rules': {
+  rules: {
     // enforces consistent naming when capturing the current execution context
     'consistent-this': [2, '_that'],
 
@@ -79,7 +79,7 @@ module.exports = {
     'no-mixed-operators': 2,
 
     // disallow multiple empty lines and only one newline at the end
-    'no-multiple-empty-lines': [2, {'max': 1, 'maxEOF': 1}],
+    'no-multiple-empty-lines': [2, { max: 1, maxEOF: 1 }],
 
     // disallow negated conditions
     // http://eslint.org/docs/rules/no-negated-condition

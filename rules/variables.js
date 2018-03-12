@@ -1,5 +1,5 @@
 module.exports = {
-  'rules': {
+  rules: {
     // disallow labels that share a name with a variable
     // - Force better code style
     'no-label-var': 2,
