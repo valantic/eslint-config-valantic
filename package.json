@@ -13,9 +13,11 @@
   "author": "valantic",
   "license": "MIT",
   "private": true,
+  "dependencies": {
+    "eslint-config-airbnb-base": "^12.1.0"
+  },
   "devDependencies": {
     "eslint": "^4.18.2",
-    "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.9.0"
   },
   "engines": {
