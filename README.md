@@ -1,21 +1,8 @@
 # JavaScript
 
-> **Changes to the frontend configs repositories or project specific settings are only allowed in agreement with the frontend or project team.**
-
 To ensure a high and consistent code quality for JavaScript we use ESLint.
 
 [http://eslint.org](http://eslint.org)
-
-### Alternatives
-
-If for any reason you're not able to use ESLint, please use one of the following fallbacks in your IDE.
-
-* JSHint
-  * [http://jshint.com](http://jshint.com)
-* JSLint
-  * [http://www.jslint.com](http://www.jslint.com)
-
-The configs for this linters can be found in the `/other-linters` folder
 
 ## Code style
 
@@ -27,25 +14,25 @@ At valantic the JavaScript code style is based on the Airbnb JavaScript codes st
 
 ### Exceptions
 
-We've made some internal adjustments to the code style, to meet our daily needs or to follow ember.js conventions. See the files inside ```./rules/``` to learn more about this adjustments.
+We've made some internal adjustments to the code style, to meet our daily needs. See the files inside ```./rules/``` to learn more about this adjustments.
  
 #### Some of the most important adjustments
 
 * We NEVER use a whitespace before function parenthesis (space-before-function-paren).
 
-## Version
+## ESLint version
 
-Our config is currently optimized for ESLint 4.6.0. To check for updates, see [http://eslint.org/blog/](http://eslint.org/blog/)
+Our config is currently optimized for ESLint 4.18.2. To check for updates, see [http://eslint.org/blog/](http://eslint.org/blog/)
 
 ## Uninstall old version
 
-### uninstall < 2.0.0
+### uninstall < 2.0.0, >= 4.0.0
 
 ```
 npm uninstall --save-dev eslint eslint-config-airbnb-base eslint-config-valantic eslint-plugin-import
 ```
 
-### uninstall 2.0.0+
+### uninstall >= 2.0.0
 
 ```
 npm uninstall --save-dev eslint-config-valantic
@@ -55,12 +42,10 @@ npm uninstall --save-dev eslint-config-valantic
 
 Use npm to install the ESlint config to your project.
 
-Note: Starting with version 2.0.0 all needed dependencies will be installed automatically. Before that you had to install them separately (see old readme files).
-
 ### Install current version
 
 ```
-$ npm install --save-dev git+https://github.com/valantic/eslint-config-valantic.git#3.0.0
+$ npm install --save-dev eslint eslint-config-airbnb-base eslint-plugin-import git+https://github.com/valantic/eslint-config-valantic.git#3.0.0
 ```
 
 ## Setup
@@ -161,22 +146,8 @@ module.exports = {
 };
 ```
 
-Now, you're able to test your Ember.js project files with one of the following options.
-
-#### Test in console
-
-Run ```$ ember test``` in the console, to see the ESLint test result in the console.
-
-#### Test in browser
-
-Run ```$ ember serve``` from the console and open http://localhost:4200/tests?filter=eslint in your browser to get a very detailed view of your ESLint test result.
-
 ## Rule hints
 
-### valid-jsdoc
-
-Tests function documentation for certain information
-
-#### PhpStorm
+#### valid-jsdoc and PhpStorm
 
 In case your PhpStorm is using `@return` instead of the required `@returns`: Write the return tag yourself for once and select the correct type from the suggestion list. PhpStorm will keep your last preference and use it from now on. See also https://youtrack.jetbrains.com/issue/WEB-7516#comment=27-611256
