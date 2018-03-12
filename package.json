@@ -1,21 +1,24 @@
 {
   "name": "eslint-config-valantic",
   "version": "3.0.0",
-  "description": "The default ESLint config of valantic. ESLint v4.6.0",
+  "description": "The default ESLint config of valantic. ESLint v4.18.2",
   "main": "index.js",
   "scripts": {
     "test": "eslint tests/** --config index.js; exit 0"
   },
   "repository": {
     "type": "git",
-    "url": "https://git.movento.com/movento-public/eslint-config-movento.git"
+    "url": "https://github.com/valantic/eslint-config-valantic.git"
   },
   "author": "valantic",
-  "license": "ISC",
+  "license": "MIT",
   "private": true,
   "devDependencies": {
-    "eslint": "^4.6.0",
-    "eslint-config-airbnb-base": "^12.0.0",
-    "eslint-plugin-import": "^2.7.0"
+    "eslint": "^4.18.2",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.9.0"
+  },
+  "engines": {
+    "node": ">= 4"
   }
 }
