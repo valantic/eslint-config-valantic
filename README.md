@@ -1,4 +1,4 @@
-# JavaScript
+# valantic ESLint config
 
 To ensure a high and consistent code quality for JavaScript we use ESLint.
 
