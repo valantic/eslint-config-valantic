@@ -1,7 +1,7 @@
 {
   "name": "eslint-config-movento",
   "version": "3.0.0",
-  "description": "ESLint config default of movento. ESLint v4.6.0",
+  "description": "The default ESLint config of valantic. ESLint v4.6.0",
   "main": "index.js",
   "scripts": {
     "test": "eslint tests/** --config index.js; exit 0"
@@ -13,7 +13,7 @@
   "author": "movento",
   "license": "ISC",
   "private": true,
-  "dependencies": {
+  "devDependencies": {
     "eslint": "^4.6.0",
     "eslint-config-airbnb-base": "^12.0.0",
     "eslint-plugin-import": "^2.7.0"
