@@ -1,5 +1,5 @@
 {
-  "name": "eslint-config-movento",
+  "name": "eslint-config-valantic",
   "version": "3.0.0",
   "description": "The default ESLint config of valantic. ESLint v4.6.0",
   "main": "index.js",
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "https://git.movento.com/movento-public/eslint-config-movento.git"
   },
-  "author": "movento",
+  "author": "valantic",
   "license": "ISC",
   "private": true,
   "devDependencies": {
