@@ -9,8 +9,9 @@ module.exports = {
     // disallow unnecessary parentheses
     // http://eslint.org/docs/rules/no-extra-parens
     'no-extra-parens': [2, 'all', {
-      returnAssign: false, // Allows parens in fat arrow returns
-      nestedBinaryExpressions: false
+      returnAssign: false, // Allows parenthesis in fat arrow returns
+      nestedBinaryExpressions: false,
+      enforceForArrowConditionals: false // Allows parenthesis for condition ins fat arrow returns
     }],
 
     // Avoid code that looks like two expressions but is actually one
