@@ -36,7 +36,7 @@ module.exports = {
         string: 'String',
         node: 'Node'
       },
-      matchDescription: '.+\\.$'
+      matchDescription: '.+\\.($|\\w)'
     }]
   }
 };

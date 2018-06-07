@@ -1,8 +1,23 @@
+var capitalizedCommentsIgnore = [
+  // Vue
+  'activated\\(\\)',
+  'components:',
+  'computed:',
+  'created\\(\\)',
+  'deactivated\\(\\)',
+  'destroyed\\(\\)',
+  'vue',
+  'watch:',
+
+  // Ember
+  'ember'
+].join('|');
+
 module.exports = {
   rules: {
     // Enforce or disallow capitalization of the first letter of a comment.
     'capitalized-comments': [1, 'always', {
-      ignorePattern: '[ember|vue]',
+      ignorePattern: '[' + capitalizedCommentsIgnore + ']',
       ignoreInlineComments: true // Allow commenting of function params and similar.
     }],
 
