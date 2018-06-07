@@ -5,7 +5,7 @@ module.exports = {
     'array-callback-return': 0,
 
     // Enforce consistent brace style for all control statements
-    'curly': 2,
+    'curly': [2, 'all'],
     
     // Enforce consistent newlines before and after dots
     'dot-location': [2, 'property'],
