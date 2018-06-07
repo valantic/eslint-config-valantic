@@ -1,12 +1,18 @@
 module.exports = {
   rules: {
-    // enforces consistent naming when capturing the current execution context
+    // Enforce or disallow capitalization of the first letter of a comment.
+    'capitalized-comments': [1, 'always', {
+      ignorePattern: '[ember|vue]',
+      ignoreInlineComments: true // Allow commenting of function params and similar.
+    }],
+
+    // Enforces consistent naming when capturing the current execution context.
     'consistent-this': [2, '_that'],
 
-    // require or disallow named function expressions
+    // Require or disallow named function expressions.
     'func-names': 0,
 
-    // this option enforces minimum and maximum identifier lengths
+    // This option enforces minimum and maximum identifier lengths.
     // (variable names, property names etc.)
     'id-length': [1, {
       min: 3,
@@ -29,13 +35,13 @@ module.exports = {
       ]
     }],
 
-    // Enforce the location of arrow function bodies with implicit returns
+    // Enforce the location of arrow function bodies with implicit returns.
     // https://eslint.org/docs/rules/implicit-arrow-linebreak
     'implicit-arrow-linebreak': [2, 'beside'],
 
-    // enforce consistent spacing between keys and values in object literal properties
+    // Enforce consistent spacing between keys and values in object literal properties.
     // http://eslint.org/docs/rules/key-spacing
-    // - Allow value alignment for multiline
+    // - Allow value alignment for multiline.
     'key-spacing': [2, {
       singleLine: {
         mode: 'strict'
@@ -45,85 +51,85 @@ module.exports = {
       }
     }],
 
-    // enforces empty lines around comments
-    // - Force cleaner comment style
+    // enforces empty lines around comments.
+    // - Force cleaner comment style.
     'lines-around-comment': [2, {
       beforeBlockComment: true,
       allowBlockStart: true,
       allowObjectStart: true
     }],
 
-    // specify the maximum length of a line in your program
+    // Specify the maximum length of a line in your program.
     // http://eslint.org/docs/rules/max-len
-    // - Weaken max line length rule
+    // - Weaken max line length rule.
     'max-len': [1, 130, 2, {
       ignoreTrailingComments: true,
       ignoreUrls: true
     }],
 
-    // enforce a maximum number of parameters in function definitions
-    // - Force max number of function params
+    // enforce a maximum number of parameters in function definitions.
+    // - Force max number of function params.
     'max-params': [2, 3],
 
-    // disallow bitwise operators
+    // Disallow bitwise operators.
     'no-bitwise': 1,
 
-    // disallow use of the continue statement
+    // Disallow use of the continue statement.
     'no-continue': 1,
 
-    // disallow if as the only statement in an else block
+    // Disallow if as the only statement in an else block.
     'no-lonely-if': 1,
 
-    // disallow mixes of different operators
+    // Disallow mixes of different operators
     // - Force cleaner code style
     'no-mixed-operators': 2,
 
-    // disallow multiple empty lines and only one newline at the end
+    // Disallow multiple empty lines and only one newline at the end.
     'no-multiple-empty-lines': [2, { max: 1, maxEOF: 1 }],
 
-    // disallow negated conditions
+    // Disallow negated conditions.
     // http://eslint.org/docs/rules/no-negated-condition
-    // - Encourage cleaner code style
+    // - Encourage cleaner code style.
     'no-negated-condition': 0,
 
-    // disallow trailing whitespace at the end of lines
-    // - Weaken for better IDE support
+    // Disallow trailing whitespace at the end of lines.
+    // - Weaken for better IDE support.
     'no-trailing-spaces': [1, {
       ignoreComments: true,
       skipBlankLines: true
     }],
 
-    // disallow dangling underscores in identifiers (no-underscore-dangle)
+    // Disallow dangling underscores in identifiers (no-underscore-dangle).
     // http://eslint.org/docs/rules/no-underscore-dangle
-    // - Allow to touch private values of this
+    // - Allow to touch private values of this.
     'no-underscore-dangle': [2, {
       allowAfterThis: true,
       allow: ['_that']
     }],
 
-    // enforce consistent line breaks inside braces
-    // - Currently (2016-06-23) not working with single properties
+    // Enforce consistent line breaks inside braces.
+    // - Currently (2016-06-23) not working with single properties.
     // 'object-curly-newline': [2, {
     //   'multiline': true,
     //   'minProperties': 2
     // }],
 
-    // enforce placing object properties on separate lines
-    // - Encourage cleaner code style
-    // - Number of attributes is handled by object-curly-newline
+    // Enforce placing object properties on separate lines.
+    // - Encourage cleaner code style.
+    // - Number of attributes is handled by object-curly-newline.
     'object-property-newline': [1, {
-      allowAllPropertiesOnSameLine: true // allowMultiplePropertiesPerLine is deprecated
+      allowAllPropertiesOnSameLine: true
     }],
 
-    // require assignment operator shorthand where possible or prohibit it entirely
+    // Require assignment operator shorthand where possible or prohibit it entirely.
     // - Encourage cleaner code style
     'operator-assignment': [1, 'always'],
 
-    // enforce operators to be placed before or after line breaks
-    // - Encourage cleaner code style
+    // Enforce operators to be placed before or after line breaks.
+    // - Encourage cleaner code style.
     'operator-linebreak': [1, 'before'],
 
-    // Require or disallow padding lines between statements
+    // Require or disallow padding lines between statements.
     // http://eslint.org/docs/rules/padding-line-between-statements
     'padding-line-between-statements': [
       'error',
@@ -169,11 +175,11 @@ module.exports = {
       }
     ],
 
-    // require quotes around object literal property names
+    // Require quotes around object literal property names.
     // - Force cleaner code style
     'quote-props': [2, 'consistent-as-needed'],
 
-    // do not require jsdoc
+    // Do not require jsDoc.
     // http://eslint.org/docs/rules/require-jsdoc
     // - Force code documentation
     'require-jsdoc': [2, {
@@ -186,14 +192,14 @@ module.exports = {
       }
     }],
 
-    // enforce consistent spacing before function definition opening parenthesis
+    // Enforce consistent spacing before function definition opening parenthesis.
     'space-before-function-paren': [2, 'never'],
 
-    // Require or disallow spaces before/after unary operators
+    // Require or disallow spaces before/after unary operators.
     // - Force cleaner code style
     'space-unary-ops': 2,
 
-    // require regex literals to be wrapped in parentheses
+    // Require regex literals to be wrapped in parentheses.
     // - Force cleaner code style
     'wrap-regex': 2
   }
