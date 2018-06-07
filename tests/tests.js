@@ -1,24 +1,24 @@
 /**
- * Fake constructor for test scenarios
+ * Fake constructor for test scenarios.
  *
- * @returns {object}
+ * @returns {object} - This should give an error about invalid type casing.
  *
  * @constructor
  */
 function Tests() {
   /**
-   * Text max-len
+   * Test max-len. This comment does also not meet comment pattern because of missing full stop
    *
-   * @returns {string}
+   * @returns - This should give an error because of missing type.
    */
   function testMaxLen() {
     return 'This is a test for maximum length of a single row. This should give a warning because having more thant 130 characters.';
   }
 
   /**
-   * Test quotes
+   * test quotes. This comment does also not meet comment pattern because of small letter at beginning.
    *
-   * @returns {string}
+   * @returns {String}
    */
   function testQuotes() {
     return "This should give an error because of invalid double quotes";
@@ -31,7 +31,7 @@ function Tests() {
   /**
    * Test valid-jsdoc (invalid return)
    *
-   * @return {string}
+   * @return {String}
    */
   function testValidJsdoc2() {
     return 'This function should get an error because JSDOC is using "@return" instead of "@returns".';
@@ -42,7 +42,7 @@ function Tests() {
    *
    * Use ...args over 'arguments'
    *
-   * @returns {any}
+   * @returns {*}
    */
   function testNoUnusedVars() {
     return arguments[0];
@@ -51,11 +51,11 @@ function Tests() {
   /**
    * There should be a blank line before each if block
    *
-   * @param   {boolean}   foo       A property
-   * @param   {boolean}   baa       A property
-   * @param   {string}    aString   A property
+   * @param   {Boolean}   foo       A property
+   * @param   {Boolean}   baa       A property
+   * @param   {String}    aString
    *
-   * @returns {boolean}
+   * @returns {Boolean}
    */
   function testPaddingLineBetweenStatements(foo, baa, aString) {
     if (foo) { // This is ok
@@ -88,7 +88,7 @@ function Tests() {
    * A caller for all tests to make it look like valid code
    */
   function init() {
-    testMaxLen();
+    testMaxLen(); // this comment should throw an error because of small cap at beginning.
     testQuotes();
 
     testValidJsdoc1();
