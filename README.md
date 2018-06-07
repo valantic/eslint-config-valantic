@@ -45,7 +45,7 @@ Use npm to install the ESlint config to your project.
 ### Install current version
 
 ```
-$ npm install --save-dev git+https://github.com/valantic/eslint-config-valantic.git#4.3.0 eslint eslint-plugin-import
+$ npm install --save-dev git+https://github.com/valantic/eslint-config-valantic.git#4.4.0 eslint eslint-plugin-import
 ```
 
 ## Setup
