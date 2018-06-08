@@ -49,13 +49,24 @@ function Tests() {
   }
 
   /**
+   * Test prefer-rest-params
+   *
+   * Use ...args over 'arguments'
+   *
+   * @returns {null} 'null' is always written small because there is no 'Null' in JS.
+   */
+  function testNull() {
+    return null;
+  }
+
+  /**
    * There should be a blank line before each if block
    *
    * @param   {Boolean}   foo       A property
    * @param   {Boolean}   baa       A property
    * @param   {String}    aString
    *
-   * @returns {Boolean}
+   * @returns {Boolean|array}
    */
   function testPaddingLineBetweenStatements(foo, baa, aString) {
     if (foo) { // This is ok

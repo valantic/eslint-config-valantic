@@ -30,11 +30,15 @@ module.exports = {
         argument: 'param'
       },
       preferType: {
+        array: 'Array',
         boolean: 'Boolean',
+        function: 'Function',
+        node: 'Node',
+        // 'null' is only valid in lower case
         number: 'Number',
         object: 'Object',
-        string: 'String',
-        node: 'Node'
+        promise: 'Promise',
+        string: 'String'
       },
       matchDescription: '.+\\.($|\\n)'
     }]
