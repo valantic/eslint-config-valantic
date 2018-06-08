@@ -60,6 +60,20 @@ function Tests() {
   }
 
   /**
+   * This demonstrates a bug in ESLint 4.19.1 in combination with valid-jsdoc.preferType.
+   *
+   * @param {object} mandatory1 - This line gives an error about lowercase 'object'
+   * @param {object|object[]} mandatory2 - This line gives two errors about lowercase 'object'
+   * @param {object} [optional1] - This line gives an error about lowercase 'object'.
+   * @param {object|object[]} [optional2] - This line gives no error about lowercase 'object'.
+   *
+   * @returns {Object}
+   */
+  function optionalParams(mandatory1, mandatory2, optional1, optional2) {
+    return {};
+  }
+
+  /**
    * There should be a blank line before each if block
    *
    * @param   {Boolean}   foo       A property
