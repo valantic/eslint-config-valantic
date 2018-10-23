@@ -46,7 +46,15 @@ module.exports = {
         'fs', // ember
         'gt', // ember-cp-validations
         'id',
-        'DS' // ember-data
+        'DS', // ember-data
+        'el', // Vue
+        'on', // Vue
+        'vm', // Vue
+        'xs', // Bootstrap
+        'sm', // Bootstrap
+        'md', // Bootstrap
+        'lg', // Bootstrap
+        'xl', // Bootstrap
       ]
     }],
 
