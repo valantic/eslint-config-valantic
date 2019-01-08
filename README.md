@@ -10,7 +10,7 @@ At valantic the JavaScript code style is based on the Airbnb JavaScript codes st
 
 [https://github.com/airbnb/javascript](https://github.com/airbnb/javascript)
 
-(Current version: 12.*)
+(Current version: 13.*)
 
 ### Exceptions
 
@@ -22,7 +22,7 @@ We've made some internal adjustments to the code style, to meet our daily needs.
 
 ## ESLint version
 
-Our config is currently optimized for ESLint 5.7.0. To check for updates, see [http://eslint.org/blog/](http://eslint.org/blog/)
+Our config is currently optimized for ESLint 5.12.0. To check for updates, see [http://eslint.org/blog/](http://eslint.org/blog/)
 
 ## Uninstall old version
 
@@ -45,7 +45,7 @@ Use npm to install the ESlint config to your project.
 ### Install current version
 
 ```
-$ npm install --save-dev git+https://github.com/valantic/eslint-config-valantic.git#5.0.0 eslint eslint-plugin-import eslint-config-airbnb-base
+$ npm install eslint-config-valantic eslint eslint-plugin-import eslint-config-airbnb-base --save-dev
 ```
 
 ## Setup
@@ -88,63 +88,6 @@ $ npm run eslint <app|file.js>
 ```
 
 NOTE: don't use the `$ eslint` command, since this will call the global ESLint package, which will not be able to find the valantic config inside your project!
-
-### Ember.js
-
-By default ember uses JSHint. To replace the JSHint test with ESLint execute the following commands when setting up a new Ember.js project:
-
-```
-$ npm uninstall --save-dev ember-cli-jshint
-$ ember install ember-cli-eslint@4
-$ npm install babel-eslint@^8.0.0
-```
-
-Make also sure, you removed all unneeded ```.jshintrc``` from the project.
-
-For more information visit the ember-cli-eslint repository: https://github.com/ember-cli/ember-cli-eslint
-
-#### Environment specific linting
-When using Ember.js it's also possible to use different linters for different environments. This allows us to sharpen or release the error level for certain environments.
-
-```
-const EmberApp = require('ember-cli/lib/broccoli/ember-app');
-
-const configuration = {
-  "extends": "valantic",
-  "rules": {
-    // ...
-  }
-};
-
-// To reduce the amount of errors for the client, we reduced the error level for all non development environments
-if (EmberApp && EmberApp.env() !== 'development') {
-  configuration.rules['no-warning-comments'] = 0;
-  configuration.rules['no-console'] = 0;
-}
-
-module.exports = configuration;
-```
-
-#### Linter for tests
-
-The test files of Ember.js are mostly created automatically and don't always follow our standards. Therefore you should loosen the rules inside the ```./tests``` folder a bit.
-
-```
-// ./tests/.eslintrc.js
-module.exports = {
-  extends: 'valantic',
-  env: {
-    'embertest': true
-  },
-  rules: {
-    'require-jsdoc': 0,
-    'valid-jsdoc': 0, // Disable jsdoc, because ember generated test doesn't include that
-    'padding-line-between-statements': 0,
-    'prefer-const': 0,
-    'prefer-rest-params': 0
-  }
-};
-```
 
 ## Rule hints
 
