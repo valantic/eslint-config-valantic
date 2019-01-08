@@ -45,7 +45,7 @@ Use npm to install the ESlint config to your project.
 ### Install current version
 
 ```
-$ npm install eslint-config-valantic eslint eslint-plugin-import eslint-config-airbnb-base --save-dev
+npm install eslint-config-valantic eslint eslint-plugin-import eslint-config-airbnb-base --save-dev
 ```
 
 ## Setup
@@ -84,7 +84,7 @@ You can also lint your code from the console. To do this, add a script to your `
 Now you can execute the linter with the following command.
 
 ```
-$ npm run eslint <app|file.js>
+npm run eslint <app|file.js>
 ```
 
 NOTE: don't use the `$ eslint` command, since this will call the global ESLint package, which will not be able to find the valantic config inside your project!
