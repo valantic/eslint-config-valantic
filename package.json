@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-valantic",
-  "version": "4.5.0",
+  "version": "4.5.1",
   "description": "The default ESLint config of valantic. ESLint v4.18.2",
   "main": "index.js",
   "scripts": {
@@ -12,11 +12,15 @@
   },
   "author": "valantic",
   "license": "MIT",
-  "private": true,
+  "keywords": [
+    "eslint",
+    "valantic",
+    "eslint-config"
+  ],
   "dependencies": {
     "eslint-config-airbnb-base": "^12.1.0"
   },
-  "devDependencies": {
+  "peerDependencies": {
     "eslint": "^4.19.1",
     "eslint-plugin-import": "^2.12.0"
   },
