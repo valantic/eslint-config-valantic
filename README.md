@@ -56,11 +56,33 @@ After installing the config package, you still need to create a `.eslintrc.js` i
 // .eslintrc.js
 
 module.exports ={
-  extends: 'valantic', // Use valantic/legacy if you're working with ES5 code
+  extends: 'valantic',
   rules: {
     // Use for project specific settings
   }
 };
+```
+
+### Legacy support
+
+Use `extends: 'valantic/legacy` instead.
+
+### Vue support
+
+If your project uses the `eslint-plugin-vue` you can import the additional vue rules we already predefined to meet our requirements.
+
+```
+// .eslintrc.js
+
+const vueRules = require('eslint-config-valantic/plugins/vue');
+
+module.exports = {
+  rules: {
+    ...vueRules,
+    // ...
+  }
+}
+
 ```
 
 ## Use
