@@ -22,20 +22,14 @@ We've made some internal adjustments to the code style, to meet our daily needs.
 
 ## ESLint version
 
-Our config is currently optimized for ESLint 5.12.0. To check for updates, see [http://eslint.org/blog/](http://eslint.org/blog/)
+Our config is currently optimized for ESLint 6.0.0. To check for updates, see [http://eslint.org/blog/](http://eslint.org/blog/)
 
 ## Uninstall old version
 
-### uninstall < 2.0.0, >= 4.1.0
+### uninstall
 
 ```
-npm uninstall --save-dev eslint eslint-plugin-import eslint-config-valantic
-```
-
-### uninstall >= 2.0.0
-
-```
-npm uninstall --save-dev eslint-config-valantic
+npm uninstall eslint eslint-plugin-import eslint-config-valantic eslint-config-airbnb-base --save-dev 
 ```
 
 ## Install
