@@ -26,16 +26,10 @@ Our config is currently optimized for ESLint 6.0.0. To check for updates, see [h
 
 ## Uninstall old version
 
-### uninstall < 2.0.0, >= 4.1.0
+### uninstall
 
 ```
-npm uninstall --save-dev eslint eslint-plugin-import eslint-config-valantic
-```
-
-### uninstall >= 2.0.0
-
-```
-npm uninstall --save-dev eslint-config-valantic
+npm uninstall eslint eslint-plugin-import eslint-config-valantic eslint-config-airbnb-base --save-dev 
 ```
 
 ## Install
