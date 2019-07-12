@@ -22,7 +22,7 @@ We've made some internal adjustments to the code style, to meet our daily needs.
 
 ## ESLint version
 
-Our config is currently optimized for ESLint 5.12.0. To check for updates, see [http://eslint.org/blog/](http://eslint.org/blog/)
+Our config is currently optimized for ESLint 6.0.0. To check for updates, see [http://eslint.org/blog/](http://eslint.org/blog/)
 
 ## Uninstall old version
 
