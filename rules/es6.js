@@ -1,5 +1,9 @@
 module.exports = {
   rules: {
+    'arrow-parens': [2, 'as-needed', {
+      requireForBlockBody: true
+    }],
+
     // require constructor function names to begin with a capital letter
     // - Adding improved support for ember
     'new-cap': [2, {
