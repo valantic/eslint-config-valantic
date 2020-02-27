@@ -10,6 +10,11 @@ module.exports = {
     // Enforce consistent newlines before and after dots
     'dot-location': [2, 'property'],
 
+    // This rule is aimed at eliminating empty functions. A function will not be considered a problem if it contains a comment.
+    'no-empty-function': [2, {
+      allow: [],
+    }],
+
     // Disallow reassignment of function parameters
     // Disallow parameter object manipulation
     // Rule: http://eslint.org/docs/rules/no-param-reassign.html

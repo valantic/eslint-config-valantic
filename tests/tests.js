@@ -7,6 +7,11 @@
  */
 function Tests() {
   /**
+   * This factory does not return an Object, as intended, but 'undefined'.
+   */
+  const invalidObjectFactory1 = () => {};
+
+  /**
    * Test max-len. This comment does also not meet comment pattern because of missing full stop
    *
    * @returns - This should give an error because of missing type.
@@ -119,7 +124,7 @@ function Tests() {
     testValidJsdoc1();
     testValidJsdoc2();
     testNoUnusedVars();
-    testPaddingLineBetweenStatements();
+    testPaddingLineBetweenStatements(invalidObjectFactory1);
   }
 
   return {
