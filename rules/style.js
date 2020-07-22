@@ -16,8 +16,9 @@ var capitalizedCommentsIgnore = [
 module.exports = {
   rules: {
     // Enforce or disallow capitalization of the first letter of a comment.
-    'capitalized-comments': [1, 'always', {
-      ignorePattern: '[' + capitalizedCommentsIgnore + ']',
+    // https://eslint.org/docs/rules/capitalized-comments
+    'capitalized-comments': [2, 'always', {
+      ignorePattern: `[${capitalizedCommentsIgnore}]`,
       ignoreInlineComments: true // Allow commenting of function params and similar.
     }],
 

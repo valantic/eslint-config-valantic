@@ -9,11 +9,11 @@ module.exports = {
   }],
   'vue/name-property-casing': [2, 'kebab-case'],
   'vue/html-closing-bracket-newline': [0],
-  // 'vue/multiline-html-element-content-newline': [1, { // TODO: currently does not allow additional properties (bug, https://github.com/vuejs/eslint-plugin-vue/issues/792)
-  //   ignoreWhenEmpty: true,
-  //   ignores: ['pre', 'textarea'],
-  //   allowEmptyLines: true
-  // }],
+  'vue/multiline-html-element-content-newline': [1, {
+    ignoreWhenEmpty: true,
+    ignores: ['pre', 'textarea'],
+    allowEmptyLines: true
+  }],
   'vue/singleline-html-element-content-newline': [1, {
     ignoreWhenNoAttributes: true,
     ignoreWhenEmpty: true,
@@ -36,5 +36,37 @@ module.exports = {
     },
     svg: 'always',
     math: 'always'
-  }]
+  }],
+  'import/extensions': [0, 'always', {
+    js: 'never',
+    vue: 'never'
+  }],
+  'vue/attributes-order': [2, {
+    order: [
+      'CONDITIONALS',
+      [
+        'LIST_RENDERING',
+        'RENDER_MODIFIERS',
+        'OTHER_DIRECTIVES',
+        'TWO_WAY_BINDING',
+        'CONTENT'
+      ],
+      'DEFINITION',
+      'GLOBAL',
+      'UNIQUE',
+      'OTHER_ATTR',
+      'EVENTS',
+    ]
+  }],
+
+  // The following lines overwrites default linters, which don't work good in combination with Vue.
+  'require-jsdoc': [2, {
+    require: {
+      FunctionDeclaration: true,
+      MethodDefinition: true,
+      ClassDeclaration: true,
+      ArrowFunctionExpression: true,
+      FunctionExpression: false, // Allows to use lifecycles, get/set and so on without JSDoc.
+    }
+  }],
 };
