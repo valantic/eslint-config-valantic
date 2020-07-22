@@ -15,14 +15,10 @@ See package.json for currently used version.
 ### Exceptions
 
 We've made some internal adjustments to the code style, to meet our daily needs. See the files inside ```./rules/``` to learn more about this adjustments.
- 
-#### Some of the most important adjustments
-
-* We NEVER use a whitespace before function parenthesis (space-before-function-paren).
 
 ## ESLint version
 
-Our config is currently optimized for ESLint 6.*.*. To check for updates, see [http://eslint.org/blog/](http://eslint.org/blog/)
+Check the required ESLint version in the `package.json` file. To check for updates, see [http://eslint.org/blog/](http://eslint.org/blog/)
 
 ## Uninstall old version
 
@@ -34,7 +30,7 @@ npm uninstall eslint eslint-plugin-import eslint-config-valantic eslint-config-a
 
 ## Install
 
-Use npm to install the ESlint config to your project.
+Use npm to install the ESLint config to your project.
 
 ### Install current version
 
