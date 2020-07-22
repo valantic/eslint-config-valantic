@@ -81,13 +81,13 @@ function Tests() {
   /**
    * There should be a blank line before each if block
    *
-   * @param   {Boolean}   foo       A property
-   * @param   {Boolean}   baa       A property
+   * @param   {Boolean}   foo       A property.
+   * @param   {Boolean}   baa       This property should also trigger an error, because it is not mandatory but not last in order.
    * @param   {String}    aString
    *
    * @returns {Boolean|array}
    */
-  function testPaddingLineBetweenStatements(foo, baa, aString) {
+  function testPaddingLineBetweenStatements(foo, baa = true, aString) {
     if (foo) { // This is ok
       return true;
     }
@@ -118,6 +118,13 @@ function Tests() {
    * A caller for all tests to make it look like valid code
    */
   function init() {
+    // The following lines should warn about loosing precision of number value.
+    const value1 = 9007199254740993;
+    const value2 = 5123000000000000000000000000001;
+    const value3 = 1230000000000000000000000.0;
+    const value4 = .1230000000000000000000000;
+    const value5 = 0X20000000000001;
+
     testMaxLen(); // this comment should throw an error because of small cap at beginning.
     testQuotes();
 
@@ -125,6 +132,8 @@ function Tests() {
     testValidJsdoc2();
     testNoUnusedVars();
     testPaddingLineBetweenStatements(invalidObjectFactory1);
+
+    return [value1, value2, value3, value4, value5];
   }
 
   return {

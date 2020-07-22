@@ -7,6 +7,10 @@ module.exports = {
     // Enforce consistent brace style for all control statements
     'curly': [2, 'all'],
 
+    // Putting default parameter at last allows function calls to omit optional tail arguments.
+    // https://eslint.org/docs/rules/default-param-last
+    'default-param-last': 2,
+
     // Enforce consistent newlines before and after dots
     'dot-location': [2, 'property'],
 
@@ -29,8 +33,8 @@ module.exports = {
     'no-useless-call': 2,
 
     // Disallow usage of configurable warning terms in comments.
-    'no-warning-comments': [1, {
+    'no-warning-comments': [2, {
       terms: ['fixme', 'xxx', 'console', 'stupid', 'dumb', 'fuck']
-    }]
+    }],
   }
 };
