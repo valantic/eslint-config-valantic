@@ -57,5 +57,16 @@ module.exports = {
       'OTHER_ATTR',
       'EVENTS',
     ]
-  }]
+  }],
+
+  // The following lines overwrites default linters, which don't work good in combination with Vue.
+  'require-jsdoc': [2, {
+    require: {
+      FunctionDeclaration: true,
+      MethodDefinition: true,
+      ClassDeclaration: true,
+      ArrowFunctionExpression: true,
+      FunctionExpression: false, // Allows to use lifecycles, get/set and so on without JSDoc.
+    }
+  }],
 };
