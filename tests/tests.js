@@ -12,6 +12,16 @@ function Tests() {
   const invalidObjectFactory1 = () => {};
 
   /**
+   * Should throw an error about 'unsave use of optional chaining'.
+   */
+  let { someValue } = window.foo?.someValue;
+
+  /**
+   * Should throw an error because of unsafe arithmetic operation.
+   */
+  someValue += window.foo?.someValue;
+
+  /**
    * Test max-len. This comment does also not meet comment pattern because of missing full stop
    *
    * @returns - This should give an error because of missing type.
@@ -137,7 +147,8 @@ function Tests() {
   }
 
   return {
-    init: init
+    init: init,
+    someValue,
   };
 }
 

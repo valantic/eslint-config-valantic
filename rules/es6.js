@@ -20,6 +20,11 @@ module.exports = {
     'rest-spread-spacing': [2, 'never'],
 
     // require const declarations for variables that are never reassigned after declared
-    'prefer-const': 1
+    'prefer-const': 1,
+
+    // disallow use of optional chaining in contexts where the undefined value is not allowed
+    'no-unsafe-optional-chaining': [2, {
+      disallowArithmeticOperators: true
+    }],
   }
 };
