@@ -6,7 +6,7 @@ To ensure a high and consistent code quality for JavaScript we use ESLint.
 
 ## Code style
 
-At valantic the JavaScript code style is based on the Airbnb JavaScript codes style for ES2015.
+At valantic the JavaScript code style is based on the Airbnb JavaScript codes style for ES2015+.
 
 [https://github.com/airbnb/javascript](https://github.com/airbnb/javascript)
 
