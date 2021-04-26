@@ -1,6 +1,7 @@
 # Changelog
 
 ## Next
+* (Break) Extends Vue linter definitions.
 
 ## v8.1.0 (2021-03-26)
 
