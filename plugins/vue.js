@@ -58,6 +58,46 @@ module.exports = {
       'EVENTS',
     ]
   }],
+  'vue/no-template-target-blank': ['error'],
+  'vue/component-definition-name-casing': ['error', 'kebab-case'],
+  'vue/html-comment-content-spacing': ['error', 'always'],
+  'vue/no-duplicate-attr-inheritance': ['error'],
+  'vue/no-unused-properties': ['error', {
+    groups: [
+      'props',
+      'data',
+      'computed',
+      'methods',
+      'setup'
+    ],
+    ignorePublicMembers: true,
+  }],
+  'vue/no-potential-component-option-typo': ['error'],
+  'vue/custom-event-name-casing': ['error', 'camelCase', {
+    ignores: ['/[ecl]{1}-.*?.[a-zA-Z]*$/'] // Allows Bus events of type <componentName>.<event>
+  }],
+  'vue/no-bare-strings-in-template': ['error'],
+  'vue/no-useless-v-bind': ['error'],
+  'vue/no-useless-mustaches': ['error'],
+  'vue/no-multiple-objects-in-class': ['error'],
+  'vue/v-for-delimiter-style': ['error', 'in'],
+  'vue/no-reserved-component-names': ['error'],
+  // Core extending
+  'vue/comma-spacing': ['error', { before: false, after: true }],
+  'vue/prefer-template': ['error'],
+  'vue/template-curly-spacing': ['error', 'never'],
+  'vue/space-in-parens': ['error', 'never'],
+  'vue/comma-style': ['error', 'last'],
+  'vue/no-extra-parens': ['error'],
+  'vue/no-useless-concat': ['error'],
+  'vue/dot-notation': ['error'],
+  'vue/object-property-newline': ['error', {
+    allowAllPropertiesOnSameLine: true
+  }],
+  'vue/object-curly-newline': ['error', 'never'],
+  'vue/operator-linebreak': ['error', 'none'],
+  'vue/func-call-spacing': ['error', 'never'],
+  'vue/no-sparse-arrays': ['error'],
 
   // The following lines overwrites default linters, which don't work good in combination with Vue.
   'require-jsdoc': [2, {
