@@ -87,7 +87,11 @@ module.exports = {
   'vue/template-curly-spacing': ['error', 'never'],
   'vue/space-in-parens': ['error', 'never'],
   'vue/comma-style': ['error', 'last'],
-  'vue/no-extra-parens': ['error'],
+  'vue/no-extra-parens': ['error', 'all', {
+    returnAssign: false, // Allows parenthesis in fat arrow returns
+    nestedBinaryExpressions: false,
+    enforceForArrowConditionals: false // Allows parenthesis for condition ins fat arrow returns
+  }],
   'vue/no-useless-concat': ['error'],
   'vue/dot-notation': ['error'],
   'vue/object-property-newline': ['error', {
