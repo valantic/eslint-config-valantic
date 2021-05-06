@@ -1,6 +1,8 @@
 # Changelog
 
 ## Next
+
+## v9.1.0 (2021-05-06)
 * (Enhancement) Loosens vue/no-extra-parens rule for complex conditions
 
 ## v9.0.0 (2021-04-26)

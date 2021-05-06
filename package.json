@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-valantic",
-  "version": "9.0.0",
+  "version": "9.1.0",
   "description": "The default ESLint config of valantic.",
   "main": "index.js",
   "scripts": {
