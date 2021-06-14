@@ -2,6 +2,10 @@
 
 ## Next
 
+## 9.2.0 (2021-06-14)
+* (Enhancement) Loosens max-len rule for comments. Now allows all comment types
+* (Update) Updates all dependencies to fix vulnerabilities
+
 ## v9.1.0 (2021-05-06)
 * (Enhancement) Loosens vue/no-extra-parens rule for complex conditions
 
