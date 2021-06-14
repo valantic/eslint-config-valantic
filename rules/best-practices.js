@@ -16,7 +16,9 @@ module.exports = {
 
     // This rule is aimed at eliminating empty functions. A function will not be considered a problem if it contains a comment.
     'no-empty-function': [2, {
-      allow: [],
+      allow: [
+        'arrowFunctions',
+      ],
     }],
 
     // Disallow reassignment of function parameters
