@@ -87,7 +87,7 @@ module.exports = {
     // http://eslint.org/docs/rules/max-len
     // - Weaken max line length rule.
     'max-len': [1, 130, 2, {
-      ignoreTrailingComments: true,
+      ignoreComments: true,
       ignoreUrls: true
     }],
 
