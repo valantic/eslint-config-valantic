@@ -2,6 +2,9 @@
 
 ## Next
 
+## 9.3.0 (2021-06-14)
+(Enhancement) Loosens no-empty-function to allow arrow functions, because they are sometimes used as fallback
+
 ## 9.2.0 (2021-06-14)
 * (Enhancement) Loosens max-len rule for comments. Now allows all comment types
 * (Update) Updates all dependencies to fix vulnerabilities
