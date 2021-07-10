@@ -1,6 +1,7 @@
 # Changelog
 
 ## Next
+* (Enhancement) Adds common locale codes to id-length
 
 ## 9.3.0 (2021-06-14)
 * (Enhancement) Loosens no-empty-function to allow arrow functions, because they are sometimes used as fallback

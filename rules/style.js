@@ -56,6 +56,10 @@ module.exports = {
         'md', // Bootstrap
         'lg', // Bootstrap
         'xl', // Bootstrap
+        'de', // Locale
+        'en', // Locale
+        'it', // Locale
+        'fr', // Locale
       ]
     }],
 
