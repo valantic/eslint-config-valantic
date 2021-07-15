@@ -1,5 +1,7 @@
 # Changelog
 
+## Next
+
 ## 9.4.0 (2021-07-15)
 * (Enhancement) Adds common locale codes to id-length
 * (Enhancement) Loosens max-len rule for strings
