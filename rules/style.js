@@ -92,7 +92,8 @@ module.exports = {
     // - Weaken max line length rule.
     'max-len': [1, 130, 2, {
       ignoreComments: true,
-      ignoreUrls: true
+      ignoreUrls: true,
+      ignorePattern: "[\"'`][,;]?$", // Allows to use long strings. 'ignoreStrings' did not work, because it was also true if only part of line used strings.
     }],
 
     // enforce a maximum number of parameters in function definitions.
