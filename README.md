@@ -1,12 +1,12 @@
 # valantic ESLint config
 
-To ensure a high and consistent code quality for JavaScript and Typescript we use ESLint.
+To ensure a high and consistent code quality for JavaScript and TypeScript we use ESLint.
 
 [http://eslint.org](http://eslint.org)
 
 ## Code style
 
-At valantic the JavaScript and Typescript code style is based on the Airbnb JavaScript codes style for ES2015+.
+At valantic the JavaScript and TypeScript code style is based on the Airbnb JavaScript codes style for ES2015+.
 
 [https://github.com/airbnb/javascript](https://github.com/airbnb/javascript)
 
@@ -75,9 +75,20 @@ module.exports = {
 
 ```
 
-### Typescript Support
+### TypeScript Support
 
-If your project uses Typescript, you need to use some additional settings to make eslint parse typescript correctly.
+If your project uses TypeScript, you need to use some additional dependencies installed:
+
+```json
+{
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "~4.31.1",
+    "@typescript-eslint/parser": "~4.31.1"
+  }
+}
+```
+
+and some additional settings to make eslint parse TypeScript correctly.
 
 ```
 // .eslintrc.js
