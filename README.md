@@ -1,12 +1,12 @@
 # valantic ESLint config
 
-To ensure a high and consistent code quality for JavaScript we use ESLint.
+To ensure a high and consistent code quality for JavaScript and TypeScript we use ESLint.
 
 [http://eslint.org](http://eslint.org)
 
 ## Code style
 
-At valantic the JavaScript code style is based on the Airbnb JavaScript codes style for ES2015+.
+At valantic the JavaScript and TypeScript code style is based on the Airbnb JavaScript codes style for ES2015+.
 
 [https://github.com/airbnb/javascript](https://github.com/airbnb/javascript)
 
@@ -75,9 +75,46 @@ module.exports = {
 
 ```
 
+### TypeScript Support
+
+If your project uses TypeScript, you need to use some additional dependencies installed:
+
+```json
+{
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "~4.31.1",
+    "@typescript-eslint/parser": "~4.31.1"
+  }
+}
+```
+
+and some additional settings to make eslint parse TypeScript correctly.
+
+```
+// .eslintrc.js
+const tsRules = require('eslint-config-valantic/plugins/typescript');
+
+module.exports = {
+  parserOptions: {
+    parser: '@typescript-eslint/parser', // Don't use on upper scope as documented by ESLint. The Vue plugin already defines itself as parser.
+    // ...
+  },
+  extends: [
+    // ...
+    'plugin:@typescript-eslint/recommended', // only needed if you DON'T use Vue
+    '@vue/typescript', // only needed if you DO use Vue
+  ],
+  rules: {
+    ...tsRules,
+    // ...
+  }
+}
+
+```
+
 ## Use
 
-Now your ready to enable ESLint in your editor or use it on the command line!
+Now you are ready to enable ESLint in your editor or use it on the command line!
 
 ### PhpStorm
 
