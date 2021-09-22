@@ -1,6 +1,8 @@
 # Changelog
 
 ## Next
+
+## 9.5.0 (2021-09-22)
 * (Breaking) Enables no-param-reassign again, because it can cause side effects, and the previous reason is no longer legit
 * (Enhancement) Allows to use 'to' as a property name on id-length
 * (Enhancement) Adds typescript plugin
