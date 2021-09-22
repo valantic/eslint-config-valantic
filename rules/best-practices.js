@@ -21,12 +21,6 @@ module.exports = {
       ],
     }],
 
-    // Disallow reassignment of function parameters
-    // Disallow parameter object manipulation
-    // Rule: http://eslint.org/docs/rules/no-param-reassign.html
-    // - Allowed to support default fallback: var foo = foo || 'baa';
-    'no-param-reassign': 0,
-
     // Disallow unmodified conditions of loops
     // http://eslint.org/docs/rules/no-unmodified-loop-condition
     'no-unmodified-loop-condition': 2,
