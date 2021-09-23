@@ -4,8 +4,8 @@
   "description": "The default ESLint config of valantic.",
   "main": "index.js",
   "scripts": {
-    "test": "eslint tests/** --ext .js --config index.js; exit 0",
-    "test:ts": "eslint tests/tests.ts --ext .ts --config typescript.js; exit 0"
+    "test": "eslint tests/tests.js --config index.js; exit 0",
+    "test:ts": "eslint tests/tests.ts --config typescript.js; exit 0"
   },
   "repository": {
     "type": "git",

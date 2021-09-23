@@ -2,6 +2,8 @@
 
 ## Next
 
+* (Feature) Disables no-param-reassign again, because it prevents a lot of legit cases
+
 ## 9.5.0 (2021-09-22)
 * (Breaking) Enables no-param-reassign again, because it can cause side effects, and the previous reason is no longer legit
 * (Enhancement) Allows to use 'to' as a property name on id-length
