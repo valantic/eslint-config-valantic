@@ -2,6 +2,8 @@
 
 ## Next
 
+## 9.5.1 (2021-09-23)
+
 * (Feature) Disables no-param-reassign again, because it prevents a lot of legit cases
 
 ## 9.5.0 (2021-09-22)
