@@ -2,8 +2,10 @@
 
 ## Next
 
-## 9.6.0 (2021-11-23)
+## 9.6.1 (2021-11-23)
+* (Bugfix) Adjusts vue/first-attribute-linebreak rule options to ignore first attribute linebreaks
 
+## 9.6.0 (2021-11-23)
 * (Update) Updates dependencies
 
 ## 9.5.1 (2021-09-23)
