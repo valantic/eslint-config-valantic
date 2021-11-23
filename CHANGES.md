@@ -2,6 +2,8 @@
 
 ## Next
 
+## 9.6.0 (2021-11-23)
+
 * (Update) Updates dependencies
 
 ## 9.5.1 (2021-09-23)
