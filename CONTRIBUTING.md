@@ -18,7 +18,7 @@
 * Move all changes in the file [CHANGES.md](CHANGES.md) from below `## Next` below a new Paragraph with the 
   to be released version
 * Change the Version in the [package.json](package.json) and [package-lock.json](package-lock.json)
-* Create a Git Tag with the to be released version number
+* Create a Git Tag with the to be released version number ` git tag x.x.x`
 * Commit and Push the changes to the Release branch (Make sure to also push Tags)
 * Switch to the `master` branch
 * Merge the release branch into `master` and push the changes
