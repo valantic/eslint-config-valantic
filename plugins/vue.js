@@ -4,6 +4,9 @@ module.exports = {
     singleline: 3,
     multiline: 1
   }],
+  'vue/first-attribute-linebreak' : [ 1, {
+    'multiline': 'ignore'
+  }],
   'vue/html-closing-bracket-newline': [0],
   'vue/multiline-html-element-content-newline': [1, {
     ignoreWhenEmpty: true,
