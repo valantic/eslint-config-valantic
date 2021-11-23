@@ -2,10 +2,10 @@ module.exports = {
   'indent': 0, // Indent is not working with html script tag. Use 'vue/script-indent' instead
   'vue/max-attributes-per-line': [2, {
     singleline: 3,
-    multiline: {
-      max: 1,
-      allowFirstLine: true
-    }
+    multiline: 1
+  }],
+  'vue/first-attribute-linebreak' : [ 1, {
+    'multiline': 'ignore'
   }],
   'vue/html-closing-bracket-newline': [0],
   'vue/multiline-html-element-content-newline': [1, {
