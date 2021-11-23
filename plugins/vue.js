@@ -3,8 +3,7 @@ module.exports = {
   'vue/max-attributes-per-line': [2, {
     singleline: 3,
     multiline: {
-      max: 1,
-      allowFirstLine: true
+      max: 1
     }
   }],
   'vue/html-closing-bracket-newline': [0],
