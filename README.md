@@ -61,12 +61,18 @@ Use `extends: 'valantic/legacy` instead.
 
 If your project uses the `eslint-plugin-vue` you can import the additional vue rules we already predefined to meet our requirements.
 
-```
+```js
 // .eslintrc.js
 
 const vueRules = require('eslint-config-valantic/plugins/vue');
 
 module.exports = {
+  extends: [
+    'plugin:vue/recommended',
+    // OR
+    'plugin:vue/vue3-recommended',
+    // ...
+  ],
   rules: {
     ...vueRules,
     // ...
