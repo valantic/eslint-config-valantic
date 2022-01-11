@@ -71,7 +71,10 @@ module.exports = {
     ],
     ignorePublicMembers: true,
   }],
-  'vue/no-potential-component-option-typo': ['error'],
+  'vue/no-potential-component-option-typo': ['error', {
+    presets: ['all'],
+    threshold: 1
+  }],
   'vue/custom-event-name-casing': ['error', 'camelCase', {
     ignores: ['/[ecl]{1}-.*?.[a-zA-Z]*$/'] // Allows Bus events of type <componentName>.<event>
   }],
@@ -101,6 +104,51 @@ module.exports = {
   'vue/operator-linebreak': ['error', 'none'],
   'vue/func-call-spacing': ['error', 'never'],
   'vue/no-sparse-arrays': ['error'],
+  'vue/block-tag-newline': ['error', {
+    'singleline': 'always',
+    'multiline': 'always',
+    'maxEmptyLines': 1, // 0 conflicts with lines-around-comment
+  }],
+  'vue/component-api-style': ["error",
+    [
+      'composition',
+      'options',
+    ]
+  ],
+  'vue/component-name-in-template-casing': ['error', 'kebab-case'],
+  'vue/component-options-name-casing': ['error', 'camelCase'],
+  'vue/html-button-has-type': ['error', {
+    button: true,
+    submit: true,
+    reset: true
+  }],
+  "vue/html-comment-content-newline": ["error",
+    {
+      singleline: 'never',
+      multiline: 'never',
+    }
+  ],
+  'vue/match-component-file-name': ['error', {
+    extensions: ['vue'],
+  }],
+  'vue/no-child-content': ['error'],
+  'vue/no-empty-component-block': ['error'],
+  'vue/no-expose-after-await': ['error'],
+  'vue/no-invalid-model-keys': ['error'],
+  'vue/no-this-in-before-route-enter': ['error'],
+  'vue/no-unsupported-features': ['error', {
+    version: "^2.6.0",
+  }],
+  'vue/no-use-computed-property-like-method': ['error'],
+  'vue/no-v-text': ['error'],
+  'vue/padding-line-between-blocks': ['error', 'always'],
+  'vue/prefer-separate-static-class': ['error'],
+  'vue/require-direct-export': ['error'],
+  'vue/require-emit-validator': ['error'],
+  'vue/require-name-property': ['error'],
+  'vue/v-on-function-call': ['error'],
+  'vue/array-bracket-newline': ['error', 'never'],
+  'vue/eqeqeq': ['error'],
 
   // The following lines overwrites default linters, which don't work good in combination with Vue.
   'require-jsdoc': [2, {
