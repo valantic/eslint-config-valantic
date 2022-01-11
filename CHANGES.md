@@ -1,7 +1,8 @@
 # Changelog
 
 ## Next
-* (Enhancement) Raises engine version of node to 12.x. Since dependencies already use this, this is no breaking change.
+* (Breaking) Raises engine version of node to 12.x. Since dependencies already use this, this is no breaking change.
+* (Breaking) Enables several new Vue related linting rules.
 
 ## 9.6.1 (2021-11-23)
 * (Bugfix) Adjusts vue/first-attribute-linebreak rule options to ignore first attribute linebreaks
