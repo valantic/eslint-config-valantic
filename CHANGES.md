@@ -1,5 +1,8 @@
 # Changelog
 
+## 10.1 (2022-01-20)
+* (Enhancement) Weakens vue/no-bare-strings-in-template to allow the use of special chars in Vue templates.
+
 ## 10.0.0 (2022-01-11)
 * (Breaking) Raises engine version of node to 12.x. Since dependencies already use this, this is no breaking change.
 * (Breaking) Enables several new Vue related linting rules.
