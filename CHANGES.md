@@ -1,6 +1,6 @@
 # Changelog
 
-## Next
+## 10.0.0 (2022-01-11)
 * (Breaking) Raises engine version of node to 12.x. Since dependencies already use this, this is no breaking change.
 * (Breaking) Enables several new Vue related linting rules.
 
