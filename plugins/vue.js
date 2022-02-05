@@ -10,8 +10,13 @@ module.exports = {
   'vue/html-closing-bracket-newline': [0],
   'vue/multiline-html-element-content-newline': [1, {
     ignoreWhenEmpty: true,
-    ignores: ['pre', 'textarea'],
-    allowEmptyLines: true
+    allowEmptyLines: true,
+    ignores: [ // Linebreaks can cause additional white space inline-elements, so they should be excluded
+      'pre',
+      'textarea',
+      'a',
+      'span'
+    ],
   }],
   'vue/singleline-html-element-content-newline': [1, {
     ignoreWhenNoAttributes: true,
