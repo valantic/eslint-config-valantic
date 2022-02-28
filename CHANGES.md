@@ -2,6 +2,7 @@
 
 ## Next
 * (Enhancement) Weakens vue/multiline-html-element-content-newline to ignore span and a
+* (Enhancement) Weakens id-length to allow Vue 'is' attribute as object key
 
 ## 10.1 (2022-01-20)
 * (Enhancement) Weakens vue/no-bare-strings-in-template to allow the use of special chars in Vue templates.
