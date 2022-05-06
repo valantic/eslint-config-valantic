@@ -1,10 +1,12 @@
 # Changelog
 
-## Next
-* (Enhancement) Weakens vue/multiline-html-element-content-newline to ignore span and a
-* (Enhancement) Weakens id-length to allow Vue 'is' attribute as object key
+## 10.2.0 (2022-05-06)
+* (Enhancement) Weakens vue/multiline-html-element-content-newline to ignore span and a.
+* (Enhancement) Weakens id-length to allow Vue 'is' attribute as object key.
+* (Enhancement) Updates dev and peer dependencies.
+* (Enhancement) Adds new ESLint rule no-constant-binary-expression.
 
-## 10.1 (2022-01-20)
+## 10.1.0 (2022-01-20)
 * (Enhancement) Weakens vue/no-bare-strings-in-template to allow the use of special chars in Vue templates.
 
 ## 10.0.0 (2022-01-11)
