@@ -1,6 +1,6 @@
 # Changelog
 
-## Next ()
+## 11.0.0 (2022-05-06)
 * (Breaking) Adds new 'vue/prefer-true-attribute-shorthand' rule.
 * (Enhancement) Cleanup of Vue rules.
 
