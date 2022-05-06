@@ -1,5 +1,8 @@
 # Changelog
 
+## 11.1.0 (2022-05-06)
+* (Enhancement) Weakens 'vue/singleline-html-element-content-newline' for inline elements be falling back to default
+
 ## 11.0.1 (2022-05-06)
 * (Bugfix) Adds missing 'vue/prefer-true-attribute-shorthand' rule.
 
