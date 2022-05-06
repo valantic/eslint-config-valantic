@@ -185,16 +185,6 @@ module.exports = {
     baseIndent: 1,
     switchCase: 1
   }],
-  'vue/singleline-html-element-content-newline': [1, {
-    ignoreWhenNoAttributes: true,
-    ignoreWhenEmpty: true,
-    ignores: [
-      'code',
-      'pre',
-      'span',
-      'textarea'
-    ]
-  }],
   'vue/space-in-parens': ['error', 'never'],
   'vue/template-curly-spacing': ['error', 'never'],
   'vue/v-for-delimiter-style': ['error', 'in'],
