@@ -177,6 +177,7 @@ module.exports = {
   'vue/padding-line-between-blocks': ['error', 'always'],
   'vue/prefer-separate-static-class': ['error'],
   'vue/prefer-template': ['error'],
+  "vue/prefer-true-attribute-shorthand": ["error", "always"],
   'vue/require-direct-export': ['error'],
   'vue/require-emit-validator': ['error'],
   'vue/require-name-property': ['error'],
