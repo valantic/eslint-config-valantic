@@ -14,7 +14,7 @@ See package.json for currently used version.
 
 ### Exceptions
 
-We've made some internal adjustments to the code style, to meet our daily needs. See the files inside ```./rules/``` to learn more about this adjustments.
+We've made some internal adjustments to the code style, to meet our daily needs. See the files inside `./rules/` to learn more about these adjustments.
 
 ## ESLint version
 

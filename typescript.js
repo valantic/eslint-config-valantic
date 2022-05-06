@@ -2,7 +2,7 @@ const tsRules = require('./plugins/typescript');
 
 module.exports = {
   parserOptions: {
-    ecmaVersion: 2020,
+    ecmaVersion: 'latest',
     parser: '@typescript-eslint/parser',
   },
   extends: [
