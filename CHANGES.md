@@ -1,5 +1,9 @@
 # Changelog
 
+## Next ()
+* (Breaking) Adds new 'vue/prefer-true-attribute-shorthand' rule.
+* (Enhancement) Cleanup of Vue rules.
+
 ## 10.2.0 (2022-05-06)
 * (Enhancement) Weakens vue/multiline-html-element-content-newline to ignore span and a.
 * (Enhancement) Weakens id-length to allow Vue 'is' attribute as object key.
