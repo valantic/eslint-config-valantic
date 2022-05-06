@@ -12,6 +12,11 @@ function Tests() {
   const invalidObjectFactory1 = () => {};
 
   /**
+   * @see https://eslint.org/docs/rules/no-constant-binary-expression
+   */
+  const nullishnessConstant = a + b ?? c;
+
+  /**
    * Should throw an error about 'unsave use of optional chaining'.
    */
   let { someValue } = window.foo?.someValue;
@@ -143,7 +148,7 @@ function Tests() {
     testNoUnusedVars();
     testPaddingLineBetweenStatements(invalidObjectFactory1);
 
-    return [value1, value2, value3, value4, value5];
+    return [value1, value2, value3, value4, value5, nullishnessConstant];
   }
 
   return {

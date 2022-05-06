@@ -14,6 +14,9 @@ module.exports = {
     // Enforce consistent newlines before and after dots
     'dot-location': [2, 'property'],
 
+    // Disallows expressions where the operation doesn't affect the value.
+    'no-constant-binary-expression': 2,
+
     // This rule is aimed at eliminating empty functions. A function will not be considered a problem if it contains a comment.
     'no-empty-function': [2, {
       allow: [
