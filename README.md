@@ -20,14 +20,6 @@ We've made some internal adjustments to the code style, to meet our daily needs.
 
 Check the required ESLint version in the `package.json` file. To check for updates, see [http://eslint.org/blog/](http://eslint.org/blog/)
 
-## Uninstall old version
-
-### uninstall
-
-```
-npm uninstall eslint eslint-plugin-import eslint-config-valantic eslint-config-airbnb-base --save-dev 
-```
-
 ## Install
 
 Use npm to install the ESLint config to your project.
@@ -42,7 +34,7 @@ npm install eslint-config-valantic eslint eslint-plugin-import eslint-config-air
 
 After installing the config package, you still need to create a `.eslintrc.js` inside your project, where you tell ESLint to use the valantic config.
 
-```
+```js
 // .eslintrc.js
 
 module.exports ={
@@ -53,13 +45,9 @@ module.exports ={
 };
 ```
 
-### Legacy support
+### Vue 2 support
 
-Use `extends: 'valantic/legacy` instead.
-
-### Vue support
-
-If your project uses the `eslint-plugin-vue` you can import the additional vue rules we already predefined to meet our requirements.
+If your project is based on Vue 2 you should use the vue config.
 
 ```js
 // .eslintrc.js
@@ -68,20 +56,28 @@ const vueRules = require('eslint-config-valantic/plugins/vue');
 
 module.exports = {
   extends: [
-    'plugin:vue/recommended',
-    // OR
-    'plugin:vue/vue3-recommended',
-    // ...
+    'valantic/vue',
   ],
-  rules: {
-    ...vueRules,
-    // ...
-  }
 }
-
 ```
 
-### TypeScript Support
+### Vue 3 support
+
+If your project is based on Vue 3 with TypeScript you should use the vue3 config.
+
+```js
+// .eslintrc.js
+
+const vueRules = require('eslint-config-valantic/plugins/vue');
+
+module.exports = {
+  extends: [
+    'valantic/vue3',
+  ],
+}
+```
+
+### TypeScript support
 
 If your project uses TypeScript, you need to use some additional dependencies installed:
 
@@ -94,26 +90,14 @@ If your project uses TypeScript, you need to use some additional dependencies in
 }
 ```
 
-and some additional settings to make eslint parse TypeScript correctly.
+and set the correct config that should be extended.
 
-```
+```js
 // .eslintrc.js
-const tsRules = require('eslint-config-valantic/plugins/typescript');
-
 module.exports = {
-  parserOptions: {
-    parser: '@typescript-eslint/parser', // Don't use on upper scope as documented by ESLint. The Vue plugin already defines itself as parser.
-    // ...
-  },
   extends: [
-    // ...
-    'plugin:@typescript-eslint/recommended', // only needed if you DON'T use Vue
-    '@vue/typescript', // only needed if you DO use Vue
+    'valantic/typescript'
   ],
-  rules: {
-    ...tsRules,
-    // ...
-  }
 }
 
 ```

@@ -13,7 +13,6 @@ module.exports = {
     './rules/strict.js',
     './rules/style.js',
     './rules/variables.js',
-    './settings/import_core-modules.js'
   ],
   env: {
     browser: true,
@@ -22,6 +21,4 @@ module.exports = {
     mocha: false,
     jasmine: false
   },
-  globals: {},
-  rules: {}
 };
