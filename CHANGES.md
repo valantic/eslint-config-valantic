@@ -1,6 +1,6 @@
 # Changelog
 
-## next
+## 12.0.0
 * (Enhancement) Updates peerDependencies to be compatible with new NPM versions (7+). @see https://docs.npmjs.com/cli/v8/configuring-npm/package-json#peerdependencies
 
 ## 11.1.0 (2022-05-06)
