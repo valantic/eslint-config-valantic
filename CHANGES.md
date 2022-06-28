@@ -1,5 +1,8 @@
 # Changelog
 
+## next
+* (Enhancement) Updates peerDependencies to be compatible with new NPM versions (7+). @see https://docs.npmjs.com/cli/v8/configuring-npm/package-json#peerdependencies
+
 ## 11.1.0 (2022-05-06)
 * (Enhancement) Weakens 'vue/singleline-html-element-content-newline' for inline elements be falling back to default
 
