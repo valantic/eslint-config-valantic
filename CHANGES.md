@@ -1,5 +1,10 @@
 # Changelog
 
+## 13.0.0
+* (Breaking) Changing config structure. See README.md.
+* (Breaking) Removed legacy support.
+* (Enhancement) Updated README.md with new installation instructions.
+
 ## 12.0.0
 * (Enhancement) Updates peerDependencies to be compatible with new NPM versions (7+). @see https://docs.npmjs.com/cli/v8/configuring-npm/package-json#peerdependencies
 
