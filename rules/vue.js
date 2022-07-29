@@ -57,7 +57,7 @@ module.exports = {
     'vue/define-macros-order': ['error'],
     'vue/dot-notation': ['error'],
     'vue/eqeqeq': ['error'],
-    'vue/first-attribute-linebreak' : [ 1, {
+    'vue/first-attribute-linebreak' : ['warn', {
       'multiline': 'ignore'
     }],
     'vue/func-call-spacing': ['error', 'never'],
@@ -96,7 +96,7 @@ module.exports = {
       ignoreUrls: true,
       ignoreHTMLTextContents: true,
     }],
-    'vue/multiline-html-element-content-newline': [1, {
+    'vue/multiline-html-element-content-newline': ['warn', {
       ignoreWhenEmpty: true,
       allowEmptyLines: true,
       ignores: [ // Linebreaks can cause additional white space inline-elements, so they should be excluded
