@@ -2,11 +2,11 @@ module.exports = {
   rules: {
     // Disallow labels that share a name with a variable.
     // - Force better code style
-    'no-label-var': 2,
+    'no-label-var': ['error'],
 
     // Disallow use of undefined when initializing variables.
     // - Force better code style
-    'no-undef-init': 2,
+    'no-undef-init': ['error'],
 
     // Disallow use of undefined variable.
     // - Force better code style
