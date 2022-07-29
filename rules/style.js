@@ -17,20 +17,20 @@ module.exports = {
   rules: {
     // Enforce or disallow capitalization of the first letter of a comment.
     // https://eslint.org/docs/rules/capitalized-comments
-    'capitalized-comments': [2, 'always', {
+    'capitalized-comments': ['error', 'always', {
       ignorePattern: `[${capitalizedCommentsIgnore}]`,
       ignoreInlineComments: true // Allow commenting of function params and similar.
     }],
 
     // Enforces consistent naming when capturing the current execution context.
-    'consistent-this': [2, '_that'],
+    'consistent-this': ['error', '_that'],
 
     // Require or disallow named function expressions.
-    'func-names': 0,
+    'func-names': ['off'],
 
     // This option enforces minimum and maximum identifier lengths.
     // (variable names, property names etc.)
-    'id-length': [1, {
+    'id-length': ['warn', {
       min: 3,
       properties: 'always',
       exceptions: [
@@ -67,12 +67,12 @@ module.exports = {
 
     // Enforce the location of arrow function bodies with implicit returns.
     // https://eslint.org/docs/rules/implicit-arrow-linebreak
-    'implicit-arrow-linebreak': [2, 'beside'],
+    'implicit-arrow-linebreak': ['error', 'beside'],
 
     // Enforce consistent spacing between keys and values in object literal properties.
     // http://eslint.org/docs/rules/key-spacing
     // - Allow value alignment for multiline.
-    'key-spacing': [2, {
+    'key-spacing': ['error', {
       singleLine: {
         mode: 'strict'
       },
@@ -83,7 +83,7 @@ module.exports = {
 
     // enforces empty lines around comments.
     // - Force cleaner comment style.
-    'lines-around-comment': [2, {
+    'lines-around-comment': ['error', {
       beforeBlockComment: true,
       allowBlockStart: true,
       allowObjectStart: true
@@ -92,7 +92,7 @@ module.exports = {
     // Specify the maximum length of a line in your program.
     // http://eslint.org/docs/rules/max-len
     // - Weaken max line length rule.
-    'max-len': [1, 130, 2, {
+    'max-len': ['warn', 130, 2, {
       ignoreComments: true,
       ignoreUrls: true,
       ignorePattern: "[\"'`][,;]?$", // Allows to use long strings. 'ignoreStrings' did not work, because it was also true if only part of line used strings.
@@ -100,32 +100,32 @@ module.exports = {
 
     // enforce a maximum number of parameters in function definitions.
     // - Force max number of function params.
-    'max-params': [2, 3],
+    'max-params': ['error', 3],
 
     // Disallow bitwise operators.
-    'no-bitwise': 1,
+    'no-bitwise': ['warn'],
 
     // Disallow use of the continue statement.
-    'no-continue': 1,
+    'no-continue': ['warn'],
 
     // Disallow if as the only statement in an else block.
-    'no-lonely-if': 1,
+    'no-lonely-if': ['warn'],
 
     // Disallow mixes of different operators
     // - Force cleaner code style
-    'no-mixed-operators': 2,
+    'no-mixed-operators': ['error'],
 
     // Disallow multiple empty lines and only one newline at the end.
-    'no-multiple-empty-lines': [2, { max: 1, maxEOF: 1 }],
+    'no-multiple-empty-lines': ['error', { max: 1, maxEOF: 1 }],
 
     // Disallow negated conditions.
     // http://eslint.org/docs/rules/no-negated-condition
     // - Encourage cleaner code style.
-    'no-negated-condition': 0,
+    'no-negated-condition': ['off'],
 
     // Disallow trailing whitespace at the end of lines.
     // - Weaken for better IDE support.
-    'no-trailing-spaces': [1, {
+    'no-trailing-spaces': ['warn', {
       ignoreComments: true,
       skipBlankLines: true
     }],
@@ -133,14 +133,14 @@ module.exports = {
     // Disallow dangling underscores in identifiers (no-underscore-dangle).
     // http://eslint.org/docs/rules/no-underscore-dangle
     // - Allow to touch private values of this.
-    'no-underscore-dangle': [2, {
+    'no-underscore-dangle': ['error', {
       allowAfterThis: true,
       allow: ['_that']
     }],
 
     // Enforce consistent line breaks inside braces.
     // - Currently (2016-06-23) not working with single properties.
-    // 'object-curly-newline': [2, {
+    // 'object-curly-newline': ['error', {
     //   'multiline': true,
     //   'minProperties': 2
     // }],
@@ -148,17 +148,17 @@ module.exports = {
     // Enforce placing object properties on separate lines.
     // - Encourage cleaner code style.
     // - Number of attributes is handled by object-curly-newline.
-    'object-property-newline': [1, {
+    'object-property-newline': ['warn', {
       allowAllPropertiesOnSameLine: true
     }],
 
     // Require assignment operator shorthand where possible or prohibit it entirely.
     // - Encourage cleaner code style
-    'operator-assignment': [1, 'always'],
+    'operator-assignment': ['warn', 'always'],
 
     // Enforce operators to be placed before or after line breaks.
     // - Encourage cleaner code style.
-    'operator-linebreak': [1, 'before'],
+    'operator-linebreak': ['warn', 'before'],
 
     // Require or disallow padding lines between statements.
     // http://eslint.org/docs/rules/padding-line-between-statements
@@ -208,12 +208,12 @@ module.exports = {
 
     // Require quotes around object literal property names.
     // - Force cleaner code style
-    'quote-props': [2, 'consistent-as-needed'],
+    'quote-props': ['error', 'consistent-as-needed'],
 
     // Do not require jsDoc.
     // http://eslint.org/docs/rules/require-jsdoc
     // - Force code documentation
-    'require-jsdoc': [2, {
+    'require-jsdoc': ['error', {
       require: {
         FunctionDeclaration: true,
         MethodDefinition: true,
@@ -224,11 +224,11 @@ module.exports = {
     }],
 
     // Enforce consistent spacing before function definition opening parenthesis.
-    'space-before-function-paren': [2, 'never'],
+    'space-before-function-paren': ['error', 'never'],
 
     // Require or disallow spaces before/after unary operators.
     // - Force cleaner code style
-    'space-unary-ops': 2,
+    'space-unary-ops': ['error'],
 
     // Require regex literals to be wrapped in parentheses.
     // - Force cleaner code style

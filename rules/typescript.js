@@ -5,13 +5,13 @@ module.exports = {
     '@typescript-eslint/no-shadow': 'error',
 
     // prevent any from being used as type
-    '@typescript-eslint/no-explicit-any': [2, {
+    '@typescript-eslint/no-explicit-any': ['error', {
       fixToUnknown: false,
       ignoreRestArgs: true,
     }],
 
     // require-jsdoc is deprecated, see https://eslint.org/blog/2018/11/jsdoc-end-of-life
-    'require-jsdoc': 0,
-    'valid-jsdoc': 0,
+    'require-jsdoc': ['off'],
+    'valid-jsdoc': ['off'],
   },
 };
