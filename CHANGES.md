@@ -4,6 +4,7 @@
 * (Breaking) Replaces max-len with vue/max-len for Vue projects, since it is more reliable with *.vue files.
 * (Enhancement) Changes error levels from numbers to keywords.
 * (Enhancement) Enables 'vue/no-unsupported-features' to warn about unsupported features.
+* (Enhancement) Updates dependencies.
 
 ## 13.0.0
 * (Breaking) Changing config structure. See README.md.
