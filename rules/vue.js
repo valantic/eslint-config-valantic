@@ -1,9 +1,9 @@
 module.exports = {
   rules: {
-    'indent': 0, // Indent is not working with html script tag. Use 'vue/script-indent' instead
+    'indent': ['off'], // Indent is not working with html script tag. Use 'vue/script-indent' instead
 
     // The following lines overwrites default linters, which don't work good in combination with Vue.
-    'require-jsdoc': [2, {
+    'require-jsdoc': ['error', {
       require: {
         FunctionDeclaration: true,
         MethodDefinition: true,
@@ -13,12 +13,11 @@ module.exports = {
       }
     }],
 
-    'import/extensions': [0, 'always', {
-      js: 'never',
-      vue: 'never'
-    }],
+    'import/extensions': ['off'],
 
-    'vue/attributes-order': [2, {
+    'max-len': ['off'], // max-len is tricky in Vue files.
+
+    'vue/attributes-order': ['error', {
       order: [
         'CONDITIONALS',
         [
@@ -67,7 +66,7 @@ module.exports = {
       submit: true,
       reset: true
     }],
-    'vue/html-closing-bracket-newline': [0],
+    // 'vue/html-closing-bracket-newline': ['off'], // TODO: why was this disabled?
     "vue/html-comment-content-newline": ["error",
       {
         singleline: 'never',
@@ -75,7 +74,7 @@ module.exports = {
       }
     ],
     'vue/html-comment-content-spacing': ['error', 'always'],
-    'vue/html-self-closing': [2, {
+    'vue/html-self-closing': ['error', {
       html: {
         void: 'never',
         normal: 'never', // Don't close default elements
@@ -87,9 +86,15 @@ module.exports = {
     'vue/match-component-file-name': ['error', {
       extensions: ['vue'],
     }],
-    'vue/max-attributes-per-line': [2, {
+    'vue/max-attributes-per-line': ['error', {
       singleline: 3,
       multiline: 1
+    }],
+    'vue/max-len': ['error', {
+      code: 130,
+      ignoreComments: true,
+      ignoreUrls: true,
+      ignoreHTMLTextContents: true,
     }],
     'vue/multiline-html-element-content-newline': [1, {
       ignoreWhenEmpty: true,
