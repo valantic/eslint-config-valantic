@@ -66,7 +66,6 @@ module.exports = {
       submit: true,
       reset: true
     }],
-    // 'vue/html-closing-bracket-newline': ['off'], // TODO: why was this disabled?
     "vue/html-comment-content-newline": ["error",
       {
         singleline: 'never',
