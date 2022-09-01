@@ -102,6 +102,49 @@ module.exports = {
 
 ```
 
+### `--fix`
+
+There is a special config if you want to use auto code styling and the `--fix` command. It is recommended to use this extended definition if you plan to use `--fix`.
+
+1. Add a new `.eslintrc.fix.js` to your project that extends the "fix" configuration. It would also be possible to define or adjust additonal rules here.
+
+```js
+// https://eslint.org/docs/user-guide/configuring
+module.exports = {
+  extends: [
+    'valantic/fix',
+  ],
+};
+```
+
+2. Add a new NPM script in `package.json`.
+
+**NOTE: The file loaded by `--config` in the `eslint:fix` script will EXTEND the basic configuration, NOT replace it!
+
+```json
+{
+  "eslint": "eslint --cache --ext .js,.vue src tests/unit/specs",
+  "eslint:fix": "npm run eslint -- --config .eslintrc.fix.js --cache=false --fix"
+}
+```
+
+3. Extend GIT hooks
+
+Finally, update the `lint-staged` configuration to apply auto code styling on commit.
+
+```json
+{
+  "lint-staged": {
+    "*.{js,vue}": [
+      "eslint --fix"
+    ],
+    "*.{css,vue,scss}": [
+      "stylelint"
+    ]
+  }
+}
+```
+
 ## Use
 
 Now you are ready to enable ESLint in your editor or use it on the command line!
