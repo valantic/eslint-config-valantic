@@ -136,7 +136,7 @@ Finally, update the `lint-staged` configuration to apply auto code styling on co
 {
   "lint-staged": {
     "*.{js,vue}": [
-      "eslint --fix"
+      "eslint --config .eslintrc.fix.js --fix"
     ],
     "*.{css,vue,scss}": [
       "stylelint"

@@ -1,5 +1,8 @@
 # Changelog
 
+## 14.1.1
+* (Bugfix) Fixes invalid documentation.
+
 ## 14.1.0
 * (Enhancement) Adds additional configuration for better auto code styling support.
 
