@@ -157,15 +157,17 @@ Go to `PhpStorm > Preferences` and search for ESLint or navigate to `Languages &
 
 You can also lint your code from the console. To do this, add a script to your `package.json`.
 
-```
-"scripts": {
-  "eslint": "eslint"
+```json
+{
+  "scripts": {
+    "eslint": "eslint"
+  }
 }
 ```
 
 Now you can execute the linter with the following command.
 
-```
+```shell
 npm run eslint <app|file.js>
 ```
 

@@ -1,7 +1,7 @@
 # Changelog
 
-## Next
-* (Enhancement) Extends rules for better autofixing support.
+## 14.1.0
+* (Enhancement) Adds additional configuration for better auto code styling support.
 
 ## 14.0.0
 * (Breaking) Replaces max-len with vue/max-len for Vue projects, since it is more reliable with *.vue files.
