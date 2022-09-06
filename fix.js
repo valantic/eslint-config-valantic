@@ -11,7 +11,7 @@ module.exports = {
       ArrayExpression: 'consistent',
       ArrayPattern: { // Destructuring
         multiline: true,
-        minItems: 2,
+        minItems: 3, // 2 was not used because of [key, value] cases
       }
     }],
     'array-bracket-newline': ['error', {
