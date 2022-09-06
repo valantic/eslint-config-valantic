@@ -1,5 +1,8 @@
 # Changelog
 
+## 14.1.3
+* (Change) Updates 'array-bracket-newline' to prevent strange line breaks during `--fix` on arrays.
+
 ## 14.1.2
 * (Change) Increases 'minItems' on array-element-newline.ArrayPattern to allow `[key, value]` combinations on same line.
 
