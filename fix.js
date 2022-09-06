@@ -14,10 +14,7 @@ module.exports = {
         minItems: 3, // 2 was not used because of [key, value] cases
       }
     }],
-    'array-bracket-newline': ['error', {
-      multiline: true,
-      minItems: 3, // 2 was not used because of [key, value] cases
-    }],
+    'array-bracket-newline': ['error', 'consistent'],
     'array-bracket-spacing': ['error', 'never'],
   }
 };
