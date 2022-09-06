@@ -1,5 +1,8 @@
 # Changelog
 
+## 14.1.2
+* (Change) Increases 'minItems' on array-element-newline.ArrayPattern to allow `[key, value]` combinations on same line.
+
 ## 14.1.1
 * (Bugfix) Fixes invalid documentation.
 
