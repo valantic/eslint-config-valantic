@@ -1,11 +1,11 @@
 module.exports = {
+  plugins: [
+    'vue',
+  ],
   extends: [
     './index.js',
     './rules/vue.js',
     'plugin:vue/recommended',
-  ],
-  plugins: [
-    'vue',
   ],
   rules: {
     "vue/no-unsupported-features": ["error", {

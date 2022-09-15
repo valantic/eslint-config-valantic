@@ -2,6 +2,9 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 'latest'
   },
+  plugins: [
+    'jsdoc',
+  ],
   extends: [
     'eslint-config-airbnb-base',
     './rules/best-practices.js',
@@ -13,7 +16,8 @@ module.exports = {
     './rules/strict.js',
     './rules/style.js',
     './rules/variables.js',
-  ],
+     'plugin:jsdoc/recommended',
+ ],
   env: {
     browser: true,
     node: true,
