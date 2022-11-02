@@ -1,5 +1,8 @@
 # Changelog
 
+## 14.2
+* (Change) Improves Vue 3 configuration by loosening some rules and removing '@vue/typescript'.
+
 ## 14.1.3
 * (Change) Updates 'array-bracket-newline' to prevent strange line breaks during `--fix` on arrays.
 

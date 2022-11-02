@@ -2,15 +2,13 @@ module.exports = {
   extends: [
     './index.js',
     './rules/vue.js',
+    './typescript.js',
     'plugin:vue/vue3-recommended',
-    '@vue/typescript',
   ],
   plugins: [
     'vue',
   ],
   rules: {
-    "vue/no-unsupported-features": ["error", {
-      version: ">= 3 < 4",
-    }],
+    'import/extensions': ['warn', 'always'],
   }
 };
