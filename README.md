@@ -73,9 +73,12 @@ const vueRules = require('eslint-config-valantic/plugins/vue');
 module.exports = {
   extends: [
     'valantic/vue3',
+    '@vue/typescript',
   ],
 }
 ```
+
+__NOTE: `@vue/typescript` is important. Else, TypeScript will not be able to parse *.vue files.__
 
 ### TypeScript support
 

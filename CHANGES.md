@@ -1,5 +1,8 @@
 # Changelog
 
+## 14.3.1
+* (Change) Fixes Vue 3 configuration to get rid of TS parsing error.
+
 ## 14.3.0
 * (Change) Adds '@typescript-eslint/ban-ts-comment' to make sure `@ts-ignore` always have a reason comment.
 
