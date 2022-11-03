@@ -9,8 +9,6 @@ module.exports = {
     'vue',
   ],
   rules: {
-    "vue/no-unsupported-features": ["error", {
-      version: ">= 3 < 4",
-    }],
+    'import/extensions': ['warn', 'always'],
   }
 };
