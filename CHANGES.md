@@ -1,9 +1,12 @@
 # Changelog
 
+## 14.3.0
+* (Change) Adds '@typescript-eslint/ban-ts-comment' to make sure `@ts-ignore` always have a reson comment.
+
 ## 14.2.1
 * (Bugfix) Changes order of rule imports in vue(3).js to fix an issue, where 'indent' was enabled again by the vue-recommendations. 
 
-## 14.2
+## 14.2.0
 * (Change) Improves Vue 3 configuration by loosening some rules and removing '@vue/typescript'.
 
 ## 14.1.3
