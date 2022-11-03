@@ -1,16 +1,16 @@
 module.exports = {
   plugins: [
     'vue',
+    '@typescript-eslint/eslint-plugin',
   ],
   extends: [
+    'plugin:@typescript-eslint/recommended',
+    'plugin:vue/vue3-recommended',
     './index.js',
     './rules/vue.js',
-    'plugin:vue/vue3-recommended',
-    '@vue/typescript',
+    './rules/typescript.js',
   ],
   rules: {
-    "vue/no-unsupported-features": ["error", {
-      version: ">= 3 < 4",
-    }],
+    'import/extensions': ['warn', 'always'],
   }
 };

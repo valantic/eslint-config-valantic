@@ -3,9 +3,9 @@ module.exports = {
     'vue',
   ],
   extends: [
+    'plugin:vue/recommended',
     './index.js',
     './rules/vue.js',
-    'plugin:vue/recommended',
   ],
   rules: {
     "vue/no-unsupported-features": ["error", {
