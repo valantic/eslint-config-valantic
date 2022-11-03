@@ -1,9 +1,9 @@
 module.exports = {
   extends: [
+    'plugin:vue/vue3-recommended',
     './index.js',
     './rules/vue.js',
-    'plugin:vue/vue3-recommended',
-    '@vue/typescript',
+    './typescript.js',
   ],
   plugins: [
     'vue',
