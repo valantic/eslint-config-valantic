@@ -1,5 +1,11 @@
 # Changelog
 
+## Next
+
+* (Change) Disables 'import/extensions' again, because forcing extensions conflicts with TS.
+* (Change) Disables 'global-require' because we only use it in styleguide context, where it is never used globally.
+* (Change) Disables '@typescript-eslint/no-var-requires' because it is only used in styleguide context, where it almost always is used as variable.
+
 ## 14.3.1
 * (Change) Fixes Vue 3 configuration to get rid of TS parsing error.
 

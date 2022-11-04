@@ -10,6 +10,8 @@ module.exports = {
     'no-shadow': 'off',
     '@typescript-eslint/no-shadow': 'error',
 
+    '@typescript-eslint/no-var-requires': 'off', // We only use require in styleguide context, where it is most likely always used as variable.
+
     // prevent any from being used as type
     '@typescript-eslint/no-explicit-any': ['error', {
       fixToUnknown: false,
@@ -17,7 +19,6 @@ module.exports = {
     }],
 
     // require-jsdoc is deprecated, see https://eslint.org/blog/2018/11/jsdoc-end-of-life
-    'require-jsdoc': ['off'],
-    'valid-jsdoc': ['off'],
+    'valid-jsdoc': 'off',
   },
 };
