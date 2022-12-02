@@ -6,6 +6,12 @@
 * (Change) Disables 'global-require' because we only use it in styleguide context, where it is never used globally.
 * (Change) Disables '@typescript-eslint/no-var-requires' because it is only used in styleguide context, where it almost always is used as variable.
 
+## 15.1.0
+* (Change) Defines 'vue/object-curly-spacing' as a --fix rule.
+
+## 15.0.0
+* (Breaking) Adds 'vue/object-curly-spacing' rule to force object spacing in vue templates.
+
 ## 14.3.1
 * (Change) Fixes Vue 3 configuration to get rid of TS parsing error.
 
