@@ -16,5 +16,6 @@ module.exports = {
     }],
     'array-bracket-newline': ['error', 'consistent'],
     'array-bracket-spacing': ['error', 'never'],
+    'vue/object-curly-spacing': ['error', 'always'],
   }
 };

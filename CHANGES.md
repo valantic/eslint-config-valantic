@@ -1,5 +1,8 @@
 # Changelog
 
+## 15.1.0
+* (Change) Defines 'vue/object-curly-spacing' as a --fix rule.
+
 ## 15.0.0
 * (Breaking) Adds 'vue/object-curly-spacing' rule to force object spacing in vue templates.
 
