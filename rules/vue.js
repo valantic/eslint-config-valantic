@@ -180,6 +180,7 @@ module.exports = {
     'vue/no-use-computed-property-like-method': ['error'],
     'vue/no-v-text': ['error'],
     'vue/object-curly-newline': ['error', 'never'],
+    'vue/object-curly-spacing': ['error', 'always'],
     'vue/object-property-newline': ['error', {
       allowAllPropertiesOnSameLine: true
     }],
