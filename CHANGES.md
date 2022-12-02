@@ -1,5 +1,8 @@
 # Changelog
 
+## 15.0.0
+* (Breaking) Adds 'vue/object-curly-spacing' rule to force object spacing in vue templates.
+
 ## 14.3.1
 * (Change) Fixes Vue 3 configuration to get rid of TS parsing error.
 
