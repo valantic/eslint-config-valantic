@@ -1,6 +1,6 @@
 # Changelog
 
-## unreleased
+## 15.2.0
 
 * (Change) Overwrites `no-plusplus` rule to allow `++` statements in `for`-loops
 
