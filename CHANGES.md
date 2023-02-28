@@ -1,5 +1,9 @@
 # Changelog
 
+## unreleased
+
+* (Change) Overwrites `no-plusplus` rule to allow `++` statements in `for`-loops
+
 ## 15.1.0
 * (Change) Defines 'vue/object-curly-spacing' as a --fix rule.
 
