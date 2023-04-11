@@ -1,8 +1,10 @@
 # Changelog
 
-## 15.2.0
+## 16.0.0
+* (Breaking) Adds `@typescript-eslint/naming-convention` rule to prevent type prefixing.
 
-* (Change) Overwrites `no-plusplus` rule to allow `++` statements in `for`-loops
+## 15.2.0
+* (Change) Overwrites `no-plusplus` rule to allow `++` statements in `for`-loops.
 
 ## 15.1.0
 * (Change) Defines 'vue/object-curly-spacing' as a --fix rule.

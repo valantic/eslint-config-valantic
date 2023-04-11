@@ -6,6 +6,20 @@ module.exports = {
       },
     ],
 
+    '@typescript-eslint/naming-convention': [
+      'error',
+      {
+        selector: ['typeLike'],
+        format: ['StrictPascalCase'],
+        leadingUnderscore: 'forbid',
+        trailingUnderscore: 'forbid',
+        custom: {
+          regex: '^[IET][A-Z]', // Don't allow `I` prefixing for interfaces.
+          match: false
+        }
+      }
+    ],
+
     // see https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-shadow.md
     'no-shadow': 'off',
     '@typescript-eslint/no-shadow': 'error',
