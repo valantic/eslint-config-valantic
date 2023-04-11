@@ -2,6 +2,10 @@
 
 ## 16.0.0
 * (Breaking) Adds `@typescript-eslint/naming-convention` rule to prevent type prefixing.
+* (Breaking) NPM updates
+  * .eslintignore files are no longer supported. Use `ignores` in the .eslintrc.js. @see https://eslint.org/docs/latest/use/configure/configuration-files-new#globally-ignoring-files-with-ignores
+* (Breaking) `vue/require-prop-comment` now enforces prop comments.
+* (Breaking) `vue/multiline-ternary` disallows the use of line breaks in template ternaries.
 
 ## 15.2.0
 * (Change) Overwrites `no-plusplus` rule to allow `++` statements in `for`-loops.
