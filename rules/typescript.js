@@ -5,6 +5,7 @@ module.exports = {
         'ts-ignore': 'allow-with-description'
       },
     ],
+    '@typescript-eslint/method-signature-style': ['error', 'method'],
 
     '@typescript-eslint/naming-convention': [
       'error',
@@ -23,6 +24,8 @@ module.exports = {
     // see https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-shadow.md
     'no-shadow': 'off',
     '@typescript-eslint/no-shadow': 'error',
+
+    'no-undefined': 'off', // 'undefined' is required in TS context.
 
     // prevent any from being used as type
     '@typescript-eslint/no-explicit-any': ['error', {
