@@ -98,6 +98,14 @@ module.exports = {
       ignorePattern: "[\"'`][,;]?$", // Allows to use long strings. 'ignoreStrings' did not work, because it was also true if only part of line used strings.
     }],
 
+    // This rule enforces a maximum number of lines per file.
+    // https://eslint.org/docs/latest/rules/max-lines#rule-details
+    'max-lines': ['error', {
+      max: 1000,
+      skipBlankLines: true,
+      skipComments: true,
+    }],
+
     // enforce a maximum number of parameters in function definitions.
     // - Force max number of function params.
     'max-params': ['error', 3],
@@ -224,7 +232,11 @@ module.exports = {
     }],
 
     // Enforce consistent spacing before function definition opening parenthesis.
-    'space-before-function-paren': ['error', 'never'],
+    'space-before-function-paren': ['error', {
+      anonymous: 'never',
+      named: 'never',
+      asyncArrow: 'always',
+    }],
 
     // Require or disallow spaces before/after unary operators.
     // - Force cleaner code style

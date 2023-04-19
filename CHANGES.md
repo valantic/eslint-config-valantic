@@ -1,5 +1,11 @@
 # Changelog
 
+## 16.0.1
+* (Breaking) `@typescript-eslint/method-signature-style` enforces the method style in interfaces.
+* (Breaking) Enforces `max-lines` by default.
+* (Change) Disables `no-undefined` for TypeScript configuration.
+* (Change) Updates config for `space-before-function-paren`.
+
 ## 16.0.0
 * (Breaking) Adds `@typescript-eslint/naming-convention` rule to prevent type prefixing.
 * (Breaking) NPM updates
