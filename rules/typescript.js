@@ -9,14 +9,22 @@ module.exports = {
 
     '@typescript-eslint/naming-convention': [
       'error',
-      {
+      { // Enforces PascalCase and disallows prefixes.
         selector: ['typeLike'],
         format: ['StrictPascalCase'],
         leadingUnderscore: 'forbid',
         trailingUnderscore: 'forbid',
         custom: {
-          regex: '^[IET][A-Z]', // Don't allow `I` prefixing for interfaces.
+          regex: '^[IET][A-Z]',
           match: false
+        }
+      },
+      { // Enforces singular for enum names.
+        selector: ['enum'],
+        format: ['StrictPascalCase'],
+        custom: {
+          regex: 's$',
+          match: false,
         }
       }
     ],
