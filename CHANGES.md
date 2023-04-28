@@ -2,6 +2,7 @@
 
 ## Next
 * (Change) Adds 'v$' as an 'id-length' exception.
+* (Change) Enables enforcement of singular case for enum names.
 
 ## 16.0.1
 * (Breaking) `@typescript-eslint/method-signature-style` enforces the method style in interfaces.
