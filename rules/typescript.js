@@ -26,6 +26,10 @@ module.exports = {
           regex: 's$',
           match: false,
         }
+      },
+      { // Enforces singular for enum names.
+        selector: ['enumMember'],
+        format: ['StrictPascalCase'],
       }
     ],
 
