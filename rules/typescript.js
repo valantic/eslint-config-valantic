@@ -5,7 +5,7 @@ module.exports = {
         'ts-ignore': 'allow-with-description'
       },
     ],
-    '@typescript-eslint/member-delimiter-style': 'error',
+    '@typescript-eslint/member-delimiter-style': 'warning', // fixable
     '@typescript-eslint/method-signature-style': ['error', 'method'],
 
     '@typescript-eslint/naming-convention': [
