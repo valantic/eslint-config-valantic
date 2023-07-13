@@ -53,6 +53,7 @@ module.exports = {
         'el', // Vue
         'on', // Vue
         'vm', // Vue
+        'v$', // Vuelidate
         'xs', // Bootstrap
         'sm', // Bootstrap
         'md', // Bootstrap
@@ -96,6 +97,14 @@ module.exports = {
       ignoreComments: true,
       ignoreUrls: true,
       ignorePattern: "[\"'`][,;]?$", // Allows to use long strings. 'ignoreStrings' did not work, because it was also true if only part of line used strings.
+    }],
+
+    // This rule enforces a maximum number of lines per file.
+    // https://eslint.org/docs/latest/rules/max-lines#rule-details
+    'max-lines': ['error', {
+      max: 1000,
+      skipBlankLines: true,
+      skipComments: true,
     }],
 
     // enforce a maximum number of parameters in function definitions.
@@ -224,7 +233,11 @@ module.exports = {
     }],
 
     // Enforce consistent spacing before function definition opening parenthesis.
-    'space-before-function-paren': ['error', 'never'],
+    'space-before-function-paren': ['error', {
+      anonymous: 'never',
+      named: 'never',
+      asyncArrow: 'always',
+    }],
 
     // Require or disallow spaces before/after unary operators.
     // - Force cleaner code style
@@ -232,6 +245,13 @@ module.exports = {
 
     // Require regex literals to be wrapped in parentheses.
     // - Force cleaner code style
-    'wrap-regex': 2
+    'wrap-regex': 2,
+
+    // overwrites rule from eslint-config-airbnb-base
+    'no-plusplus': [
+      'error', {
+        allowForLoopAfterthoughts: true,
+      }
+    ]
   }
 };

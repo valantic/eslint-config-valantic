@@ -1,10 +1,28 @@
 # Changelog
 
 ## Next
-
+* (Change) Adds 'v$' as an 'id-length' exception.
+* (Change) Requests specific member delimiter with `@typescript-eslint/member-delimiter-style`.
+* (Breaking) Enables enforcement of singular case for enum names with `@typescript-eslint/naming-convention`.
 * (Change) Disables 'import/extensions' again, because forcing extensions conflicts with TS.
 * (Change) Disables 'global-require' because we only use it in styleguide context, where it is never used globally.
 * (Change) Disables '@typescript-eslint/no-var-requires' because it is only used in styleguide context, where it almost always is used as variable.
+
+## 16.0.1
+* (Breaking) `@typescript-eslint/method-signature-style` enforces the method style in interfaces.
+* (Breaking) Enforces `max-lines` by default.
+* (Change) Disables `no-undefined` for TypeScript configuration.
+* (Change) Updates config for `space-before-function-paren`.
+
+## 16.0.0
+* (Breaking) Adds `@typescript-eslint/naming-convention` rule to prevent type prefixing.
+* (Breaking) NPM updates
+  * .eslintignore files are no longer supported. Use `ignores` in the .eslintrc.js. @see https://eslint.org/docs/latest/use/configure/configuration-files-new#globally-ignoring-files-with-ignores
+* (Breaking) `vue/require-prop-comment` now enforces prop comments.
+* (Breaking) `vue/multiline-ternary` disallows the use of line breaks in template ternaries.
+
+## 15.2.0
+* (Change) Overwrites `no-plusplus` rule to allow `++` statements in `for`-loops.
 
 ## 15.1.0
 * (Change) Defines 'vue/object-curly-spacing' as a --fix rule.
