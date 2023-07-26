@@ -109,9 +109,10 @@ module.exports = {
 
 There is a special config if you want to use auto code styling and the `--fix` command. It is recommended to use this extended definition if you plan to use `--fix`.
 
-1. Add a new `.eslintrc.fix.js` to your project that extends the "fix" configuration. It would also be possible to define or adjust additonal rules here.
+1. Add a new `.eslintrc.fix.js` to your project that extends the "fix" configuration. It would also be possible to define or adjust additional rules here.
 
 ```js
+// .eslint.fix.js
 // https://eslint.org/docs/user-guide/configuring
 module.exports = {
   extends: [
@@ -120,7 +121,19 @@ module.exports = {
 };
 ```
 
-2. Add a new NPM script in `package.json`.
+2. To hide the fixable issues in the IDE, add the `valantic/exclude-fixable` rules to your `.eslintrc.js`.
+
+```js
+// .eslintrc.js
+// https://eslint.org/docs/user-guide/configuring
+module.exports = {
+  extends: [
+    // ...,
+    'valantic/exclude-fixable',
+  ],
+};
+
+3. Add a new NPM script in `package.json`.
 
 **NOTE: The file loaded by `--config` in the `eslint:fix` script will EXTEND the basic configuration, NOT replace it!
 

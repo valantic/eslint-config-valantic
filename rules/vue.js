@@ -1,22 +1,6 @@
 module.exports = {
   rules: {
-    'indent': ['off'], // Indent is not working with html script tag. Use 'vue/script-indent' instead
-
-    // The following lines overwrites default linters, which don't work good in combination with Vue.
-    'require-jsdoc': ['error', {
-      require: {
-        FunctionDeclaration: true,
-        MethodDefinition: true,
-        ClassDeclaration: true,
-        ArrowFunctionExpression: true,
-        FunctionExpression: false, // Allows to use lifecycles, get/set and so on without JSDoc.
-      },
-    }],
-
-    'import/extensions': ['off'],
-
-    'max-len': ['off'], // max-len is tricky in Vue files.
-
+    'vue/array-bracket-newline': ['error', 'never'],
     'vue/attributes-order': ['error', {
       order: [
         'CONDITIONALS',
@@ -53,24 +37,20 @@ module.exports = {
     'vue/custom-event-name-casing': ['error', 'camelCase', {
       ignores: ['/[ecl]{1}-.*?.[a-zA-Z]*$/'], // Allows Bus events of type <componentName>.<event>
     }],
-    'vue/array-bracket-newline': ['error', 'never'],
     'vue/define-macros-order': ['error'],
     'vue/dot-notation': ['error'],
     'vue/eqeqeq': ['error'],
-    'vue/first-attribute-linebreak': ['warn', {
-      'multiline': 'ignore',
-    }],
     'vue/func-call-spacing': ['error', 'never'],
     'vue/html-button-has-type': ['error', {
       button: true,
       submit: true,
       reset: true,
     }],
-    'vue/html-comment-content-newline': ['error',
+    'vue/html-comment-content-newline': ["error",
       {
         singleline: 'never',
-        multiline: 'never',
-      },
+        multiline: 'always',
+      }
     ],
     'vue/html-comment-content-spacing': ['error', 'always'],
     'vue/html-self-closing': ['error', {
@@ -85,17 +65,13 @@ module.exports = {
     'vue/match-component-file-name': ['error', {
       extensions: ['vue'],
     }],
-    'vue/max-attributes-per-line': ['error', {
-      singleline: 3,
-      multiline: 1,
-    }],
     'vue/max-len': ['error', {
       code: 130,
       ignoreComments: true,
       ignoreUrls: true,
       ignoreHTMLTextContents: true,
     }],
-    'vue/multiline-html-element-content-newline': ['warn', {
+    'vue/multiline-html-element-content-newline': ['error', {
       ignoreWhenEmpty: true,
       allowEmptyLines: true,
       ignores: [ // Linebreaks can cause additional white space inline-elements, so they should be excluded
@@ -139,26 +115,23 @@ module.exports = {
         '|',
       ],
     }],
-    'vue/no-child-content': ['error'],
     'vue/no-duplicate-attr-inheritance': ['error'],
     'vue/no-empty-component-block': ['error'],
-    'vue/no-expose-after-await': ['error'],
     'vue/no-extra-parens': ['error', 'all', {
       returnAssign: false, // Allows parenthesis in fat arrow returns
       nestedBinaryExpressions: false,
       enforceForArrowConditionals: false, // Allows parenthesis for condition ins fat arrow returns
     }],
+    'vue/no-irregular-whitespace': ['error'],
     'vue/no-multiple-objects-in-class': ['error'],
     'vue/no-potential-component-option-typo': ['error', {
       presets: ['all'],
       threshold: 1,
     }],
-    'vue/no-reserved-component-names': ['error'],
-    'vue/no-restricted-html-elements': ['error', {
-      element: 'script',
-      message: 'Script is not supported inside of the template',
+    "vue/no-restricted-html-elements": ['error', {
+      element: "script",
+      message: "Script is not supported inside of the template"
     }],
-    'vue/no-required-prop-with-default': ['error'],
     'vue/no-sparse-arrays': ['error'],
     'vue/no-template-target-blank': ['error'],
     'vue/no-this-in-before-route-enter': ['error'],
@@ -178,9 +151,9 @@ module.exports = {
     'vue/no-unsupported-features': ['error', {
       version: '^2.6.0',
     }],
-    'vue/no-use-computed-property-like-method': ['error'],
     'vue/no-v-text': ['error'],
     'vue/object-curly-newline': ['error', 'never'],
+    'vue/object-curly-spacing': ['error', 'always'],
     'vue/object-property-newline': ['error', {
       allowAllPropertiesOnSameLine: true,
     }],
@@ -188,7 +161,7 @@ module.exports = {
     'vue/padding-line-between-blocks': ['error', 'always'],
     'vue/prefer-separate-static-class': ['error'],
     'vue/prefer-template': ['error'],
-    'vue/prefer-true-attribute-shorthand': ['error', 'always'],
+    'vue/prefer-true-attribute-shorthand': ["error", "always"],
     'vue/require-direct-export': ['error'],
     'vue/require-emit-validator': ['error'],
     'vue/require-name-property': ['error'],
@@ -200,6 +173,8 @@ module.exports = {
     'vue/space-in-parens': ['error', 'never'],
     'vue/template-curly-spacing': ['error', 'never'],
     'vue/v-for-delimiter-style': ['error', 'in'],
-    'vue/v-on-function-call': ['error'],
-  },
-};
+    'vue/v-on-handler-style': ['error',
+      ['method', 'inline']
+    ],
+  }
+}

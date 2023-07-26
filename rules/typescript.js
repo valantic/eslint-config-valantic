@@ -24,7 +24,7 @@ module.exports = {
         selector: ['enum'],
         format: ['StrictPascalCase'],
         custom: {
-          regex: 's$',
+          regex: '(?<![u])s$',
           match: false,
         }
       },
@@ -36,6 +36,9 @@ module.exports = {
 
     // see https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-shadow.md
     'no-shadow': 'off',
+
+    '@typescript-eslint/member-delimiter-style': 'error',
+
     '@typescript-eslint/no-shadow': 'error',
 
     '@typescript-eslint/no-var-requires': 'off', // We only use require in styleguide context, where it is most likely always used as variable.

@@ -1,12 +1,8 @@
+const fix = require('./utils/fix-rules');
+
 module.exports = {
   rules: {
-    "comma-dangle": ["error", {
-      "arrays": "always-multiline",
-      "objects": "always-multiline",
-      "imports": "always-multiline",
-      "exports": "always-multiline",
-      "functions": "never"
-    }],
+    ...fix.rules,
     'array-element-newline': ['error', {
       ArrayExpression: 'consistent',
       ArrayPattern: { // Destructuring
@@ -16,6 +12,13 @@ module.exports = {
     }],
     'array-bracket-newline': ['error', 'consistent'],
     'array-bracket-spacing': ['error', 'never'],
-    'vue/object-curly-spacing': ['error', 'always'],
+
+    // enforces empty lines around comments.
+    // - Force cleaner comment style.
+    'lines-around-comment': ['error', {
+      beforeBlockComment: true,
+      allowBlockStart: true,
+      allowObjectStart: true
+    }],
   }
 };

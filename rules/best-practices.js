@@ -27,8 +27,15 @@ module.exports = {
     // Disallow reassignment of function parameters
     // Disallow parameter object manipulation
     // Rule: http://eslint.org/docs/rules/no-param-reassign.html
-    // - Allowed to support default fallback: var foo = foo || 'baa';
-    'no-param-reassign': ['off'],
+    'no-param-reassign': ['error', {
+      props: true,
+      ignorePropertyModificationsFor: [
+        'accumulator', // For reduce accumulators
+        'state', // For Vuex state
+        'Vue', // For Vue plugins
+        'el', // For Vue directives
+      ]
+    }],
 
     // Disallow unmodified conditions of loops
     // http://eslint.org/docs/rules/no-unmodified-loop-condition

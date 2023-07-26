@@ -1,9 +1,5 @@
 module.exports = {
   rules: {
-    // Require or disallow trailing commas
-    // https://eslint.org/docs/rules/comma-dangle
-    'comma-dangle': ['off'],
-
     // Disallow use of constant expressions in conditions
     'no-constant-condition': ['error'],
 

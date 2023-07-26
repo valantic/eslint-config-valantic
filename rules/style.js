@@ -25,9 +25,6 @@ module.exports = {
     // Enforces consistent naming when capturing the current execution context.
     'consistent-this': ['error', '_that'],
 
-    // Require or disallow named function expressions.
-    'func-names': ['off'],
-
     // This option enforces minimum and maximum identifier lengths.
     // (variable names, property names etc.)
     'id-length': ['warn', {
@@ -66,22 +63,6 @@ module.exports = {
       ]
     }],
 
-    // Enforce the location of arrow function bodies with implicit returns.
-    // https://eslint.org/docs/rules/implicit-arrow-linebreak
-    'implicit-arrow-linebreak': ['error', 'beside'],
-
-    // Enforce consistent spacing between keys and values in object literal properties.
-    // http://eslint.org/docs/rules/key-spacing
-    // - Allow value alignment for multiline.
-    'key-spacing': ['error', {
-      singleLine: {
-        mode: 'strict'
-      },
-      multiLine: {
-        mode: 'minimum'
-      }
-    }],
-
     // enforces empty lines around comments.
     // - Force cleaner comment style.
     'lines-around-comment': ['error', {
@@ -96,7 +77,7 @@ module.exports = {
     'max-len': ['warn', 130, 2, {
       ignoreComments: true,
       ignoreUrls: true,
-      ignorePattern: "[\"'`][,;]?$", // Allows to use long strings. 'ignoreStrings' did not work, because it was also true if only part of line used strings.
+      ignorePattern: "[\''`][,;]?$", // Allows to use long strings. 'ignoreStrings' did not work, because it was also true if only part of line used strings.
     }],
 
     // This rule enforces a maximum number of lines per file.
@@ -123,14 +104,6 @@ module.exports = {
     // Disallow mixes of different operators
     // - Force cleaner code style
     'no-mixed-operators': ['error'],
-
-    // Disallow multiple empty lines and only one newline at the end.
-    'no-multiple-empty-lines': ['error', { max: 1, maxEOF: 1 }],
-
-    // Disallow negated conditions.
-    // http://eslint.org/docs/rules/no-negated-condition
-    // - Encourage cleaner code style.
-    'no-negated-condition': ['off'],
 
     // Disallow trailing whitespace at the end of lines.
     // - Weaken for better IDE support.
@@ -222,15 +195,7 @@ module.exports = {
     // Do not require jsDoc.
     // http://eslint.org/docs/rules/require-jsdoc
     // - Force code documentation
-    'require-jsdoc': ['error', {
-      require: {
-        FunctionDeclaration: true,
-        MethodDefinition: true,
-        ClassDeclaration: true,
-        ArrowFunctionExpression: true,
-        FunctionExpression: true
-      }
-    }],
+    'require-jsdoc': ['off'], // Handled by jsdoc plugin.
 
     // Enforce consistent spacing before function definition opening parenthesis.
     'space-before-function-paren': ['error', {

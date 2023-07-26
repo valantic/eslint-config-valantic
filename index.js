@@ -16,7 +16,6 @@ module.exports = {
     './rules/strict.js',
     './rules/style.js',
     './rules/variables.js',
-     'plugin:jsdoc/recommended',
  ],
   env: {
     browser: true,
@@ -25,4 +24,12 @@ module.exports = {
     mocha: false,
     jasmine: false
   },
+  overrides: [
+    { // Only apply JSDoc checks to JS files.
+      files: ['*.js'],
+      extends: [
+        'plugin:jsdoc/recommended',
+      ]
+    }
+  ]
 };
