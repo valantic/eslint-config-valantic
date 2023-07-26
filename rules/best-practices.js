@@ -27,15 +27,7 @@ module.exports = {
     // Disallow reassignment of function parameters
     // Disallow parameter object manipulation
     // Rule: http://eslint.org/docs/rules/no-param-reassign.html
-    'no-param-reassign': ['error', {
-      props: true,
-      ignorePropertyModificationsFor: [
-        'accumulator', // For reduce accumulators
-        'state', // For Vuex state
-        'Vue', // For Vue plugins
-        'el', // For Vue directives
-      ]
-    }],
+    'no-param-reassign': ['off'], // Was not used as of 2023-07-26 because it did not allow touching data in `forEach` loops.
 
     // Disallow unmodified conditions of loops
     // http://eslint.org/docs/rules/no-unmodified-loop-condition

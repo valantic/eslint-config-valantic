@@ -10,6 +10,11 @@ module.exports = {
     './rules/vue.js',
     './rules/typescript.js',
   ],
-  rules: {
-  }
+  overrides: [{
+    files: ['*.vue'],
+    rules: {
+      'indent': ['off'], // Use 'vue/script-indent' instead.
+      'max-len': ['off'], // Use 'vue/max-len' instead.
+    },
+  }],
 };

@@ -115,6 +115,7 @@ module.exports = {
         '|',
       ],
     }],
+    'vue/no-console': ['error'],
     'vue/no-duplicate-attr-inheritance': ['error'],
     'vue/no-empty-component-block': ['error'],
     'vue/no-extra-parens': ['error', 'all', {
@@ -132,6 +133,7 @@ module.exports = {
       element: "script",
       message: "Script is not supported inside of the template"
     }],
+    'vue/no-root-v-if': ['error'],
     'vue/no-sparse-arrays': ['error'],
     'vue/no-template-target-blank': ['error'],
     'vue/no-this-in-before-route-enter': ['error'],
@@ -173,8 +175,7 @@ module.exports = {
     'vue/space-in-parens': ['error', 'never'],
     'vue/template-curly-spacing': ['error', 'never'],
     'vue/v-for-delimiter-style': ['error', 'in'],
-    'vue/v-on-handler-style': ['error',
-      ['method', 'inline']
-    ],
+    // 'vue/v-on-handler-style' - As of 2023-07-26 we are not been able to use this rule because of https://github.com/vuejs/eslint-plugin-vue/issues/2049#issuecomment-1606389123
+    // The rule does not allow to use the same method with multiple values (e.g. `getApiResponseMessage('success')`, `getApiResponseMessage('info')`)
   }
 }

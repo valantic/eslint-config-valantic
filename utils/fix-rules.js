@@ -24,7 +24,6 @@ const baseRules = {
 }
 
 const vueRules = {
-  // TODO: export fixable rules from 'rules/vue.js'.
   'vue/array-bracket-newline': vue,
   'vue/attributes-order': vue,
   'vue/block-tag-newline': vue,
@@ -57,7 +56,6 @@ const vueRules = {
   'vue/space-in-parens': vue,
   'vue/template-curly-spacing': vue,
   'vue/v-for-delimiter-style': vue,
-  'vue/v-on-handler-style': vue,
 }
 
 /**
