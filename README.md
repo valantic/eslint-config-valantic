@@ -39,6 +39,30 @@ module.exports ={
 };
 ```
 
+## TypeScript support
+
+<details>
+<summary>Show details</summary>
+
+If your project uses TypeScript, some additional dependencies need to be installed:
+
+```shell
+npm i @typescript-eslint/eslint-plugin@4 @typescript-eslint/parser@4 --D
+```
+
+and set the correct config that should be extended.
+
+```js
+// .eslintrc.js
+module.exports = {
+  extends: [
+    'valantic/typescript'
+  ],
+}
+
+```
+</details>
+
 ## Vue support
 
 <details>
@@ -87,31 +111,6 @@ module.exports = {
 __NOTE: `@vue/typescript` is important. Else, TypeScript will not be able to parse *.vue files.__
 
 </details>
-
-## TypeScript support
-
-<details>
-<summary>Show details</summary>
-
-If your project uses TypeScript, some additional dependencies need to be installed:
-
-```shell
-npm i @typescript-eslint/eslint-plugin@4 @typescript-eslint/parser@4 --D
-```
-
-and set the correct config that should be extended.
-
-```js
-// .eslintrc.js
-module.exports = {
-  extends: [
-    'valantic/typescript'
-  ],
-}
-
-```
-</details>
-
 
 ## Using `--fix`
 
