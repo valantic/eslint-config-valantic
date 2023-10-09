@@ -140,6 +140,8 @@ module.exports = {
       ],
     }],
     'vue/no-child-content': ['error'],
+    'vue/no-console': ['error'],
+    'vue/no-deprecated-model-definition': ['error'],
     'vue/no-duplicate-attr-inheritance': ['error'],
     'vue/no-empty-component-block': ['error'],
     'vue/no-expose-after-await': ['error'],
@@ -159,6 +161,7 @@ module.exports = {
       message: 'Script is not supported inside of the template',
     }],
     'vue/no-required-prop-with-default': ['error'],
+    'vue/no-root-v-if': ['error'],
     'vue/no-sparse-arrays': ['error'],
     'vue/no-template-target-blank': ['error'],
     'vue/no-this-in-before-route-enter': ['error'],
@@ -180,6 +183,7 @@ module.exports = {
     }],
     'vue/no-use-computed-property-like-method': ['error'],
     'vue/no-v-text': ['error'],
+    'vue/no-use-v-else-with-v-for': ['error'],
     'vue/object-curly-newline': ['error', 'never'],
     'vue/object-property-newline': ['error', {
       allowAllPropertiesOnSameLine: true,
@@ -193,6 +197,7 @@ module.exports = {
     'vue/require-emit-validator': ['error'],
     'vue/require-name-property': ['error'],
     'vue/require-prop-comment': ['error'],
+    'vue/require-typed-object-prop': ['error'],
     'vue/script-indent': ['error', 2, {
       baseIndent: 1,
       switchCase: 1,
