@@ -4,7 +4,7 @@ module.exports = {
     'plugin:vue/vue3-recommended',
     './index.js',
     './rules/vue.js',
-    './rules/typescript.js',
+    // './rules/typescript.js',
   ],
   plugins: [
     'vue',
