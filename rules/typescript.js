@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   rules: {
     '@typescript-eslint/ban-ts-comment': ['error',
       {

@@ -1,24 +1,26 @@
-module.exports = {
-  parserOptions: {
-    ecmaVersion: 'latest'
+import bestPractices from './rules/best-practices.js';
+import errors from './rules/errors.js';
+import es6 from './rules/es6.js';
+import importRules from './rules/import.js';
+import style from './rules/style.js';
+import variables from './rules/variables.js';
+import globals from 'globals';
+
+export default {
+  languageOptions: {
+    ecmaVersion: 'latest',
+    globals: {
+      ...globals.browser,
+      ...globals.node,
+      ...globals.amd,
+      ...globals.mocha,
+      ...globals.jasmine,
+    },
   },
-  extends: [
-    'eslint-config-airbnb-base',
-    './rules/best-practices.js',
-    './rules/errors.js',
-    './rules/es6.js',
-    './rules/import.js',
-    './rules/legacy.js',
-    './rules/node.js',
-    './rules/strict.js',
-    './rules/style.js',
-    './rules/variables.js',
-  ],
-  env: {
-    browser: true,
-    node: true,
-    amd: false,
-    mocha: false,
-    jasmine: false
-  },
+  ...bestPractices,
+  ...errors,
+  ...es6,
+  ...importRules,
+  ...style,
+  ...variables,
 };

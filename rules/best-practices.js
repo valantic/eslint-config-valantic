@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   rules: {
     // Enforce return statements in callbacks of array methods
     // - Allowed to use .map() instead forEach without a return value
