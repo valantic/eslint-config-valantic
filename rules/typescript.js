@@ -5,19 +5,32 @@ module.exports = {
         'ts-ignore': 'allow-with-description'
       },
     ],
+    '@typescript-eslint/member-delimiter-style': 'warn', // fixable
     '@typescript-eslint/method-signature-style': ['error', 'method'],
 
     '@typescript-eslint/naming-convention': [
       'error',
-      {
+      { // Enforces PascalCase and disallows prefixes.
         selector: ['typeLike'],
         format: ['StrictPascalCase'],
         leadingUnderscore: 'forbid',
         trailingUnderscore: 'forbid',
         custom: {
-          regex: '^[IET][A-Z]', // Don't allow `I` prefixing for interfaces.
+          regex: '^[IET][A-Z]',
           match: false
         }
+      },
+      { // Enforces singular for enum names.
+        selector: ['enum'],
+        format: ['StrictPascalCase'],
+        custom: {
+          regex: 's$',
+          match: false,
+        }
+      },
+      { // Enforces singular for enum names.
+        selector: ['enumMember'],
+        format: ['StrictPascalCase'],
       }
     ],
 
