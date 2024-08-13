@@ -1,5 +1,10 @@
 # Changelog
 
+## 16.0.2
+* (Change) Adds 'v$' as an 'id-length' exception.
+* (Change) Requests specific member delimiter with `@typescript-eslint/member-delimiter-style`.
+* (Breaking) Enables enforcement of singular case for enum names with `@typescript-eslint/naming-convention`.
+
 ## 16.0.1
 * (Breaking) `@typescript-eslint/method-signature-style` enforces the method style in interfaces.
 * (Breaking) Enforces `max-lines` by default.

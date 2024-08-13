@@ -53,6 +53,7 @@ module.exports = {
         'el', // Vue
         'on', // Vue
         'vm', // Vue
+        'v$', // Vuelidate
         'xs', // Bootstrap
         'sm', // Bootstrap
         'md', // Bootstrap
