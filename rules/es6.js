@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   rules: {
     'arrow-parens': ['error', 'as-needed', {
       requireForBlockBody: true
