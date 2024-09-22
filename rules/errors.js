@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   rules: {
     // Require or disallow trailing commas
     // https://eslint.org/docs/rules/comma-dangle
