@@ -13,7 +13,7 @@ var capitalizedCommentsIgnore = [
   'ember'
 ].join('|');
 
-module.exports = {
+export default {
   rules: {
     // Enforce or disallow capitalization of the first letter of a comment.
     // https://eslint.org/docs/rules/capitalized-comments

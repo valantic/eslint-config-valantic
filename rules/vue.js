@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   rules: {
     'indent': ['off'], // Indent is not working with html script tag. Use 'vue/script-indent' instead
 
