@@ -205,6 +205,6 @@ export default {
     'vue/space-in-parens': ['error', 'never'],
     'vue/template-curly-spacing': ['error', 'never'],
     'vue/v-for-delimiter-style': ['error', 'in'],
-    'vue/v-on-function-call': ['error'],
+    'vue/v-on-handler-style': ['error'],
   },
 };

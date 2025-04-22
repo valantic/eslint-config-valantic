@@ -1,7 +1,7 @@
 /**
  * This config should be used on top of any of the other configs, to disable Prettier handle rules.
  */
-module.exports = {
+export default {
   rules: {
     'arrow-body-style': 'off',
     'arrow-parens': 'off',

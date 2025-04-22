@@ -219,19 +219,6 @@ export default {
     // - Force cleaner code style
     'quote-props': ['error', 'consistent-as-needed'],
 
-    // Do not require jsDoc.
-    // http://eslint.org/docs/rules/require-jsdoc
-    // - Force code documentation
-    'require-jsdoc': ['error', {
-      require: {
-        FunctionDeclaration: true,
-        MethodDefinition: true,
-        ClassDeclaration: true,
-        ArrowFunctionExpression: true,
-        FunctionExpression: true
-      }
-    }],
-
     // Enforce consistent spacing before function definition opening parenthesis.
     'space-before-function-paren': ['error', {
       anonymous: 'never',
