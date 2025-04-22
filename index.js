@@ -5,24 +5,32 @@ import importRules from './rules/import.js';
 import style from './rules/style.js';
 import variables from './rules/variables.js';
 import globals from 'globals';
-import pluginUnicorn from 'eslint-plugin-unicorn';
+import eslintPluginUnicorn from 'eslint-plugin-unicorn';
+import { defineConfig } from 'eslint/config';
 
-export default {
-  languageOptions: {
-    ecmaVersion: 'latest',
-    globals: {
-      ...globals.browser,
-      ...globals.node,
-      ...globals.amd,
-      ...globals.mocha,
-      ...globals.jasmine,
+export default defineConfig([
+  {
+    languageOptions: {
+      ecmaVersion: 'latest',
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+        ...globals.amd,
+        ...globals.mocha,
+        ...globals.jasmine,
+      },
     },
   },
-  ...pluginUnicorn,
+  eslintPluginUnicorn.configs.recommended,
+  {
+    rules: {
+      'unicorn/better-regex': 'warn',
+    },
+  },
   ...bestPractices,
   ...errors,
   ...es6,
   ...importRules,
   ...style,
   ...variables,
-};
+]);
