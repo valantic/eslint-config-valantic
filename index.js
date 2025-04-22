@@ -5,6 +5,7 @@ import importRules from './rules/import.js';
 import style from './rules/style.js';
 import variables from './rules/variables.js';
 import globals from 'globals';
+import pluginUnicorn from 'eslint-plugin-unicorn';
 
 export default {
   languageOptions: {
@@ -17,6 +18,7 @@ export default {
       ...globals.jasmine,
     },
   },
+  ...pluginUnicorn,
   ...bestPractices,
   ...errors,
   ...es6,
