@@ -4,33 +4,37 @@ import es6 from './rules/es6.js';
 import importRules from './rules/import.js';
 import style from './rules/style.js';
 import variables from './rules/variables.js';
+import vue from './rules/vue.js';
+import typescript from './rules/typescript.js';
 import globals from 'globals';
-import eslintPluginUnicorn from 'eslint-plugin-unicorn';
-import { defineConfig } from 'eslint/config';
+import importPlugin from 'eslint-plugin-import';
+import vuePlugin from 'eslint-plugin-vue';
 
-export default defineConfig([
-  {
-    languageOptions: {
-      ecmaVersion: 'latest',
-      globals: {
-        ...globals.browser,
-        ...globals.node,
-        ...globals.amd,
-        ...globals.mocha,
-        ...globals.jasmine,
-      },
+export default {
+  languageOptions: {
+    ecmaVersion: 'latest',
+    globals: {
+      ...globals.builtin,
+      ...globals.browser,
+      ...globals.node,
+      ...globals.amd,
+      ...globals.mocha,
+      ...globals.jasmine,
     },
   },
-  eslintPluginUnicorn.configs.recommended,
-  {
-    rules: {
-      'unicorn/better-regex': 'warn',
-    },
+  plugins: {
+    import: importPlugin,
+    vue: vuePlugin,
   },
-  ...bestPractices,
-  ...errors,
-  ...es6,
-  ...importRules,
-  ...style,
-  ...variables,
-]);
+  rules: {
+    ...bestPractices.rules,
+    ...errors.rules,
+    ...es6.rules,
+    ...importRules.rules,
+    ...style.rules,
+    ...variables.rules,
+    ...vue.rules,
+    ...typescript.rules,
+
+  },
+};
