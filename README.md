@@ -47,31 +47,14 @@ export default [
 ];
 ```
 
-### Vue 2 support
+### Vue support
 
-If your project is based on Vue 2 you should use the vue config.
+If your project is based on Vue 3 with TypeScript you should use the vue config.
 
 ```js
 // eslint.config.js
 
 import eslintConfigValantic from 'eslint-config-valantic/vue.js';
-
-export default [
-  ...eslintConfigValantic,
-  rules: {
-    // Use for project specific settings
-  },
-];
-```
-
-### Vue 3 support
-
-If your project is based on Vue 3 with TypeScript you should use the vue3 config.
-
-```js
-// eslint.config.js
-
-import eslintConfigValantic from 'eslint-config-valantic/vue3.js';
 
 export default [
   ...eslintConfigValantic,

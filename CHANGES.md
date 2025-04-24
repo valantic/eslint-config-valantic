@@ -1,8 +1,13 @@
 # Changelog
 
+## 18.0.0
+* (Breaking) Updates ESLint to Version 9. The project is now based on flat configs.
+* (Breaking) Removes support for Node.js versions prior to 18. The minimum version is now Node.js 18.
+* (Breaking) Removes support for Vue 2. The minimum version is now Vue 3.
+
 ## 17.0.0
 * (Change) Adds 'v$' as an 'id-length' exception.
-* (Breaking) Enables enforcement of singular case for enum names with `@typescript-eslint/naming-convention`.
+* (Breaking) Enables enforcement of singular case for enum names with @typescript-eslint/naming-convention.
 
 ## 16.0.1
 * (Breaking) `@typescript-eslint/method-signature-style` enforces the method style in interfaces.
