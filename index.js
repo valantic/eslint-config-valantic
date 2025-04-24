@@ -1,4 +1,5 @@
 import globals from 'globals';
+import eslint from '@eslint/js';
 import importPlugin from 'eslint-plugin-import';
 import vuePlugin from 'eslint-plugin-vue';
 import jsdocPlugin from 'eslint-plugin-jsdoc';
@@ -11,6 +12,7 @@ import variablesRules from './rules/variables.js';
 import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 
 export default [
+  eslint.configs.recommended,
   eslintPluginUnicorn.configs.recommended,
   {
     // Override unicorn rules for our template. These can be discussed to be removed.
