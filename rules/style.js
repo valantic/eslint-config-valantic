@@ -260,13 +260,6 @@ export default [
       // Require regex literals to be wrapped in parentheses.
       // - Force cleaner code style
       'wrap-regex': 2,
-
-      // overwrites rule from eslint-config-airbnb-base
-      'no-plusplus': [
-        'error', {
-          allowForLoopAfterthoughts: true,
-        },
-      ],
     },
   },
 ];
