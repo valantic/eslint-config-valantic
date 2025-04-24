@@ -10,7 +10,7 @@ export default [
   {
     languageOptions: {
       ecmaVersion: 'latest',
-      parser: '@typescript-eslint/parser',
+      parser: tseslint.parser,
       globals: {
         ...globals.browser,
         ...globals.node,

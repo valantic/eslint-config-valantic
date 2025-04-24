@@ -8,8 +8,54 @@ import es6Rules from './rules/es6.js';
 import importRules from './rules/import.js';
 import styleRules from './rules/style.js';
 import variablesRules from './rules/variables.js';
+import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 
 export default [
+  eslintPluginUnicorn.configs.recommended,
+  {
+    // Override unicorn rules for our template. These can be discussed to be removed.
+    rules: {
+      'unicorn/no-null': 'off',
+      'unicorn/prefer-global-this': 'off',
+      'unicorn/no-array-for-each': 'off',
+      'unicorn/switch-case-braces': 'off',
+      'unicorn/explicit-length-check': 'off',
+      'unicorn/no-anonymous-default-export': 'off',
+      'unicorn/prefer-query-selector': 'off',
+      'unicorn/prefer-ternary': 'off',
+      'unicorn/no-array-reduce': 'off',
+      'unicorn/numeric-separators-style': 'off',
+      'unicorn/prevent-abbreviations': [
+        'error',
+        {
+          'allowList': {
+            'val': true,
+            'req': true,
+            'formRef': true,
+            'newVal': true,
+            'args': true,
+            'e': true,
+            'i': true,
+            'elem': true,
+            'el': true,
+            'utils': true,
+            'resultObj': true,
+            'prev': true,
+            'prop': true,
+            'props': true,
+            'scriptSrc': true,
+            'PropConfig': true,
+            'arr': true,
+            'hasSrcSet': true,
+            'ref': true,
+            'excludeRefs': true,
+            'isClickOnExcludedRefElement': true,
+            'withProps': true,
+          }
+        }
+      ]
+    },
+  },
   {
     languageOptions: {
       ecmaVersion: 'latest',
