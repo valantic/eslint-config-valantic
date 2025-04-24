@@ -6,9 +6,9 @@ To ensure a high and consistent code quality for JavaScript and TypeScript we us
 
 ## Code style
 
-At valantic the JavaScript and TypeScript code style is based on the Airbnb JavaScript codes style for ES2015+.
+At valantic the JavaScript and TypeScript code style is based on the eslint-plugin-unicorn.
 
-[https://github.com/airbnb/javascript](https://github.com/airbnb/javascript)
+[https://github.com/sindresorhus/eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn)
 
 See package.json for currently used version.
 
@@ -32,17 +32,19 @@ npm install eslint-config-valantic eslint eslint-plugin-import eslint-config-air
 
 ## Setup
 
-After installing the config package, you still need to create a `.eslintrc.js` inside your project, where you tell ESLint to use the valantic config.
+After installing the config package, you still need to create a `eslint.config.js` inside your project, where you tell ESLint to use the valantic config.
 
 ```js
-// .eslintrc.js
+// eslint.config.js
 
-module.exports ={
-  extends: 'valantic',
+import eslintConfigValantic from 'eslint-config-valantic';
+
+export default [
+  ...eslintConfigValantic,
   rules: {
     // Use for project specific settings
-  }
-};
+  },
+];
 ```
 
 ### Vue 2 support
@@ -50,15 +52,16 @@ module.exports ={
 If your project is based on Vue 2 you should use the vue config.
 
 ```js
-// .eslintrc.js
+// eslint.config.js
 
-const vueRules = require('eslint-config-valantic/plugins/vue');
+import eslintConfigValantic from 'eslint-config-valantic/vue.js';
 
-module.exports = {
-  extends: [
-    'valantic/vue',
-  ],
-}
+export default [
+  ...eslintConfigValantic,
+  rules: {
+    // Use for project specific settings
+  },
+];
 ```
 
 ### Vue 3 support
@@ -66,16 +69,16 @@ module.exports = {
 If your project is based on Vue 3 with TypeScript you should use the vue3 config.
 
 ```js
-// .eslintrc.js
+// eslint.config.js
 
-const vueRules = require('eslint-config-valantic/plugins/vue');
+import eslintConfigValantic from 'eslint-config-valantic/vue3.js';
 
-module.exports = {
-  extends: [
-    'valantic/vue3',
-    '@vue/typescript',
-  ],
-}
+export default [
+  ...eslintConfigValantic,
+  rules: {
+    // Use for project specific settings
+  },
+];
 ```
 
 __NOTE: `@vue/typescript` is important. Else, TypeScript will not be able to parse *.vue files.__
@@ -87,8 +90,7 @@ If your project uses TypeScript, you need to use some additional dependencies in
 ```json
 {
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "~4.31.1",
-    "@typescript-eslint/parser": "~4.31.1"
+    "typescript-eslint": "~8.31.0",
   }
 }
 ```
@@ -96,16 +98,22 @@ If your project uses TypeScript, you need to use some additional dependencies in
 and set the correct config that should be extended.
 
 ```js
-// .eslintrc.js
-module.exports = {
-  extends: [
-    'valantic/typescript'
-  ],
-}
+// eslint.config.js
+import eslintConfigValantic from 'eslint-config-valantic/typescript.js';
+
+export default [
+  ...eslintConfigValantic,
+  rules: {
+    // Use for project specific settings
+  },
+];
 
 ```
 
 ### `--fix`
+
+> [!WARNING]
+> This block has not been tested since the update of eslint 9.
 
 There is a special config if you want to use auto code styling and the `--fix` command. It is recommended to use this extended definition if you plan to use `--fix`.
 
@@ -113,11 +121,14 @@ There is a special config if you want to use auto code styling and the `--fix` c
 
 ```js
 // https://eslint.org/docs/user-guide/configuring
-module.exports = {
-  extends: [
-    'valantic/fix',
-  ],
-};
+import eslintConfigValantic from 'eslint-config-valantic/fix.js';
+
+export default [
+  ...eslintConfigValantic,
+  rules: {
+    // Use for project specific settings
+  },
+];
 ```
 
 2. Add a new NPM script in `package.json`.
@@ -126,8 +137,8 @@ module.exports = {
 
 ```json
 {
-  "eslint": "eslint --cache --ext .js,.vue src tests/unit/specs",
-  "eslint:fix": "npm run eslint -- --config .eslintrc.fix.js --cache=false --fix"
+  "lint:eslint": "eslint ./",
+  "fix:eslint": "npm run lint:eslint -- --config .eslintrc.fix.js --cache=false --fix"
 }
 ```
 
@@ -137,14 +148,7 @@ Finally, update the `lint-staged` configuration to apply auto code styling on co
 
 ```json
 {
-  "lint-staged": {
-    "*.{js,vue}": [
-      "eslint --config .eslintrc.fix.js --fix"
-    ],
-    "*.{css,vue,scss}": [
-      "stylelint"
-    ]
-  }
+  "lint-staged": "lint-staged",
 }
 ```
 
