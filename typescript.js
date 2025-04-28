@@ -1,18 +1,20 @@
-module.exports = {
-  parserOptions: {
-    ecmaVersion: 'latest',
-    parser: '@typescript-eslint/parser',
+import globals from 'globals';
+import index from './index.js';
+import typescriptRules from './rules/typescript.js';
+import tseslint from 'typescript-eslint';
+
+export default [
+  ...tseslint.configs.recommended,
+  ...index,
+  ...typescriptRules,
+  {
+    languageOptions: {
+      ecmaVersion: 'latest',
+      parser: tseslint.parser,
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+      }
+    },
   },
-  extends: [
-    './index.js',
-    './rules/typescript.js',
-    'plugin:@typescript-eslint/recommended',
-  ],
-  env: {
-    browser: true,
-    node: true,
-    amd: false,
-    mocha: false,
-    jasmine: false
-  },
-};
+];
