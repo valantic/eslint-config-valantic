@@ -1,7 +1,6 @@
 import globals from 'globals';
 import eslint from '@eslint/js';
 import importPlugin from 'eslint-plugin-import';
-import vuePlugin from 'eslint-plugin-vue';
 import jsdocPlugin from 'eslint-plugin-jsdoc';
 import bestPracticesRules from './rules/best-practices.js';
 import errorRules from './rules/errors.js';
@@ -72,7 +71,6 @@ export default [
     },
     plugins: {
       import: importPlugin,
-      vue: vuePlugin,
       jsdoc: jsdocPlugin,
     },
   },

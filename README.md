@@ -26,8 +26,10 @@ Use npm to install the ESLint config to your project.
 
 ### Install current version
 
+Check this repo for the different configs and install the plugins accordingly. (Vue, TypeScript, etc.)
+
 ```
-npm install eslint-config-valantic eslint eslint-plugin-import eslint-config-airbnb-base --save-dev
+npm install eslint-config-valantic eslint eslint-plugin-import eslint-plugin-jsdoc eslint-plugin-unicorn --save-dev
 ```
 
 ## Setup
