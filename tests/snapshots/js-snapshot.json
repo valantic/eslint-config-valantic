@@ -14,124 +14,106 @@
         "endColumn": 38
       },
       {
-        "ruleId": "unicorn/empty-brace-spaces",
-        "severity": 2,
-        "message": "Do not add spaces between braces.",
-        "line": 12,
-        "column": 40,
-        "nodeType": null,
-        "messageId": "empty-brace-spaces",
-        "endLine": 13,
-        "endColumn": 3,
-        "fix": {
-          "range": [
-            291,
-            294
-          ],
-          "text": ""
-        }
-      },
-      {
         "ruleId": "no-constant-binary-expression",
         "severity": 2,
         "message": "Unexpected constant nullishness on the left-hand side of a `??` expression.",
-        "line": 18,
+        "line": 17,
         "column": 31,
         "nodeType": "BinaryExpression",
         "messageId": "constantShortCircuit",
-        "endLine": 18,
+        "endLine": 17,
         "endColumn": 36
       },
       {
         "ruleId": "no-undef",
         "severity": 2,
         "message": "'a' is not defined.",
-        "line": 18,
+        "line": 17,
         "column": 31,
         "nodeType": "Identifier",
         "messageId": "undef",
-        "endLine": 18,
+        "endLine": 17,
         "endColumn": 32
       },
       {
         "ruleId": "no-undef",
         "severity": 2,
         "message": "'b' is not defined.",
-        "line": 18,
+        "line": 17,
         "column": 35,
         "nodeType": "Identifier",
         "messageId": "undef",
-        "endLine": 18,
+        "endLine": 17,
         "endColumn": 36
       },
       {
         "ruleId": "no-undef",
         "severity": 2,
         "message": "'c' is not defined.",
-        "line": 18,
+        "line": 17,
         "column": 40,
         "nodeType": "Identifier",
         "messageId": "undef",
-        "endLine": 18,
+        "endLine": 17,
         "endColumn": 41
       },
       {
         "ruleId": "no-unsafe-optional-chaining",
         "severity": 2,
         "message": "Unsafe usage of optional chaining. If it short-circuits with 'undefined' the evaluation will throw TypeError.",
-        "line": 23,
+        "line": 22,
         "column": 21,
         "nodeType": "ChainExpression",
         "messageId": "unsafeOptionalChain",
-        "endLine": 23,
+        "endLine": 22,
         "endColumn": 42
       },
       {
         "ruleId": "no-unsafe-optional-chaining",
         "severity": 2,
         "message": "Unsafe arithmetic operation on optional chaining. It can result in NaN.",
-        "line": 28,
+        "line": 27,
         "column": 16,
         "nodeType": "ChainExpression",
         "messageId": "unsafeArithmetic",
-        "endLine": 28,
+        "endLine": 27,
         "endColumn": 37
       },
       {
         "ruleId": "jsdoc/match-description",
         "severity": 2,
         "message": "JSDoc description does not satisfy the regex pattern.",
-        "line": 31,
+        "line": 30,
         "column": 1,
         "nodeType": "Block",
-        "endLine": 31,
+        "endLine": 30,
         "endColumn": 1
       },
       {
         "ruleId": "unicorn/consistent-function-scoping",
         "severity": 2,
         "message": "Move function 'testMaxLen' to the outer scope.",
-        "line": 35,
+        "line": 34,
         "column": 3,
         "nodeType": "FunctionDeclaration",
         "messageId": "consistent-function-scoping",
-        "endLine": 35,
+        "endLine": 34,
         "endColumn": 22
       },
       {
         "ruleId": "unicorn/prevent-abbreviations",
         "severity": 2,
         "message": "The variable `testMaxLen` should be named `testMaxLength`. A more descriptive name will do too.",
-        "line": 35,
+        "line": 34,
         "column": 12,
         "nodeType": "Identifier",
         "messageId": "replace",
-        "endLine": 35,
+        "endLine": 34,
         "endColumn": 22,
         "fix": {
           "range": [
-            856,
-            3781
+            853,
+            3778
           ],
           "text": "testMaxLength() {\n    return 'This is a test for maximum length of a single row. This should give a warning because having more thant 130 characters.';\n  }\n\n  /**\n   * test quotes. This comment does also not meet comment pattern because of small letter at beginning.\n   *\n   * @returns {String}\n   */\n  function testQuotes() {\n    return \"This should give an error because of invalid double quotes\";\n  }\n\n  function testValidJsdoc1() {\n    return 'This function should get a warning because of missing JSDOC';\n  }\n\n  /**\n   * Test valid-jsdoc (invalid return)\n   *\n   * @return {String}\n   */\n  function testValidJsdoc2() {\n    return 'This function should get an error because JSDOC is using \"@return\" instead of \"@returns\".';\n  }\n\n  /**\n   * Test prefer-rest-params\n   *\n   * Use ...args over 'arguments'\n   *\n   * @returns {*}\n   */\n  function testNoUnusedVars() {\n    return arguments[0];\n  }\n\n  /**\n   * Test prefer-rest-params\n   *\n   * Use ...args over 'arguments'\n   *\n   * @returns {null} 'null' is always written small because there is no 'Null' in JS.\n   */\n  function testNull() {\n    return null;\n  }\n\n  /**\n   * This demonstrates a bug in ESLint 4.19.1 in combination with valid-jsdoc.preferType.\n   *\n   * @param {object} mandatory1 - This line gives an error about lowercase 'object'\n   * @param {object|object[]} mandatory2 - This line gives two errors about lowercase 'object'\n   * @param {object} [optional1] - This line gives an error about lowercase 'object'.\n   * @param {object|object[]} [optional2] - This line gives no error about lowercase 'object'.\n   *\n   * @returns {Object}\n   */\n  function optionalParams(mandatory1, mandatory2, optional1, optional2) {\n    return {};\n  }\n\n  /**\n   * There should be a blank line before each if block\n   *\n   * @param   {Boolean}   foo       A property.\n   * @param   {Boolean}   baa       This property should also trigger an error, because it is not mandatory but not last in order.\n   * @param   {String}    aString\n   *\n   * @returns {Boolean|array}\n   */\n  function testPaddingLineBetweenStatements(foo, baa = true, aString) {\n    if (foo) { // This is ok\n      return true;\n    }\n    if (baa) { // This is not ok\n      return false;\n    }\n\n    switch (aString) {\n      case 'case1':\n        return true;\n      case 'case2':\n        return false;\n\n      case 'case3': // This is ok\n        return true;\n\n      case 'case4':\n      // falls through\n\n      case 'case5': // This is ok\n        return true;\n      default:\n        return false;\n    }\n  }\n\n  /**\n   * A caller for all tests to make it look like valid code\n   */\n  function init() {\n    // The following lines should warn about loosing precision of number value.\n    const value1 = 9007199254740993;\n    const value2 = 5123000000000000000000000000001;\n    const value3 = 1230000000000000000000000.0;\n    const value4 = .1230000000000000000000000;\n    const value5 = 0X20000000000001;\n\n    testMaxLength"
         }
@@ -140,80 +122,80 @@
         "ruleId": "unicorn/consistent-function-scoping",
         "severity": 2,
         "message": "Move function 'testQuotes' to the outer scope.",
-        "line": 44,
+        "line": 43,
         "column": 3,
         "nodeType": "FunctionDeclaration",
         "messageId": "consistent-function-scoping",
-        "endLine": 44,
+        "endLine": 43,
         "endColumn": 22
       },
       {
         "ruleId": "unicorn/consistent-function-scoping",
         "severity": 2,
         "message": "Move function 'testValidJsdoc1' to the outer scope.",
-        "line": 48,
+        "line": 47,
         "column": 3,
         "nodeType": "FunctionDeclaration",
         "messageId": "consistent-function-scoping",
-        "endLine": 48,
+        "endLine": 47,
         "endColumn": 27
       },
       {
         "ruleId": "jsdoc/match-description",
         "severity": 2,
         "message": "JSDoc description does not satisfy the regex pattern.",
-        "line": 53,
+        "line": 52,
         "column": 1,
         "nodeType": "Block",
-        "endLine": 53,
+        "endLine": 52,
         "endColumn": 1
       },
       {
         "ruleId": "unicorn/consistent-function-scoping",
         "severity": 2,
         "message": "Move function 'testValidJsdoc2' to the outer scope.",
-        "line": 57,
+        "line": 56,
         "column": 3,
         "nodeType": "FunctionDeclaration",
         "messageId": "consistent-function-scoping",
-        "endLine": 57,
+        "endLine": 56,
         "endColumn": 27
       },
       {
         "ruleId": "jsdoc/match-description",
         "severity": 2,
         "message": "JSDoc description does not satisfy the regex pattern.",
-        "line": 62,
+        "line": 61,
         "column": 1,
         "nodeType": "Block",
-        "endLine": 62,
+        "endLine": 61,
         "endColumn": 1
       },
       {
         "ruleId": "unicorn/consistent-function-scoping",
         "severity": 2,
         "message": "Move function 'testNoUnusedVars' to the outer scope.",
-        "line": 68,
+        "line": 67,
         "column": 3,
         "nodeType": "FunctionDeclaration",
         "messageId": "consistent-function-scoping",
-        "endLine": 68,
+        "endLine": 67,
         "endColumn": 28
       },
       {
         "ruleId": "unicorn/prevent-abbreviations",
         "severity": 2,
         "message": "The variable `testNoUnusedVars` should be named `testNoUnusedVariables`. A more descriptive name will do too.",
-        "line": 68,
+        "line": 67,
         "column": 12,
         "nodeType": "Identifier",
         "messageId": "replace",
-        "endLine": 68,
+        "endLine": 67,
         "endColumn": 28,
         "fix": {
           "range": [
-            1700,
-            3943
+            1697,
+            3940
           ],
           "text": "testNoUnusedVariables() {\n    return arguments[0];\n  }\n\n  /**\n   * Test prefer-rest-params\n   *\n   * Use ...args over 'arguments'\n   *\n   * @returns {null} 'null' is always written small because there is no 'Null' in JS.\n   */\n  function testNull() {\n    return null;\n  }\n\n  /**\n   * This demonstrates a bug in ESLint 4.19.1 in combination with valid-jsdoc.preferType.\n   *\n   * @param {object} mandatory1 - This line gives an error about lowercase 'object'\n   * @param {object|object[]} mandatory2 - This line gives two errors about lowercase 'object'\n   * @param {object} [optional1] - This line gives an error about lowercase 'object'.\n   * @param {object|object[]} [optional2] - This line gives no error about lowercase 'object'.\n   *\n   * @returns {Object}\n   */\n  function optionalParams(mandatory1, mandatory2, optional1, optional2) {\n    return {};\n  }\n\n  /**\n   * There should be a blank line before each if block\n   *\n   * @param   {Boolean}   foo       A property.\n   * @param   {Boolean}   baa       This property should also trigger an error, because it is not mandatory but not last in order.\n   * @param   {String}    aString\n   *\n   * @returns {Boolean|array}\n   */\n  function testPaddingLineBetweenStatements(foo, baa = true, aString) {\n    if (foo) { // This is ok\n      return true;\n    }\n    if (baa) { // This is not ok\n      return false;\n    }\n\n    switch (aString) {\n      case 'case1':\n        return true;\n      case 'case2':\n        return false;\n\n      case 'case3': // This is ok\n        return true;\n\n      case 'case4':\n      // falls through\n\n      case 'case5': // This is ok\n        return true;\n      default:\n        return false;\n    }\n  }\n\n  /**\n   * A caller for all tests to make it look like valid code\n   */\n  function init() {\n    // The following lines should warn about loosing precision of number value.\n    const value1 = 9007199254740993;\n    const value2 = 5123000000000000000000000000001;\n    const value3 = 1230000000000000000000000.0;\n    const value4 = .1230000000000000000000000;\n    const value5 = 0X20000000000001;\n\n    testMaxLen(); // this comment should throw an error because of small cap at beginning.\n    testQuotes();\n\n    testValidJsdoc1();\n    testValidJsdoc2();\n    testNoUnusedVariables"
         }
@@ -222,32 +204,32 @@
         "ruleId": "jsdoc/match-description",
         "severity": 2,
         "message": "JSDoc description does not satisfy the regex pattern.",
-        "line": 73,
+        "line": 72,
         "column": 1,
         "nodeType": "Block",
-        "endLine": 73,
+        "endLine": 72,
         "endColumn": 1
       },
       {
         "ruleId": "unicorn/consistent-function-scoping",
         "severity": 2,
         "message": "Move function 'testNull' to the outer scope.",
-        "line": 79,
+        "line": 78,
         "column": 3,
         "nodeType": "FunctionDeclaration",
         "messageId": "consistent-function-scoping",
-        "endLine": 79,
+        "endLine": 78,
         "endColumn": 20
       },
       {
         "ruleId": "no-unused-vars",
         "severity": 2,
         "message": "'testNull' is defined but never used.",
-        "line": 79,
+        "line": 78,
         "column": 12,
         "nodeType": "Identifier",
         "messageId": "unusedVar",
-        "endLine": 79,
+        "endLine": 78,
         "endColumn": 20,
         "suggestions": [
           {
@@ -257,8 +239,8 @@
             },
             "fix": {
               "range": [
-                1924,
-                1966
+                1921,
+                1963
               ],
               "text": ""
             },
@@ -270,33 +252,33 @@
         "ruleId": "max-params",
         "severity": 2,
         "message": "Function 'optionalParams' has too many parameters (4). Maximum allowed is 3.",
-        "line": 93,
+        "line": 92,
         "column": 3,
         "nodeType": "FunctionDeclaration",
         "messageId": "exceed",
-        "endLine": 93,
+        "endLine": 92,
         "endColumn": 26
       },
       {
         "ruleId": "unicorn/consistent-function-scoping",
         "severity": 2,
         "message": "Move function 'optionalParams' to the outer scope.",
-        "line": 93,
+        "line": 92,
         "column": 3,
         "nodeType": "FunctionDeclaration",
         "messageId": "consistent-function-scoping",
-        "endLine": 93,
+        "endLine": 92,
         "endColumn": 26
       },
       {
         "ruleId": "no-unused-vars",
         "severity": 2,
         "message": "'optionalParams' is defined but never used.",
-        "line": 93,
+        "line": 92,
         "column": 12,
         "nodeType": "Identifier",
         "messageId": "unusedVar",
-        "endLine": 93,
+        "endLine": 92,
         "endColumn": 26,
         "suggestions": [
           {
@@ -306,8 +288,8 @@
             },
             "fix": {
               "range": [
-                2465,
-                2555
+                2462,
+                2552
               ],
               "text": ""
             },
@@ -319,16 +301,16 @@
         "ruleId": "unicorn/prevent-abbreviations",
         "severity": 2,
         "message": "The variable `optionalParams` should be named `optionalParameters`. A more descriptive name will do too.",
-        "line": 93,
+        "line": 92,
         "column": 12,
         "nodeType": "Identifier",
         "messageId": "replace",
-        "endLine": 93,
+        "endLine": 92,
         "endColumn": 26,
         "fix": {
           "range": [
-            2474,
-            2488
+            2471,
+            2485
           ],
           "text": "optionalParameters"
         }
@@ -337,11 +319,11 @@
         "ruleId": "no-unused-vars",
         "severity": 2,
         "message": "'mandatory1' is defined but never used.",
-        "line": 93,
+        "line": 92,
         "column": 27,
         "nodeType": "Identifier",
         "messageId": "unusedVar",
-        "endLine": 93,
+        "endLine": 92,
         "endColumn": 37,
         "suggestions": [
           {
@@ -351,8 +333,8 @@
             },
             "fix": {
               "range": [
-                2489,
-                2500
+                2486,
+                2497
               ],
               "text": ""
             },
@@ -364,11 +346,11 @@
         "ruleId": "no-unused-vars",
         "severity": 2,
         "message": "'mandatory2' is defined but never used.",
-        "line": 93,
+        "line": 92,
         "column": 39,
         "nodeType": "Identifier",
         "messageId": "unusedVar",
-        "endLine": 93,
+        "endLine": 92,
         "endColumn": 49,
         "suggestions": [
           {
@@ -378,8 +360,8 @@
             },
             "fix": {
               "range": [
-                2499,
-                2511
+                2496,
+                2508
               ],
               "text": ""
             },
@@ -391,11 +373,11 @@
         "ruleId": "no-unused-vars",
         "severity": 2,
         "message": "'optional1' is defined but never used.",
-        "line": 93,
+        "line": 92,
         "column": 51,
         "nodeType": "Identifier",
         "messageId": "unusedVar",
-        "endLine": 93,
+        "endLine": 92,
         "endColumn": 60,
         "suggestions": [
           {
@@ -405,8 +387,8 @@
             },
             "fix": {
               "range": [
-                2511,
-                2522
+                2508,
+                2519
               ],
               "text": ""
             },
@@ -418,11 +400,11 @@
         "ruleId": "no-unused-vars",
         "severity": 2,
         "message": "'optional2' is defined but never used.",
-        "line": 93,
+        "line": 92,
         "column": 62,
         "nodeType": "Identifier",
         "messageId": "unusedVar",
-        "endLine": 93,
+        "endLine": 92,
         "endColumn": 71,
         "suggestions": [
           {
@@ -432,8 +414,8 @@
             },
             "fix": {
               "range": [
-                2522,
-                2533
+                2519,
+                2530
               ],
               "text": ""
             },
@@ -445,48 +427,48 @@
         "ruleId": "jsdoc/match-description",
         "severity": 2,
         "message": "JSDoc description does not satisfy the regex pattern.",
-        "line": 98,
+        "line": 97,
         "column": 1,
         "nodeType": "Block",
-        "endLine": 98,
+        "endLine": 97,
         "endColumn": 1
       },
       {
         "ruleId": "unicorn/consistent-function-scoping",
         "severity": 2,
         "message": "Move function 'testPaddingLineBetweenStatements' to the outer scope.",
-        "line": 106,
+        "line": 105,
         "column": 3,
         "nodeType": "FunctionDeclaration",
         "messageId": "consistent-function-scoping",
-        "endLine": 106,
+        "endLine": 105,
         "endColumn": 44
       },
       {
         "ruleId": "default-param-last",
         "severity": 2,
         "message": "Default parameters should be last.",
-        "line": 106,
+        "line": 105,
         "column": 50,
         "nodeType": "AssignmentPattern",
         "messageId": "shouldBeLast",
-        "endLine": 106,
+        "endLine": 105,
         "endColumn": 60
       },
       {
         "ruleId": "padding-line-between-statements",
         "severity": 2,
         "message": "Expected blank line before this statement.",
-        "line": 110,
+        "line": 109,
         "column": 5,
         "nodeType": "IfStatement",
         "messageId": "expectedBlankLine",
-        "endLine": 112,
+        "endLine": 111,
         "endColumn": 6,
         "fix": {
           "range": [
-            3002,
-            3002
+            2999,
+            2999
           ],
           "text": "\n"
         }
@@ -495,16 +477,16 @@
         "ruleId": "padding-line-between-statements",
         "severity": 2,
         "message": "Expected blank line before this statement.",
-        "line": 117,
+        "line": 116,
         "column": 7,
         "nodeType": "SwitchCase",
         "messageId": "expectedBlankLine",
-        "endLine": 118,
+        "endLine": 117,
         "endColumn": 22,
         "fix": {
           "range": [
-            3126,
-            3126
+            3123,
+            3123
           ],
           "text": "\n"
         }
@@ -513,16 +495,16 @@
         "ruleId": "capitalized-comments",
         "severity": 2,
         "message": "Comments should not begin with a lowercase character.",
-        "line": 124,
+        "line": 123,
         "column": 7,
         "nodeType": null,
         "messageId": "unexpectedLowercaseComment",
-        "endLine": 124,
+        "endLine": 123,
         "endColumn": 23,
         "fix": {
           "range": [
-            3255,
-            3256
+            3252,
+            3253
           ],
           "text": "F"
         }
@@ -531,16 +513,16 @@
         "ruleId": "padding-line-between-statements",
         "severity": 2,
         "message": "Expected blank line before this statement.",
-        "line": 128,
+        "line": 127,
         "column": 7,
         "nodeType": "SwitchCase",
         "messageId": "expectedBlankLine",
-        "endLine": 129,
+        "endLine": 128,
         "endColumn": 22,
         "fix": {
           "range": [
-            3324,
-            3324
+            3321,
+            3321
           ],
           "text": "\n"
         }
@@ -549,11 +531,22 @@
         "ruleId": "jsdoc/match-description",
         "severity": 2,
         "message": "JSDoc description does not satisfy the regex pattern.",
-        "line": 134,
+        "line": 133,
         "column": 1,
         "nodeType": "Block",
-        "endLine": 134,
+        "endLine": 133,
         "endColumn": 1
+      },
+      {
+        "ruleId": "no-loss-of-precision",
+        "severity": 2,
+        "message": "This number literal will lose precision at runtime.",
+        "line": 137,
+        "column": 20,
+        "nodeType": "Literal",
+        "messageId": "noLossOfPrecision",
+        "endLine": 137,
+        "endColumn": 36
       },
       {
         "ruleId": "no-loss-of-precision",
@@ -564,7 +557,7 @@
         "nodeType": "Literal",
         "messageId": "noLossOfPrecision",
         "endLine": 138,
-        "endColumn": 36
+        "endColumn": 51
       },
       {
         "ruleId": "no-loss-of-precision",
@@ -575,33 +568,22 @@
         "nodeType": "Literal",
         "messageId": "noLossOfPrecision",
         "endLine": 139,
-        "endColumn": 51
-      },
-      {
-        "ruleId": "no-loss-of-precision",
-        "severity": 2,
-        "message": "This number literal will lose precision at runtime.",
-        "line": 140,
-        "column": 20,
-        "nodeType": "Literal",
-        "messageId": "noLossOfPrecision",
-        "endLine": 140,
         "endColumn": 47
       },
       {
         "ruleId": "unicorn/no-zero-fractions",
         "severity": 2,
         "message": "Don't use a zero fraction in the number.",
-        "line": 140,
+        "line": 139,
         "column": 45,
         "nodeType": null,
         "messageId": "zero-fraction",
-        "endLine": 140,
+        "endLine": 139,
         "endColumn": 47,
         "fix": {
           "range": [
-            3653,
-            3680
+            3650,
+            3677
           ],
           "text": "1230000000000000000000000"
         }
@@ -610,27 +592,27 @@
         "ruleId": "no-loss-of-precision",
         "severity": 2,
         "message": "This number literal will lose precision at runtime.",
-        "line": 141,
+        "line": 140,
         "column": 20,
         "nodeType": "Literal",
         "messageId": "noLossOfPrecision",
-        "endLine": 141,
+        "endLine": 140,
         "endColumn": 46
       },
       {
         "ruleId": "unicorn/no-zero-fractions",
         "severity": 2,
         "message": "Don't use a zero fraction in the number.",
-        "line": 141,
+        "line": 140,
         "column": 24,
         "nodeType": null,
         "messageId": "zero-fraction",
-        "endLine": 141,
+        "endLine": 140,
         "endColumn": 46,
         "fix": {
           "range": [
-            3701,
-            3727
+            3698,
+            3724
           ],
           "text": ".123"
         }
@@ -639,27 +621,27 @@
         "ruleId": "no-loss-of-precision",
         "severity": 2,
         "message": "This number literal will lose precision at runtime.",
-        "line": 142,
+        "line": 141,
         "column": 20,
         "nodeType": "Literal",
         "messageId": "noLossOfPrecision",
-        "endLine": 142,
+        "endLine": 141,
         "endColumn": 36
       },
       {
         "ruleId": "unicorn/number-literal-case",
         "severity": 2,
         "message": "Invalid number literal casing.",
-        "line": 142,
+        "line": 141,
         "column": 20,
         "nodeType": "Literal",
         "messageId": "number-literal-case",
-        "endLine": 142,
+        "endLine": 141,
         "endColumn": 36,
         "fix": {
           "range": [
-            3748,
-            3764
+            3745,
+            3761
           ],
           "text": "0x20000000000001"
         }
@@ -668,16 +650,16 @@
         "ruleId": "object-shorthand",
         "severity": 1,
         "message": "Expected property shorthand.",
-        "line": 156,
+        "line": 155,
         "column": 5,
         "nodeType": "Property",
         "messageId": "expectedPropertyShorthand",
-        "endLine": 156,
+        "endLine": 155,
         "endColumn": 15,
         "fix": {
           "range": [
-            4103,
-            4113
+            4100,
+            4110
           ],
           "text": "init"
         }
@@ -686,19 +668,19 @@
         "ruleId": "unicorn/prefer-module",
         "severity": 2,
         "message": "Do not use \"module\".",
-        "line": 161,
+        "line": 160,
         "column": 1,
         "nodeType": "Identifier",
         "messageId": "error/identifier",
-        "endLine": 161,
+        "endLine": 160,
         "endColumn": 7,
         "suggestions": [
           {
             "messageId": "suggestion/export",
             "fix": {
               "range": [
-                4138,
-                4155
+                4135,
+                4152
               ],
               "text": "export default "
             },
@@ -711,12 +693,12 @@
       }
     ],
     "suppressedMessages": [],
-    "errorCount": 46,
+    "errorCount": 45,
     "fatalErrorCount": 0,
     "warningCount": 1,
-    "fixableErrorCount": 11,
+    "fixableErrorCount": 10,
     "fixableWarningCount": 1,
-    "source": "/**\n * Fake constructor for test scenarios.\n *\n * @returns {object} - This should give an error about invalid type casing.\n *\n * @constructor\n */\nfunction Tests() {\n  /**\n   * This factory does not return an Object, as intended, but 'undefined'.\n   */\n  const invalidObjectFactory1 = () => {\n  };\n\n  /**\n   * @see https://eslint.org/docs/rules/no-constant-binary-expression\n   */\n  const nullishnessConstant = a + b ?? c;\n\n  /**\n   * Should throw an error about 'unsave use of optional chaining'.\n   */\n  let {someValue} = window.foo?.someValue;\n\n  /**\n   * Should throw an error because of unsafe arithmetic operation.\n   */\n  someValue += window.foo?.someValue;\n\n  /**\n   * Test max-len. This comment does also not meet comment pattern because of missing full stop\n   *\n   * @returns - This should give an error because of missing type.\n   */\n  function testMaxLen() {\n    return 'This is a test for maximum length of a single row. This should give a warning because having more thant 130 characters.';\n  }\n\n  /**\n   * test quotes. This comment does also not meet comment pattern because of small letter at beginning.\n   *\n   * @returns {String}\n   */\n  function testQuotes() {\n    return \"This should give an error because of invalid double quotes\";\n  }\n\n  function testValidJsdoc1() {\n    return 'This function should get a warning because of missing JSDOC';\n  }\n\n  /**\n   * Test valid-jsdoc (invalid return)\n   *\n   * @return {String}\n   */\n  function testValidJsdoc2() {\n    return 'This function should get an error because JSDOC is using \"@return\" instead of \"@returns\".';\n  }\n\n  /**\n   * Test prefer-rest-params\n   *\n   * Use ...args over 'arguments'\n   *\n   * @returns {*}\n   */\n  function testNoUnusedVars() {\n    return arguments[0];\n  }\n\n  /**\n   * Test prefer-rest-params\n   *\n   * Use ...args over 'arguments'\n   *\n   * @returns {null} 'null' is always written small because there is no 'Null' in JS.\n   */\n  function testNull() {\n    return null;\n  }\n\n  /**\n   * This demonstrates a bug in ESLint 4.19.1 in combination with valid-jsdoc.preferType.\n   *\n   * @param {object} mandatory1 - This line gives an error about lowercase 'object'\n   * @param {object|object[]} mandatory2 - This line gives two errors about lowercase 'object'\n   * @param {object} [optional1] - This line gives an error about lowercase 'object'.\n   * @param {object|object[]} [optional2] - This line gives no error about lowercase 'object'.\n   *\n   * @returns {Object}\n   */\n  function optionalParams(mandatory1, mandatory2, optional1, optional2) {\n    return {};\n  }\n\n  /**\n   * There should be a blank line before each if block\n   *\n   * @param   {Boolean}   foo       A property.\n   * @param   {Boolean}   baa       This property should also trigger an error, because it is not mandatory but not last in order.\n   * @param   {String}    aString\n   *\n   * @returns {Boolean|array}\n   */\n  function testPaddingLineBetweenStatements(foo, baa = true, aString) {\n    if (foo) { // This is ok\n      return true;\n    }\n    if (baa) { // This is not ok\n      return false;\n    }\n\n    switch (aString) {\n      case 'case1':\n        return true;\n      case 'case2':\n        return false;\n\n      case 'case3': // This is ok\n        return true;\n\n      case 'case4':\n      // falls through\n\n      case 'case5': // This is ok\n        return true;\n      default:\n        return false;\n    }\n  }\n\n  /**\n   * A caller for all tests to make it look like valid code\n   */\n  function init() {\n    // The following lines should warn about loosing precision of number value.\n    const value1 = 9007199254740993;\n    const value2 = 5123000000000000000000000000001;\n    const value3 = 1230000000000000000000000.0;\n    const value4 = .1230000000000000000000000;\n    const value5 = 0X20000000000001;\n\n    testMaxLen(); // this comment should throw an error because of small cap at beginning.\n    testQuotes();\n\n    testValidJsdoc1();\n    testValidJsdoc2();\n    testNoUnusedVars();\n    testPaddingLineBetweenStatements(invalidObjectFactory1);\n\n    return [value1, value2, value3, value4, value5, nullishnessConstant];\n  }\n\n  return {\n    init: init,\n    someValue,\n  };\n}\n\nmodule.exports = Tests;\n",
+    "source": "/**\n * Fake constructor for test scenarios.\n *\n * @returns {object} - This should give an error about invalid type casing.\n *\n * @constructor\n */\nfunction Tests() {\n  /**\n   * This factory does not return an Object, as intended, but 'undefined'.\n   */\n  const invalidObjectFactory1 = () => {};\n\n  /**\n   * @see https://eslint.org/docs/rules/no-constant-binary-expression\n   */\n  const nullishnessConstant = a + b ?? c;\n\n  /**\n   * Should throw an error about 'unsave use of optional chaining'.\n   */\n  let {someValue} = window.foo?.someValue;\n\n  /**\n   * Should throw an error because of unsafe arithmetic operation.\n   */\n  someValue += window.foo?.someValue;\n\n  /**\n   * Test max-len. This comment does also not meet comment pattern because of missing full stop\n   *\n   * @returns - This should give an error because of missing type.\n   */\n  function testMaxLen() {\n    return 'This is a test for maximum length of a single row. This should give a warning because having more thant 130 characters.';\n  }\n\n  /**\n   * test quotes. This comment does also not meet comment pattern because of small letter at beginning.\n   *\n   * @returns {String}\n   */\n  function testQuotes() {\n    return \"This should give an error because of invalid double quotes\";\n  }\n\n  function testValidJsdoc1() {\n    return 'This function should get a warning because of missing JSDOC';\n  }\n\n  /**\n   * Test valid-jsdoc (invalid return)\n   *\n   * @return {String}\n   */\n  function testValidJsdoc2() {\n    return 'This function should get an error because JSDOC is using \"@return\" instead of \"@returns\".';\n  }\n\n  /**\n   * Test prefer-rest-params\n   *\n   * Use ...args over 'arguments'\n   *\n   * @returns {*}\n   */\n  function testNoUnusedVars() {\n    return arguments[0];\n  }\n\n  /**\n   * Test prefer-rest-params\n   *\n   * Use ...args over 'arguments'\n   *\n   * @returns {null} 'null' is always written small because there is no 'Null' in JS.\n   */\n  function testNull() {\n    return null;\n  }\n\n  /**\n   * This demonstrates a bug in ESLint 4.19.1 in combination with valid-jsdoc.preferType.\n   *\n   * @param {object} mandatory1 - This line gives an error about lowercase 'object'\n   * @param {object|object[]} mandatory2 - This line gives two errors about lowercase 'object'\n   * @param {object} [optional1] - This line gives an error about lowercase 'object'.\n   * @param {object|object[]} [optional2] - This line gives no error about lowercase 'object'.\n   *\n   * @returns {Object}\n   */\n  function optionalParams(mandatory1, mandatory2, optional1, optional2) {\n    return {};\n  }\n\n  /**\n   * There should be a blank line before each if block\n   *\n   * @param   {Boolean}   foo       A property.\n   * @param   {Boolean}   baa       This property should also trigger an error, because it is not mandatory but not last in order.\n   * @param   {String}    aString\n   *\n   * @returns {Boolean|array}\n   */\n  function testPaddingLineBetweenStatements(foo, baa = true, aString) {\n    if (foo) { // This is ok\n      return true;\n    }\n    if (baa) { // This is not ok\n      return false;\n    }\n\n    switch (aString) {\n      case 'case1':\n        return true;\n      case 'case2':\n        return false;\n\n      case 'case3': // This is ok\n        return true;\n\n      case 'case4':\n      // falls through\n\n      case 'case5': // This is ok\n        return true;\n      default:\n        return false;\n    }\n  }\n\n  /**\n   * A caller for all tests to make it look like valid code\n   */\n  function init() {\n    // The following lines should warn about loosing precision of number value.\n    const value1 = 9007199254740993;\n    const value2 = 5123000000000000000000000000001;\n    const value3 = 1230000000000000000000000.0;\n    const value4 = .1230000000000000000000000;\n    const value5 = 0X20000000000001;\n\n    testMaxLen(); // this comment should throw an error because of small cap at beginning.\n    testQuotes();\n\n    testValidJsdoc1();\n    testValidJsdoc2();\n    testNoUnusedVars();\n    testPaddingLineBetweenStatements(invalidObjectFactory1);\n\n    return [value1, value2, value3, value4, value5, nullishnessConstant];\n  }\n\n  return {\n    init: init,\n    someValue,\n  };\n}\n\nmodule.exports = Tests;\n",
     "usedDeprecatedRules": [
       {
         "ruleId": "dot-location",

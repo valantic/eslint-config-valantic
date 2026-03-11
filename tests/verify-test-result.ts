@@ -1,18 +1,19 @@
-import {readFileSync} from 'fs';
+import {existsSync, mkdirSync, readFileSync, writeFileSync} from 'fs';
+import {join} from 'path';
 
 /**
- * Verifies ESLint error and warning counts.
- * Usage: node verify-eslint-counts.js <expectedErrors> <expectedWarnings>
+ * Verifies ESLint error and warning counts and optionally compares with a snapshot.
+ * Usage: node verify-test-result.ts <expectedErrors> <expectedWarnings> [snapshotName]
  */
-const [, , expectedErrors, expectedWarnings] = process.argv;
+const [, , expectedErrors, expectedWarnings, snapshotName] = process.argv;
 
 if (expectedErrors === undefined) {
-    console.error('Usage: node verify-eslint-counts.js <expectedErrors> [expectedWarnings]');
+    console.error('Usage: node verify-test-result.ts <expectedErrors> [expectedWarnings] [snapshotName]');
     process.exit(1);
 }
 
 try {
-    // Read from stdin (piped output from eslint --format json)
+    // Read from stdin (piped output from eslint --format JSON)
     const input = readFileSync(0, 'utf8');
 
     if (!input) {
@@ -20,19 +21,19 @@ try {
         process.exit(1);
     }
 
-    const results = JSON.parse(input);
-    const targetErrors = Number.parseInt(expectedErrors, 10);
-    const targetWarnings = expectedWarnings !== undefined ? Number.parseInt(expectedWarnings, 10) : 0;
+    const results: Record<string, any> = JSON.parse(input);
+    const targetErrors: number = Number.parseInt(expectedErrors, 10);
+    const targetWarnings: number = expectedWarnings !== undefined ? Number.parseInt(expectedWarnings, 10) : 0;
 
-    let actualErrors = 0;
-    let actualWarnings = 0;
+    let actualErrors: number = 0;
+    let actualWarnings: number = 0;
 
-    results.forEach((file) => {
-        actualErrors += file.errorCount;
-        actualWarnings += file.warningCount;
+    results.forEach((row: Record<string, number>) => {
+        actualErrors += row.errorCount;
+        actualWarnings += row.warningCount;
     });
 
-    let failed = false;
+    let failed: boolean = false;
 
     if (actualErrors !== targetErrors) {
         console.error(`❌ Error count mismatch! Expected: ${targetErrors}, Actual: ${actualErrors}`);
@@ -46,6 +47,36 @@ try {
         failed = true;
     } else if (expectedWarnings !== undefined) {
         console.log(`✅ Warning count matches: ${actualWarnings}`);
+    }
+
+    if (failed) {
+        process.exit(1);
+    }
+
+    // Read or update the snapshot.
+    if (snapshotName) {
+        const snapshotsDir: string = join(process.cwd(), 'tests', 'snapshots');
+
+        if (!existsSync(snapshotsDir)) {
+            mkdirSync(snapshotsDir, { recursive: true });
+        }
+
+        const snapshotPath: string = join(snapshotsDir, `${snapshotName}.json`);
+        const currentResult: string = JSON.stringify(results, null, 2);
+
+        if (process.env.UPDATE_SNAPSHOTS || !existsSync(snapshotPath)) {
+            writeFileSync(snapshotPath, currentResult);
+            console.log(`✅ Snapshot updated: ${snapshotName}`);
+        } else {
+            const expectedResult = readFileSync(snapshotPath, 'utf8');
+
+            if (currentResult !== expectedResult) {
+                console.error(`❌ Snapshot mismatch for ${snapshotName}!`);
+                failed = true;
+            } else {
+                console.log(`✅ Snapshot matches: ${snapshotName}`);
+            }
+        }
     }
 
     if (failed) {

@@ -26,9 +26,43 @@
         "fix": {
           "range": [
             76,
-            976
+            908
           ],
-          "text": "<script>\n\n  /**\n   * TODO: add description for component styleguide.\n   */\n  export default {\n    name: 'c-component', // TODO: update name according to filename\n\n    // components: {},\n    // mixins: [],\n\n    // props: {},\n    // data() {\n    //   return {};\n    // },\n\n    // computed: {},\n    // watch: {},\n\n    // beforeCreate() {},\n    // created() {},\n    // beforeMount() {},\n    // mounted() {},\n    // beforeUpdate() {},\n    // updated() {},\n    // activated() {},\n    // deactivated() {},\n    // beforeDestroy() {},\n    // destroyed() {},\n\n    // methods: {},\n    // render() {},\n  };\n</script>\n\n<style lang=\"scss\">\n  // @use 'sass:math';\n  // @use '../setup/scss/variables' as *;\n  // @use '../setup/scss/mixins' as *;\n  // @use '../setup/scss/extends' as *;\n  // @use '../setup/scss/functions' as *;\n\n  .c-component { // TODO: update selector according to filename\n    // ...\n  }\n</style>"
+          "text": "<script>\n\n/**\n * TODO: add description for component styleguide.\n */\nexport default {\n  name: 'c-component', // TODO: update name according to filename\n\n  // components: {},\n  // mixins: [],\n\n  // props: {},\n  // data() {\n  //   return {};\n  // },\n\n  // computed: {},\n  // watch: {},\n\n  // beforeCreate() {},\n  // created() {},\n  // beforeMount() {},\n  // mounted() {},\n  // beforeUpdate() {},\n  // updated() {},\n  // activated() {},\n  // deactivated() {},\n  // beforeDestroy() {},\n  // destroyed() {},\n\n  // methods: {},\n  // render() {},\n};\n</script>\n\n<style lang=\"scss\">\n// @use 'sass:math';\n// @use '../setup/scss/variables' as *;\n// @use '../setup/scss/mixins' as *;\n// @use '../setup/scss/extends' as *;\n// @use '../setup/scss/functions' as *;\n\n.c-component { // TODO: update selector according to filename\n  // ...\n}\n</style>"
+        }
+      },
+      {
+        "ruleId": "vue/script-indent",
+        "severity": 2,
+        "message": "Expected indentation of 2 spaces but found 0 spaces.",
+        "line": 24,
+        "column": 1,
+        "nodeType": null,
+        "endLine": 24,
+        "endColumn": 1,
+        "fix": {
+          "range": [
+            425,
+            425
+          ],
+          "text": "  "
+        }
+      },
+      {
+        "ruleId": "vue/script-indent",
+        "severity": 2,
+        "message": "Expected indentation of 4 spaces but found 2 spaces.",
+        "line": 25,
+        "column": 1,
+        "nodeType": null,
+        "endLine": 25,
+        "endColumn": 3,
+        "fix": {
+          "range": [
+            442,
+            444
+          ],
+          "text": "    "
         }
       },
       {
@@ -36,32 +70,49 @@
         "severity": 2,
         "message": "Component name `c-component` should match file name `test-vue`.",
         "line": 25,
-        "column": 11,
+        "column": 9,
         "nodeType": "Literal",
         "messageId": "shouldMatchFileName",
         "endLine": 25,
-        "endColumn": 24,
+        "endColumn": 22,
         "suggestions": [
           {
             "desc": "Rename component to match file name.",
             "fix": {
               "range": [
-                476,
-                489
+                450,
+                463
               ],
               "text": "'test-vue'"
             }
           }
         ]
+      },
+      {
+        "ruleId": "vue/script-indent",
+        "severity": 2,
+        "message": "Expected indentation of 2 spaces but found 0 spaces.",
+        "line": 51,
+        "column": 1,
+        "nodeType": null,
+        "endLine": 51,
+        "endColumn": 1,
+        "fix": {
+          "range": [
+            896,
+            896
+          ],
+          "text": "  "
+        }
       }
     ],
     "suppressedMessages": [],
-    "errorCount": 2,
+    "errorCount": 5,
     "fatalErrorCount": 0,
     "warningCount": 1,
-    "fixableErrorCount": 0,
+    "fixableErrorCount": 3,
     "fixableWarningCount": 1,
-    "source": "<template>\n  <div :class=\"b()\">\n    <script></script>\n  </div>\n</template>\n\n<style lang=\"scss\">\n  // @use 'sass:math';\n  // @use '../setup/scss/variables' as *;\n  // @use '../setup/scss/mixins' as *;\n  // @use '../setup/scss/extends' as *;\n  // @use '../setup/scss/functions' as *;\n\n  .c-component { // TODO: update selector according to filename\n    // ...\n  }\n</style>\n\n<script>\n\n  /**\n   * TODO: add description for component styleguide.\n   */\n  export default {\n    name: 'c-component', // TODO: update name according to filename\n\n    // components: {},\n    // mixins: [],\n\n    // props: {},\n    // data() {\n    //   return {};\n    // },\n\n    // computed: {},\n    // watch: {},\n\n    // beforeCreate() {},\n    // created() {},\n    // beforeMount() {},\n    // mounted() {},\n    // beforeUpdate() {},\n    // updated() {},\n    // activated() {},\n    // deactivated() {},\n    // beforeDestroy() {},\n    // destroyed() {},\n\n    // methods: {},\n    // render() {},\n  };\n</script>\n",
+    "source": "<template>\n  <div :class=\"b()\">\n    <script></script>\n  </div>\n</template>\n\n<style lang=\"scss\">\n// @use 'sass:math';\n// @use '../setup/scss/variables' as *;\n// @use '../setup/scss/mixins' as *;\n// @use '../setup/scss/extends' as *;\n// @use '../setup/scss/functions' as *;\n\n.c-component { // TODO: update selector according to filename\n  // ...\n}\n</style>\n\n<script>\n\n/**\n * TODO: add description for component styleguide.\n */\nexport default {\n  name: 'c-component', // TODO: update name according to filename\n\n  // components: {},\n  // mixins: [],\n\n  // props: {},\n  // data() {\n  //   return {};\n  // },\n\n  // computed: {},\n  // watch: {},\n\n  // beforeCreate() {},\n  // created() {},\n  // beforeMount() {},\n  // mounted() {},\n  // beforeUpdate() {},\n  // updated() {},\n  // activated() {},\n  // deactivated() {},\n  // beforeDestroy() {},\n  // destroyed() {},\n\n  // methods: {},\n  // render() {},\n};\n</script>\n",
     "usedDeprecatedRules": [
       {
         "ruleId": "dot-location",
