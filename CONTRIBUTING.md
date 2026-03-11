@@ -3,9 +3,12 @@
 ## Getting started
 
 * Clone this repository
-* Run `npm install`
-* Run the tests: `npm run test`
-    * Attention, they should fail as they test if the rules are working as expected.
+* Run `npm ci`
+* Use these scripts to test: 
+  * `npm run test`: Will run the tests for all files and also checks if the output is as expected.
+  * `npm run test:ci`: Special CI job, so we do not have to store the snapshots somewhere but only check if the amout expected errors is correct.
+  * `npm run test:raw`: Will run all tests but prints the output to the console.
+  * `npm run snapshop:update`: Will run the tests and stores the output as a new snapshot. (run this if you have changed the tests)
 
 ## Developing
 

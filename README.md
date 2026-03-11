@@ -10,21 +10,23 @@ At valantic the JavaScript and TypeScript code style is based on the eslint-plug
 
 [https://github.com/sindresorhus/eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn)
 
-See package.json for currently used version.
+See package.json for a currently used version.
 
 ### Exceptions
 
-We've made some internal adjustments to the code style, to meet our daily needs. See the files inside `./rules/` to learn more about these adjustments.
+We've made some internal adjustments to the code style to meet our daily needs. See the files inside `./rules/` to learn
+more about these adjustments.
 
 ## ESLint version
 
-Check the required ESLint version in the `package.json` file. To check for updates, see [http://eslint.org/blog/](http://eslint.org/blog/)
+Check the required ESLint version in the `package.json` file. To check for updates,
+see [http://eslint.org/blog/](http://eslint.org/blog/)
 
 ## Install
 
 Use npm to install the ESLint config to your project.
 
-### Install current version
+### Install the current version
 
 Check this repo for the different configs and install the plugins accordingly. (Vue, TypeScript, etc.)
 
@@ -34,7 +36,10 @@ npm install eslint-config-valantic eslint eslint-plugin-import eslint-plugin-jsd
 
 ## Setup
 
-After installing the config package, you still need to create a `eslint.config.js` inside your project, where you tell ESLint to use the valantic config.
+After installing the config package, you still need to create a `eslint.config.js` inside your project, where you tell
+ESLint to use the valantic config.
+
+Check out a real-world example here: [valantic vue template](https://github.com/valantic/vue-template/blob/main/eslint.config.js)
 
 ```js
 // eslint.config.js
@@ -75,7 +80,7 @@ If your project uses TypeScript, you need to use some additional dependencies in
 ```json
 {
   "devDependencies": {
-    "typescript-eslint": "~8.31.0",
+    "typescript-eslint": "~8.57.0"
   }
 }
 ```
@@ -100,9 +105,11 @@ export default [
 > [!WARNING]
 > This block has not been tested since the update of eslint 9.
 
-There is a special config if you want to use auto code styling and the `--fix` command. It is recommended to use this extended definition if you plan to use `--fix`.
+There is a special config if you want to use auto code styling and the `--fix` command. It is recommended to use this
+extended definition if you plan to use `--fix`.
 
-1. Add a new `.eslintrc.fix.js` to your project that extends the "fix" configuration. It would also be possible to define or adjust additonal rules here.
+1. Add a new `.eslintrc.fix.js` to your project that extends the "fix" configuration. It would also be possible to
+   define or adjust additonal rules here.
 
 ```js
 // https://eslint.org/docs/user-guide/configuring
@@ -122,7 +129,7 @@ export default [
 
 ```json
 {
-  "lint:eslint": "eslint ./",
+  "lint:eslint": "eslint --ext .ts,.js,.vue ./",
   "fix:eslint": "npm run lint:eslint -- --config .eslintrc.fix.js --cache=false --fix"
 }
 ```
@@ -133,7 +140,7 @@ Finally, update the `lint-staged` configuration to apply auto code styling on co
 
 ```json
 {
-  "lint-staged": "lint-staged",
+  "lint-staged": "lint-staged"
 }
 ```
 
@@ -143,7 +150,10 @@ Now you are ready to enable ESLint in your editor or use it on the command line!
 
 ### PhpStorm
 
-Go to `PhpStorm > Preferences` and search for ESLint or navigate to `Languages & Frameworks > JavaScript > Code Quality Tools > ESLint` and enable ESLint. Make sure you set the `ESLint package` to the one in your `node_modules` folder. Else the global ESLint will be used and won't be able to find the `valantic` config.
+Go to `PhpStorm > Preferences` and search for ESLint or navigate to
+`Languages & Frameworks > JavaScript > Code Quality Tools > ESLint` and enable ESLint. Make sure you set the
+`ESLint package` to the one in your `node_modules` folder. Else the global ESLint will be used and won't be able to find
+the `valantic` config.
 
 ### Console
 
@@ -163,10 +173,13 @@ Now you can execute the linter with the following command.
 npm run eslint <app|file.js>
 ```
 
-NOTE: don't use the `$ eslint` command, since this will call the global ESLint package, which will not be able to find the valantic config inside your project!
+NOTE: don't use the `$ eslint` command, since this will call the global ESLint package, which will not be able to find
+the valantic config inside your project!
 
 ## Rule hints
 
 #### valid-jsdoc and PhpStorm
 
-In case your PhpStorm is using `@return` instead of the required `@returns`: Write the return tag yourself for once and select the correct type from the suggestion list. PhpStorm will keep your last preference and use it from now on. See also https://youtrack.jetbrains.com/issue/WEB-7516#comment=27-611256
+In case your PhpStorm is using `@return` instead of the required `@returns`: Write the return tag yourself for once and
+select the correct type from the suggestion list. PhpStorm will keep your last preference and use it from now on. See
+also https://youtrack.jetbrains.com/issue/WEB-7516#comment=27-611256
