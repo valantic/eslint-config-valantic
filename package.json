@@ -5,7 +5,11 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "eslint tests/tests.js --config index.js; exit 0",
+    "release": "npm version patch -m 'Release %s' && git push --follow-tags",
+    "release:minor": "npm version minor -m 'Release %s' && git push --follow-tags",
+    "release:major": "npm version major -m 'Release %s' && git push --follow-tags",
+    "test": "npm run test:js && npm run test:ts && npm run test:vue",
+    "test:js": "eslint tests/tests.js --config index.js; exit 0",
     "test:ts": "eslint tests/tests.ts --config typescript.js; exit 0",
     "test:vue": "eslint tests/vue2.vue --config vue.js; exit 0"
   },
@@ -21,7 +25,7 @@
     "eslint-config"
   ],
   "devDependencies": {
-    "@types/node": "^24.6.2",
+    "@types/node": "^24.12.0",
     "eslint": "^9.36.0",
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-jsdoc": "^60.7.1",
