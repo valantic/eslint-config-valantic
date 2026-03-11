@@ -5,6 +5,10 @@ import process from 'node:process';
 /**
  * ATTENTION:
  * This is a test, I usually would solve this with a bash script but wanted to see how this could be done with node and JavaScript.
+ * The outcome is good, let's keep it like this, but I think it would have been easier to use a bash script.
+ * Feel free to refactor or improve this, it is a first glance.
+ *
+ * Also note, most of the tests could also be done with RuleTester https://typescript-eslint.io/packages/rule-tester
  */
 const TEST_CONFIG = {
   js: {
