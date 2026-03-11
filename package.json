@@ -9,9 +9,14 @@
     "release:minor": "npm version minor -m 'Release %s' && git push --follow-tags",
     "release:major": "npm version major -m 'Release %s' && git push --follow-tags",
     "test": "npm run test:js && npm run test:ts && npm run test:vue",
-    "test:js": "eslint tests/test-javascript.js --config index.js --format json | node tests/verify-test-result.ts 45 1",
-    "test:ts": "eslint tests/test-typescript.ts --config typescript.js --format json | node tests/verify-test-result.ts 12 0",
-    "test:vue": "eslint tests/test-vue.vue --config vue.js --format json | node tests/verify-test-result.ts 5 1"
+    "test:raw": "npm run test:js:raw && npm run test:ts:raw && npm run test:vue:raw",
+    "test:js": "eslint tests/test-javascript.js --config index.js --format json | node tests/verify-test-result.ts 45 1 js-snapshot",
+    "test:ts": "eslint tests/test-typescript.ts --config typescript.js --format json | node tests/verify-test-result.ts 12 0 ts-snapshot",
+    "test:vue": "eslint tests/test-vue.vue --config vue.js --format json | node tests/verify-test-result.ts 5 1 vue-snapshot",
+    "test:js:raw": "eslint tests/test-javascript.js --config index.js",
+    "test:ts:raw": "eslint tests/test-typescript.ts --config typescript.js",
+    "test:vue:raw": "eslint tests/test-vue.vue --config vue.js --format json",
+    "test:result:save": "UPDATE_SNAPSHOTS=true npm run test"
   },
   "repository": {
     "type": "git",
