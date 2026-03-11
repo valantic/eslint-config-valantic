@@ -1,0 +1,722 @@
+[
+  {
+    "filePath": "/Users/naba/sandbox/valantic/eslint-config-valantic/tests/test-typescript.ts",
+    "messages": [
+      {
+        "ruleId": "jsdoc/match-description",
+        "severity": 2,
+        "message": "JSDoc description does not satisfy the regex pattern.",
+        "line": 10,
+        "column": 1,
+        "nodeType": "Block",
+        "endLine": 10,
+        "endColumn": 1
+      },
+      {
+        "ruleId": "unicorn/consistent-function-scoping",
+        "severity": 2,
+        "message": "Move function 'testReturnTypeAny' to the outer scope.",
+        "line": 15,
+        "column": 3,
+        "nodeType": "FunctionDeclaration",
+        "messageId": "consistent-function-scoping",
+        "endLine": 15,
+        "endColumn": 29
+      },
+      {
+        "ruleId": "no-unused-vars",
+        "severity": 2,
+        "message": "'testReturnTypeAny' is defined but never used.",
+        "line": 15,
+        "column": 12,
+        "nodeType": "Identifier",
+        "messageId": "unusedVar",
+        "endLine": 15,
+        "endColumn": 29,
+        "suggestions": [
+          {
+            "messageId": "removeVar",
+            "data": {
+              "varName": "testReturnTypeAny"
+            },
+            "fix": {
+              "range": [
+                368,
+                467
+              ],
+              "text": ""
+            },
+            "desc": "Remove unused variable 'testReturnTypeAny'."
+          }
+        ]
+      },
+      {
+        "ruleId": "@typescript-eslint/no-explicit-any",
+        "severity": 2,
+        "message": "Unexpected any. Specify a different type.",
+        "line": 15,
+        "column": 33,
+        "nodeType": "TSAnyKeyword",
+        "messageId": "unexpectedAny",
+        "endLine": 15,
+        "endColumn": 36,
+        "suggestions": [
+          {
+            "messageId": "suggestUnknown",
+            "fix": {
+              "range": [
+                398,
+                401
+              ],
+              "text": "unknown"
+            },
+            "desc": "Use `unknown` instead, this will force you to explicitly, and safely assert the type is correct."
+          },
+          {
+            "messageId": "suggestNever",
+            "fix": {
+              "range": [
+                398,
+                401
+              ],
+              "text": "never"
+            },
+            "desc": "Use `never` instead, this is useful when instantiating generic type parameters that you don't need to know the type of."
+          }
+        ]
+      },
+      {
+        "ruleId": "@typescript-eslint/naming-convention",
+        "severity": 2,
+        "message": "Enum name `myEnum` must match one of the following formats: StrictPascalCase",
+        "line": 24,
+        "column": 8,
+        "nodeType": "Identifier",
+        "messageId": "doesNotMatchFormat",
+        "endLine": 24,
+        "endColumn": 14
+      },
+      {
+        "ruleId": "no-unused-vars",
+        "severity": 2,
+        "message": "'myEnum' is defined but never used.",
+        "line": 24,
+        "column": 8,
+        "nodeType": "Identifier",
+        "messageId": "unusedVar",
+        "endLine": 24,
+        "endColumn": 14,
+        "suggestions": [
+          {
+            "messageId": "removeVar",
+            "data": {
+              "varName": "myEnum"
+            },
+            "fix": {
+              "range": [
+                692,
+                698
+              ],
+              "text": ""
+            },
+            "desc": "Remove unused variable 'myEnum'."
+          }
+        ]
+      },
+      {
+        "ruleId": "@typescript-eslint/naming-convention",
+        "severity": 2,
+        "message": "Enum Member name `item1` must match one of the following formats: StrictPascalCase",
+        "line": 25,
+        "column": 5,
+        "nodeType": "Identifier",
+        "messageId": "doesNotMatchFormat",
+        "endLine": 25,
+        "endColumn": 10
+      },
+      {
+        "ruleId": "@typescript-eslint/no-duplicate-enum-values",
+        "severity": 2,
+        "message": "Duplicate enum member value item 1.",
+        "line": 26,
+        "column": 5,
+        "nodeType": "TSEnumMember",
+        "messageId": "duplicateValue",
+        "endLine": 26,
+        "endColumn": 21
+      },
+      {
+        "ruleId": "@typescript-eslint/naming-convention",
+        "severity": 2,
+        "message": "Enum Member name `item2` must match one of the following formats: StrictPascalCase",
+        "line": 26,
+        "column": 5,
+        "nodeType": "Identifier",
+        "messageId": "doesNotMatchFormat",
+        "endLine": 26,
+        "endColumn": 10
+      },
+      {
+        "ruleId": "@typescript-eslint/no-duplicate-enum-values",
+        "severity": 2,
+        "message": "Duplicate enum member value item 1.",
+        "line": 27,
+        "column": 5,
+        "nodeType": "TSEnumMember",
+        "messageId": "duplicateValue",
+        "endLine": 27,
+        "endColumn": 21
+      },
+      {
+        "ruleId": "@typescript-eslint/naming-convention",
+        "severity": 2,
+        "message": "Enum Member name `item3` must match one of the following formats: StrictPascalCase",
+        "line": 27,
+        "column": 5,
+        "nodeType": "Identifier",
+        "messageId": "doesNotMatchFormat",
+        "endLine": 27,
+        "endColumn": 10
+      },
+      {
+        "ruleId": "unicorn/prefer-module",
+        "severity": 2,
+        "message": "Do not use \"module\".",
+        "line": 31,
+        "column": 1,
+        "nodeType": "Identifier",
+        "messageId": "error/identifier",
+        "endLine": 31,
+        "endColumn": 7,
+        "suggestions": [
+          {
+            "messageId": "suggestion/export",
+            "fix": {
+              "range": [
+                774,
+                791
+              ],
+              "text": "export default "
+            },
+            "data": {
+              "name": "module"
+            },
+            "desc": "Switch to `export`."
+          }
+        ]
+      }
+    ],
+    "suppressedMessages": [
+      {
+        "ruleId": "@typescript-eslint/no-unused-vars",
+        "severity": 2,
+        "message": "'testReturnTypeAny' is defined but never used.",
+        "line": 15,
+        "column": 12,
+        "nodeType": "Identifier",
+        "messageId": "unusedVar",
+        "endLine": 15,
+        "endColumn": 29,
+        "suppressions": [
+          {
+            "kind": "directive",
+            "justification": ""
+          }
+        ]
+      },
+      {
+        "ruleId": "@typescript-eslint/no-unused-vars",
+        "severity": 2,
+        "message": "'myEnum' is defined but never used.",
+        "line": 24,
+        "column": 8,
+        "nodeType": "Identifier",
+        "messageId": "unusedVar",
+        "endLine": 24,
+        "endColumn": 14,
+        "suppressions": [
+          {
+            "kind": "directive",
+            "justification": ""
+          }
+        ]
+      }
+    ],
+    "errorCount": 12,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "source": "/**\n * Fake constructor for test scenarios.\n *\n * @returns {object} - This should give an error about invalid type casing.\n *\n * @constructor\n */\nfunction Tests() {\n  /**\n   * Test return type any\n   *\n   * This test does not give an error, as we disabled require-jsdoc for the typescript plugin\n   */\n  // eslint-disable-next-line @typescript-eslint/no-unused-vars\n  function testReturnTypeAny(): any {\n    return 'This Return type is invalid as it returns any';\n  }\n\n  /**\n   * Test enum type does not give a no-shadow error\n   * Comment out the rule 'no-shadow': 'off' in the plugins/typescript to see the error\n   */\n  // eslint-disable-next-line @typescript-eslint/no-unused-vars\n  enum myEnum {\n    item1 = 'item 1',\n    item2 = 'item 1',\n    item3 = 'item 1',\n  }\n}\n\nmodule.exports = Tests;\n",
+    "usedDeprecatedRules": [
+      {
+        "ruleId": "dot-location",
+        "replacedBy": [
+          "@stylistic/dot-location"
+        ],
+        "info": {
+          "message": "Formatting rules are being moved out of ESLint core.",
+          "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+          "deprecatedSince": "8.53.0",
+          "availableUntil": "11.0.0",
+          "replacedBy": [
+            {
+              "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+              "url": "https://eslint.style/guide/migration",
+              "plugin": {
+                "name": "@stylistic/eslint-plugin",
+                "url": "https://eslint.style"
+              },
+              "rule": {
+                "name": "dot-location",
+                "url": "https://eslint.style/rules/dot-location"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "ruleId": "no-extra-parens",
+        "replacedBy": [
+          "@stylistic/no-extra-parens"
+        ],
+        "info": {
+          "message": "Formatting rules are being moved out of ESLint core.",
+          "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+          "deprecatedSince": "8.53.0",
+          "availableUntil": "11.0.0",
+          "replacedBy": [
+            {
+              "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+              "url": "https://eslint.style/guide/migration",
+              "plugin": {
+                "name": "@stylistic/eslint-plugin",
+                "url": "https://eslint.style"
+              },
+              "rule": {
+                "name": "no-extra-parens",
+                "url": "https://eslint.style/rules/no-extra-parens"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "ruleId": "implicit-arrow-linebreak",
+        "replacedBy": [
+          "@stylistic/implicit-arrow-linebreak"
+        ],
+        "info": {
+          "message": "Formatting rules are being moved out of ESLint core.",
+          "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+          "deprecatedSince": "8.53.0",
+          "availableUntil": "11.0.0",
+          "replacedBy": [
+            {
+              "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+              "url": "https://eslint.style/guide/migration",
+              "plugin": {
+                "name": "@stylistic/eslint-plugin",
+                "url": "https://eslint.style"
+              },
+              "rule": {
+                "name": "implicit-arrow-linebreak",
+                "url": "https://eslint.style/rules/implicit-arrow-linebreak"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "ruleId": "key-spacing",
+        "replacedBy": [
+          "@stylistic/key-spacing"
+        ],
+        "info": {
+          "message": "Formatting rules are being moved out of ESLint core.",
+          "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+          "deprecatedSince": "8.53.0",
+          "availableUntil": "11.0.0",
+          "replacedBy": [
+            {
+              "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+              "url": "https://eslint.style/guide/migration",
+              "plugin": {
+                "name": "@stylistic/eslint-plugin",
+                "url": "https://eslint.style"
+              },
+              "rule": {
+                "name": "key-spacing",
+                "url": "https://eslint.style/rules/key-spacing"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "ruleId": "lines-around-comment",
+        "replacedBy": [
+          "@stylistic/lines-around-comment"
+        ],
+        "info": {
+          "message": "Formatting rules are being moved out of ESLint core.",
+          "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+          "deprecatedSince": "8.53.0",
+          "availableUntil": "11.0.0",
+          "replacedBy": [
+            {
+              "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+              "url": "https://eslint.style/guide/migration",
+              "plugin": {
+                "name": "@stylistic/eslint-plugin",
+                "url": "https://eslint.style"
+              },
+              "rule": {
+                "name": "lines-around-comment",
+                "url": "https://eslint.style/rules/lines-around-comment"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "ruleId": "max-len",
+        "replacedBy": [
+          "@stylistic/max-len"
+        ],
+        "info": {
+          "message": "Formatting rules are being moved out of ESLint core.",
+          "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+          "deprecatedSince": "8.53.0",
+          "availableUntil": "11.0.0",
+          "replacedBy": [
+            {
+              "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+              "url": "https://eslint.style/guide/migration",
+              "plugin": {
+                "name": "@stylistic/eslint-plugin",
+                "url": "https://eslint.style"
+              },
+              "rule": {
+                "name": "max-len",
+                "url": "https://eslint.style/rules/max-len"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "ruleId": "no-mixed-operators",
+        "replacedBy": [
+          "@stylistic/no-mixed-operators"
+        ],
+        "info": {
+          "message": "Formatting rules are being moved out of ESLint core.",
+          "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+          "deprecatedSince": "8.53.0",
+          "availableUntil": "11.0.0",
+          "replacedBy": [
+            {
+              "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+              "url": "https://eslint.style/guide/migration",
+              "plugin": {
+                "name": "@stylistic/eslint-plugin",
+                "url": "https://eslint.style"
+              },
+              "rule": {
+                "name": "no-mixed-operators",
+                "url": "https://eslint.style/rules/no-mixed-operators"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "ruleId": "no-multiple-empty-lines",
+        "replacedBy": [
+          "@stylistic/no-multiple-empty-lines"
+        ],
+        "info": {
+          "message": "Formatting rules are being moved out of ESLint core.",
+          "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+          "deprecatedSince": "8.53.0",
+          "availableUntil": "11.0.0",
+          "replacedBy": [
+            {
+              "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+              "url": "https://eslint.style/guide/migration",
+              "plugin": {
+                "name": "@stylistic/eslint-plugin",
+                "url": "https://eslint.style"
+              },
+              "rule": {
+                "name": "no-multiple-empty-lines",
+                "url": "https://eslint.style/rules/no-multiple-empty-lines"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "ruleId": "no-trailing-spaces",
+        "replacedBy": [
+          "@stylistic/no-trailing-spaces"
+        ],
+        "info": {
+          "message": "Formatting rules are being moved out of ESLint core.",
+          "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+          "deprecatedSince": "8.53.0",
+          "availableUntil": "11.0.0",
+          "replacedBy": [
+            {
+              "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+              "url": "https://eslint.style/guide/migration",
+              "plugin": {
+                "name": "@stylistic/eslint-plugin",
+                "url": "https://eslint.style"
+              },
+              "rule": {
+                "name": "no-trailing-spaces",
+                "url": "https://eslint.style/rules/no-trailing-spaces"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "ruleId": "object-property-newline",
+        "replacedBy": [
+          "@stylistic/object-property-newline"
+        ],
+        "info": {
+          "message": "Formatting rules are being moved out of ESLint core.",
+          "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+          "deprecatedSince": "8.53.0",
+          "availableUntil": "11.0.0",
+          "replacedBy": [
+            {
+              "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+              "url": "https://eslint.style/guide/migration",
+              "plugin": {
+                "name": "@stylistic/eslint-plugin",
+                "url": "https://eslint.style"
+              },
+              "rule": {
+                "name": "object-property-newline",
+                "url": "https://eslint.style/rules/object-property-newline"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "ruleId": "operator-linebreak",
+        "replacedBy": [
+          "@stylistic/operator-linebreak"
+        ],
+        "info": {
+          "message": "Formatting rules are being moved out of ESLint core.",
+          "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+          "deprecatedSince": "8.53.0",
+          "availableUntil": "11.0.0",
+          "replacedBy": [
+            {
+              "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+              "url": "https://eslint.style/guide/migration",
+              "plugin": {
+                "name": "@stylistic/eslint-plugin",
+                "url": "https://eslint.style"
+              },
+              "rule": {
+                "name": "operator-linebreak",
+                "url": "https://eslint.style/rules/operator-linebreak"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "ruleId": "padding-line-between-statements",
+        "replacedBy": [
+          "@stylistic/padding-line-between-statements"
+        ],
+        "info": {
+          "message": "Formatting rules are being moved out of ESLint core.",
+          "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+          "deprecatedSince": "8.53.0",
+          "availableUntil": "11.0.0",
+          "replacedBy": [
+            {
+              "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+              "url": "https://eslint.style/guide/migration",
+              "plugin": {
+                "name": "@stylistic/eslint-plugin",
+                "url": "https://eslint.style"
+              },
+              "rule": {
+                "name": "padding-line-between-statements",
+                "url": "https://eslint.style/rules/padding-line-between-statements"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "ruleId": "quote-props",
+        "replacedBy": [
+          "@stylistic/quote-props"
+        ],
+        "info": {
+          "message": "Formatting rules are being moved out of ESLint core.",
+          "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+          "deprecatedSince": "8.53.0",
+          "availableUntil": "11.0.0",
+          "replacedBy": [
+            {
+              "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+              "url": "https://eslint.style/guide/migration",
+              "plugin": {
+                "name": "@stylistic/eslint-plugin",
+                "url": "https://eslint.style"
+              },
+              "rule": {
+                "name": "quote-props",
+                "url": "https://eslint.style/rules/quote-props"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "ruleId": "space-before-function-paren",
+        "replacedBy": [
+          "@stylistic/space-before-function-paren"
+        ],
+        "info": {
+          "message": "Formatting rules are being moved out of ESLint core.",
+          "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+          "deprecatedSince": "8.53.0",
+          "availableUntil": "11.0.0",
+          "replacedBy": [
+            {
+              "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+              "url": "https://eslint.style/guide/migration",
+              "plugin": {
+                "name": "@stylistic/eslint-plugin",
+                "url": "https://eslint.style"
+              },
+              "rule": {
+                "name": "space-before-function-paren",
+                "url": "https://eslint.style/rules/space-before-function-paren"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "ruleId": "space-unary-ops",
+        "replacedBy": [
+          "@stylistic/space-unary-ops"
+        ],
+        "info": {
+          "message": "Formatting rules are being moved out of ESLint core.",
+          "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+          "deprecatedSince": "8.53.0",
+          "availableUntil": "11.0.0",
+          "replacedBy": [
+            {
+              "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+              "url": "https://eslint.style/guide/migration",
+              "plugin": {
+                "name": "@stylistic/eslint-plugin",
+                "url": "https://eslint.style"
+              },
+              "rule": {
+                "name": "space-unary-ops",
+                "url": "https://eslint.style/rules/space-unary-ops"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "ruleId": "wrap-regex",
+        "replacedBy": [
+          "@stylistic/wrap-regex"
+        ],
+        "info": {
+          "message": "Formatting rules are being moved out of ESLint core.",
+          "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+          "deprecatedSince": "8.53.0",
+          "availableUntil": "11.0.0",
+          "replacedBy": [
+            {
+              "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+              "url": "https://eslint.style/guide/migration",
+              "plugin": {
+                "name": "@stylistic/eslint-plugin",
+                "url": "https://eslint.style"
+              },
+              "rule": {
+                "name": "wrap-regex",
+                "url": "https://eslint.style/rules/wrap-regex"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "ruleId": "arrow-parens",
+        "replacedBy": [
+          "@stylistic/arrow-parens"
+        ],
+        "info": {
+          "message": "Formatting rules are being moved out of ESLint core.",
+          "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+          "deprecatedSince": "8.53.0",
+          "availableUntil": "11.0.0",
+          "replacedBy": [
+            {
+              "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+              "url": "https://eslint.style/guide/migration",
+              "plugin": {
+                "name": "@stylistic/eslint-plugin",
+                "url": "https://eslint.style"
+              },
+              "rule": {
+                "name": "arrow-parens",
+                "url": "https://eslint.style/rules/arrow-parens"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "ruleId": "rest-spread-spacing",
+        "replacedBy": [
+          "@stylistic/rest-spread-spacing"
+        ],
+        "info": {
+          "message": "Formatting rules are being moved out of ESLint core.",
+          "url": "https://eslint.org/blog/2023/10/deprecating-formatting-rules/",
+          "deprecatedSince": "8.53.0",
+          "availableUntil": "11.0.0",
+          "replacedBy": [
+            {
+              "message": "ESLint Stylistic now maintains deprecated stylistic core rules.",
+              "url": "https://eslint.style/guide/migration",
+              "plugin": {
+                "name": "@stylistic/eslint-plugin",
+                "url": "https://eslint.style"
+              },
+              "rule": {
+                "name": "rest-spread-spacing",
+                "url": "https://eslint.style/rules/rest-spread-spacing"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+]
