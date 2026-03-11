@@ -2,6 +2,7 @@
 
 ## Next
 
+* (feature) Added CI workflow.
 * (feature) Added a better check for the tests, that they have not changed.
 * (change) Updated all packages to the latest patch version.
 * (change) Updated documentation.
