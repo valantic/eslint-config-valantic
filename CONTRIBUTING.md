@@ -4,28 +4,38 @@
 
 * Clone this repository
 * Run `npm install`
+* Run the tests: `npm run test`
+    * Attention, they should fail as they test if the rules are working as expected.
 
 ## Developing
 
 * Make your changes
 * Enhance the tests to fail for added rules
-* Check the [blog](https://eslint.org/blog/) to see, if there are relevant new features for us to use
+* Check the [blog](https://eslint.org/blog/) to see if there are relevant new features for us to use
+* Make sure you have described your changes in the file [CHANGES.md](CHANGES.md) below the `## Next` header.
+* Create a branch `feature/my-new-feature` and create a new merge request.
 
 ## Releasing
 
-* Make sure, you have described your changes in the file [CHANGES.md](CHANGES.md)
-* Create a release branch `release/x.x.x` according to SemVer
-* Move all changes in the file [CHANGES.md](CHANGES.md) from below `## Next` below a new Paragraph with the 
-  to be released version
-* Change the Version in the file [package.json](package.json)
-* Run `npm i` to update the version in the file [package-lock.json](package-lock.json)
-* Create a Git Tag with the to be released version number ` git tag x.x.x`
-* Commit and Push the changes to the Release branch (Make sure to also push Tags)
+### Prepare release
+
 * Switch to the `master` branch
-* Merge the release branch into `master` and push the changes
+* Make sure the changes in the file [CHANGES.md](CHANGES.md) are up to date and complete.
+* Create a release branch `release/x.x.x` according to SemVer
+* Move all changes in the file [CHANGES.md](CHANGES.md) from below the `## Next` header to a new header with the
+  to be released version eg: `## 1.2.3`
+* Run `npm audit` and `npm audit fix` if needed to update the versions.
+* Add and commit all open changes.
+* Create a merge request.
+
+### Release
+
+* Switch to the `master` branch
+* Decide what kind of release this is (patch, minor, major)
+    * patch: `npm run release`
+    * minor: `npm run release:minor`
+    * major: `npm run release:major`
 * Login to NPM `npm login` if you not already are logged in
 * Push the Release `npm publish`
-* [Create the Release](https://github.com/valantic/eslint-config-valantic/releases/new) on the github repo  with the 
+* [Create the Release](https://github.com/valantic/eslint-config-valantic/releases/new) on the GitHub repo with the
   changes from the [CHANGES.md](CHANGES.md)
-* Merge master back to develop
-* Make sure you have pushed all changes to the Repo
