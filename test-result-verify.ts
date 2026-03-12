@@ -97,8 +97,6 @@ try {
       if (currentResult !== expectedResult) {
         failed = true;
 
-        console.log('----->', errorResponses);
-
         console.error(`❌ Snapshot mismatch for ${snapshotPath}!`);
       } else {
         console.log(`✅ Snapshot matches: ${snapshotPath}`);
