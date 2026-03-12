@@ -1,6 +1,6 @@
 [
   {
-    "filePath": "/Users/naba/sandbox/valantic/eslint-config-valantic/tests/test-vue.vue",
+    "filePath": "/tests/test-vue.vue",
     "messages": [
       {
         "ruleId": "vue/no-restricted-html-elements",

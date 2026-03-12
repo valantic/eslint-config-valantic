@@ -1,6 +1,6 @@
 [
   {
-    "filePath": "/Users/naba/sandbox/valantic/eslint-config-valantic/tests/test-javascript.js",
+    "filePath": "/tests/test-javascript.js",
     "messages": [
       {
         "ruleId": "unicorn/consistent-function-scoping",

@@ -1,5 +1,30 @@
 import {existsSync, readFileSync, writeFileSync} from 'fs';
 
+type ErrorResponse = {
+  filePath: string;
+  message: {
+    ruleId: string;
+    severity: string;
+    message: string;
+    line: number;
+    column: number;
+    nodeType: string;
+    messageId: string;
+    endLine: number;
+    endColumn: number;
+  };
+  errorCount: number;
+  fatalErrorCount: number;
+  warningCount: number;
+  fixableErrorCount: number;
+  fixableWarningCount: number;
+  suppressedMessages: unknown;
+  usedDeprecatedRules: unknown;
+  source: string;
+};
+
+const PROJECT_ROOT = 'eslint-config-valantic';
+
 /**
  * Verifies ESLint error and warning counts and optionally compares with a snapshot.
  * Usage: node verify-test-result.ts <expectedErrors> <expectedWarnings> [snapshotPath]
@@ -20,16 +45,17 @@ try {
     process.exit(1);
   }
 
-  const results: Record<string, any> = JSON.parse(input);
+  const errorResponses: ErrorResponse[] = JSON.parse(input);
   const targetErrors: number = Number.parseInt(expectedErrors, 10);
   const targetWarnings: number = expectedWarnings !== undefined ? Number.parseInt(expectedWarnings, 10) : 0;
 
   let actualErrors: number = 0;
   let actualWarnings: number = 0;
 
-  results.forEach((row: Record<string, number>) => {
-    actualErrors += row.errorCount;
-    actualWarnings += row.warningCount;
+  errorResponses.forEach((item: ErrorResponse) => {
+    item.filePath = item.filePath.split(PROJECT_ROOT)[1]; // we need to remove the users project path in order to have it comparable on other devices.
+    actualErrors += item.errorCount;
+    actualWarnings += item.warningCount;
   });
 
   let failed: boolean = false;
@@ -59,7 +85,9 @@ try {
 
   // Read or update the snapshot.
   if (snapshotPath) {
-    const currentResult: string = JSON.stringify(results, null, 2);
+    const currentResult: string = JSON.stringify(errorResponses, null, 2);
+
+    // currentResult.at(0).filePath = snapshotPath;
 
     if (process.env.UPDATE_SNAPSHOTS || !existsSync(snapshotPath)) {
       writeFileSync(snapshotPath, currentResult);
