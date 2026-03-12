@@ -35,7 +35,7 @@ export default [
         },
       ],
 
-      // see https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-shadow.md
+      // see https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/no-shadow.md
       'no-shadow': 'off',
       '@typescript-eslint/no-shadow': 'error',
 
