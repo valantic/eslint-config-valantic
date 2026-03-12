@@ -22,7 +22,7 @@
 
 ### Prepare release
 
-* Switch to the `master` branch
+* Switch to the `main` branch
 * Make sure the changes in the file [CHANGES.md](CHANGES.md) are up to date and complete.
 * Create a release branch `release/x.x.x` according to SemVer
 * Move all changes in the file [CHANGES.md](CHANGES.md) from below the `## Next` header to a new header with the
@@ -33,7 +33,7 @@
 
 ### Release
 
-* Switch to the `master` branch
+* Switch to the `main` branch
 * Decide what kind of release this is (patch, minor, major)
     * patch: `npm run release`
     * minor: `npm run release:minor`
