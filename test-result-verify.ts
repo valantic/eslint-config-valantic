@@ -87,8 +87,6 @@ try {
   if (snapshotPath) {
     const currentResult: string = JSON.stringify(errorResponses, null, 2);
 
-    // currentResult.at(0).filePath = snapshotPath;
-
     if (process.env.UPDATE_SNAPSHOTS || !existsSync(snapshotPath)) {
       writeFileSync(snapshotPath, currentResult);
 
@@ -98,6 +96,8 @@ try {
 
       if (currentResult !== expectedResult) {
         failed = true;
+
+        console.log('----->', errorResponses);
 
         console.error(`❌ Snapshot mismatch for ${snapshotPath}!`);
       } else {
