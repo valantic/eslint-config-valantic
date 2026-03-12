@@ -2,6 +2,7 @@
 
 ## Next
 
+* (change) Changed branch name master to main.
 * (feature) Added CI workflow.
 * (feature) Added a better check for the tests, that they have not changed.
 * (change) Updated all packages to the latest patch version.
