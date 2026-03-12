@@ -25,4 +25,4 @@ jobs:
         run: npm ci
 
       - name: Lint + typecheck
-        run: npm run test
+        run: npm run test:ci
