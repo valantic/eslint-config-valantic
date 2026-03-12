@@ -8,10 +8,10 @@
     "release": "npm version patch -m 'Release %s' && git push --follow-tags",
     "release:minor": "npm version minor -m 'Release %s' && git push --follow-tags",
     "release:major": "npm version major -m 'Release %s' && git push --follow-tags",
-    "test": "npm run test:js && npm run test:ts && npm run test:vue",
-    "test:js": "eslint tests/tests.js --config index.js; exit 0",
-    "test:ts": "eslint tests/tests.ts --config typescript.js; exit 0",
-    "test:vue": "eslint tests/vue2.vue --config vue.js; exit 0"
+    "test": "node test-setup.ts js && node test-setup.ts ts && node test-setup.ts vue",
+    "test:ci": "node test-setup.ts js ci && node test-setup.ts ts ci && node test-setup.ts vue ci",
+    "test:raw": "node test-setup.ts js raw && node test-setup.ts ts raw && node test-setup.ts vue raw",
+    "snapshop:update": "UPDATE_SNAPSHOTS=true npm run test"
   },
   "repository": {
     "type": "git",
@@ -26,13 +26,13 @@
   ],
   "devDependencies": {
     "@types/node": "^24.12.0",
-    "eslint": "^9.36.0",
+    "eslint": "^9.39.4",
     "eslint-plugin-import": "^2.32.0",
-    "eslint-plugin-jsdoc": "^60.7.1",
+    "eslint-plugin-jsdoc": "^60.8.3",
     "eslint-plugin-unicorn": "^61.0.2",
-    "eslint-plugin-vue": "^10.5.0",
+    "eslint-plugin-vue": "^10.8.0",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.45.0"
+    "typescript-eslint": "^8.57.0"
   },
   "peerDependencies": {
     "eslint": ">= 9",

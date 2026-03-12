@@ -2,6 +2,9 @@
 
 ## Next
 
+* (feature) Added CI workflow.
+* (feature) Added a better check for the tests, that they have not changed.
+* (change) Updated all packages to the latest patch version.
 * (change) Updated documentation.
 * (change) Added release scripts for tags.
 * (change) Updated `"@types/node": "^24.12.0"` and run `npm audit fix`

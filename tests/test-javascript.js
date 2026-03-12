@@ -19,7 +19,7 @@ function Tests() {
   /**
    * Should throw an error about 'unsave use of optional chaining'.
    */
-  let { someValue } = window.foo?.someValue;
+  let {someValue} = window.foo?.someValue;
 
   /**
    * Should throw an error because of unsafe arithmetic operation.
@@ -120,7 +120,7 @@ function Tests() {
         return true;
 
       case 'case4':
-        // falls through
+      // falls through
 
       case 'case5': // This is ok
         return true;
