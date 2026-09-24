@@ -2,6 +2,7 @@
 
 ## Next
 
+* (Enhancement) Allows to use 'ok' as a property name on id-length (Fetch `Response#ok`).
 * (change) Added a `files` allow-list to `package.json` (and removed the now-redundant `.npmignore`) so the published
   package only ships `index.js`, `fix.js`, `prettier.js`, `prettier-vue.js`, `typescript.js`, `vue.js`, `rules/`,
   `package.json`, `LICENSE` and `README.md` — dev/test files (`tests/`, `snapshots/`, `test-setup.ts`, docs, CI
