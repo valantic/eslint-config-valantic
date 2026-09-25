@@ -1,8 +1,34 @@
+<div align="center">
+
 # valantic ESLint config
+
+**The default ESLint config of valantic.**
+
+[**Report an Issue**](https://github.com/valantic/eslint-config-valantic/issues/new) ·
+[**Request a Feature**](https://github.com/valantic/eslint-config-valantic/issues/new?labels=enhancement)
+
+</div>
+
+---
+
+## About this project
 
 To ensure a high and consistent code quality for JavaScript and TypeScript we use ESLint.
 
 [http://eslint.org](http://eslint.org)
+
+## Quickstart
+
+Use npm to install the ESLint config to your project. Check this repo for the different configs and install the
+plugins accordingly. (Vue, TypeScript, etc.)
+
+```
+npm install eslint-config-valantic eslint eslint-plugin-import eslint-plugin-jsdoc eslint-plugin-unicorn --save-dev
+```
+
+See the [Setup](#setup) section below for the full walkthrough.
+
+---
 
 ## Code style
 
@@ -21,18 +47,6 @@ more about these adjustments.
 
 Check the required ESLint version in the `package.json` file. To check for updates,
 see [http://eslint.org/blog/](http://eslint.org/blog/)
-
-## Install
-
-Use npm to install the ESLint config to your project.
-
-### Install the current version
-
-Check this repo for the different configs and install the plugins accordingly. (Vue, TypeScript, etc.)
-
-```
-npm install eslint-config-valantic eslint eslint-plugin-import eslint-plugin-jsdoc eslint-plugin-unicorn --save-dev
-```
 
 ## Setup
 
@@ -183,3 +197,19 @@ the valantic config inside your project!
 In case your PhpStorm is using `@return` instead of the required `@returns`: Write the return tag yourself for once and
 select the correct type from the suggestion list. PhpStorm will keep your last preference and use it from now on. See
 also https://youtrack.jetbrains.com/issue/WEB-7516#comment=27-611256
+
+---
+
+<div align="center">
+
+## from valantic - with love
+
+Built and maintained by [valantic](https://www.valantic.com/en/careers/) — we're hiring, check out our [open positions](https://www.valantic.com/en/careers/).
+
+## License
+
+[MIT](https://opensource.org/licenses/MIT)
+
+Copyright (c) 2017-present, valantic CEC Schweiz AG
+
+</div>
