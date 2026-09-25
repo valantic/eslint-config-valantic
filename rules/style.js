@@ -54,6 +54,7 @@ export default [
             'gt', // ember-cp-validations
             'id',
             'is', // Vue
+            'ok', // Fetch Response#ok
             'DS', // ember-data
             'el', // Vue
             'on', // Vue

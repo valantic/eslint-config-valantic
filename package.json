@@ -1,9 +1,15 @@
 {
   "name": "eslint-config-valantic",
-  "version": "18.1.0",
   "description": "The default ESLint config of valantic.",
-  "main": "index.js",
+  "author": "valantic",
+  "license": "MIT",
+  "version": "18.1.0",
+  "lastDependencyUpdate": "12.03.2026",
   "type": "module",
+  "engines": {
+    "node": ">=22 <26",
+    "npm": ">=10 <12"
+  },
   "scripts": {
     "release": "npm version patch -m 'Release %s' && git push --follow-tags",
     "release:minor": "npm version minor -m 'Release %s' && git push --follow-tags",
@@ -13,17 +19,6 @@
     "test:raw": "node test-setup.ts js raw && node test-setup.ts ts raw && node test-setup.ts vue raw",
     "snapshop:update": "UPDATE_SNAPSHOTS=true npm run test"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/valantic/eslint-config-valantic.git"
-  },
-  "author": "valantic",
-  "license": "MIT",
-  "keywords": [
-    "eslint",
-    "valantic",
-    "eslint-config"
-  ],
   "devDependencies": {
     "@types/node": "^24.12.0",
     "eslint": "^9.39.4",
@@ -34,11 +29,27 @@
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.57.0"
   },
+  "files": [
+    "index.js",
+    "fix.js",
+    "prettier.js",
+    "prettier-vue.js",
+    "typescript.js",
+    "vue.js",
+    "rules"
+  ],
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/valantic/eslint-config-valantic.git"
+  },
+  "keywords": [
+    "eslint",
+    "valantic",
+    "eslint-config"
+  ],
   "peerDependencies": {
     "eslint": ">= 9",
     "eslint-plugin-import": "2.x"
-  },
-  "engines": {
-    "node": ">= 18"
   }
 }

@@ -2,6 +2,15 @@
 
 ## Next
 
+* (change) Renamed the CI workflow to "CI Test" and updated it to `actions/checkout@v7`, `actions/setup-node@v7`,
+  and Node 25.
+* (change) Streamlined `PULL_REQUEST_TEMPLATE.md` by removing the obsolete checklist sections.
+* (Enhancement) Allows to use 'ok' as a property name on id-length (Fetch `Response#ok`).
+* (change) Added a `files` allow-list to `package.json` (and removed the now-redundant `.npmignore`) so the published
+  package only ships `index.js`, `fix.js`, `prettier.js`, `prettier-vue.js`, `typescript.js`, `vue.js`, `rules/`,
+  `package.json`, `LICENSE` and `README.md` — dev/test files (`tests/`, `snapshots/`, `test-setup.ts`, docs, CI
+  config) are no longer installed by consumers.
+
 ## 18.1.0
 
 * (change) Changed branch name master to main.
