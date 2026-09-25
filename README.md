@@ -1,5 +1,7 @@
 <div align="center">
 
+![valantic eslint-config-valantic banner](.github/assets/banner.jpeg)
+
 # valantic ESLint config
 
 **The default ESLint config of valantic.**
@@ -19,8 +21,8 @@ To ensure a high and consistent code quality for JavaScript and TypeScript we us
 
 ## Quickstart
 
-Use npm to install the ESLint config to your project. Check this repo for the different configs and install the
-plugins accordingly. (Vue, TypeScript, etc.)
+Use npm to install the ESLint config to your project. Check this repo for the different configs and install the plugins
+accordingly. (Vue, TypeScript, etc.)
 
 ```
 npm install eslint-config-valantic eslint eslint-plugin-import eslint-plugin-jsdoc eslint-plugin-unicorn --save-dev
@@ -53,7 +55,8 @@ see [http://eslint.org/blog/](http://eslint.org/blog/)
 After installing the config package, you still need to create a `eslint.config.js` inside your project, where you tell
 ESLint to use the valantic config.
 
-Check out a real-world example here: [valantic vue template](https://github.com/valantic/vue-template/blob/main/eslint.config.js)
+Check out a real-world example
+here: [valantic vue template](https://github.com/valantic/vue-template/blob/main/eslint.config.js)
 
 ```js
 // eslint.config.js
@@ -62,10 +65,14 @@ import eslintConfigValantic from 'eslint-config-valantic';
 
 export default [
   ...eslintConfigValantic,
-  rules: {
-    // Use for project specific settings
-  },
-];
+  rules
+:
+{
+  // Use for project specific settings
+}
+,
+]
+;
 ```
 
 ### Vue support
@@ -79,10 +86,14 @@ import eslintConfigValantic from 'eslint-config-valantic/vue.js';
 
 export default [
   ...eslintConfigValantic,
-  rules: {
-    // Use for project specific settings
-  },
-];
+  rules
+:
+{
+  // Use for project specific settings
+}
+,
+]
+;
 ```
 
 __NOTE: `@vue/typescript` is important. Else, TypeScript will not be able to parse *.vue files.__
@@ -107,10 +118,14 @@ import eslintConfigValantic from 'eslint-config-valantic/typescript.js';
 
 export default [
   ...eslintConfigValantic,
-  rules: {
-    // Use for project specific settings
-  },
-];
+  rules
+:
+{
+  // Use for project specific settings
+}
+,
+]
+;
 
 ```
 
@@ -131,10 +146,14 @@ import eslintConfigValantic from 'eslint-config-valantic/fix.js';
 
 export default [
   ...eslintConfigValantic,
-  rules: {
-    // Use for project specific settings
-  },
-];
+  rules
+:
+{
+  // Use for project specific settings
+}
+,
+]
+;
 ```
 
 2. Add a new NPM script in `package.json`.
@@ -204,7 +223,8 @@ also https://youtrack.jetbrains.com/issue/WEB-7516#comment=27-611256
 
 ## from valantic - with love
 
-Built and maintained by [valantic](https://www.valantic.com/en/careers/) — we're hiring, check out our [open positions](https://www.valantic.com/en/careers/).
+Built and maintained by [valantic](https://www.valantic.com/en/careers/) — we're hiring, check out
+our [open positions](https://www.valantic.com/en/careers/).
 
 ## License
 
