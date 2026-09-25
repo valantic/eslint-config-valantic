@@ -48,6 +48,7 @@
     "eslint-plugin-import": "2.x"
   },
   "engines": {
-    "node": ">= 18"
+    "node": ">=22 <26",
+    "npm": ">=10 <12"
   }
 }
