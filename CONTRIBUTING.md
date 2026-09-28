@@ -15,7 +15,8 @@
 * Make your changes
 * Enhance the tests to fail for added rules
 * Check the [blog](https://eslint.org/blog/) to see if there are relevant new features for us to use
-* Make sure you have described your changes in the file [CHANGES.md](CHANGES.md) below the `## Next` header.
+* Make sure you have described your changes in the file [CHANGELOG.md](CHANGELOG.md) below the `## unreleased` header,
+  following the changelog convention in [AGENTS.md](AGENTS.md#changelog-required-for-every-task).
 * Create a branch `feature/my-new-feature` and create a new merge request.
 
 ## Releasing
@@ -23,10 +24,10 @@
 ### Prepare release
 
 * Switch to the `main` branch
-* Make sure the changes in the file [CHANGES.md](CHANGES.md) are up to date and complete.
+* Make sure the changes in the file [CHANGELOG.md](CHANGELOG.md) are up to date and complete.
 * Create a release branch `release/x.x.x` according to SemVer
-* Move all changes in the file [CHANGES.md](CHANGES.md) from below the `## Next` header to a new header with the
-  to be released version eg: `## 1.2.3`
+* Move all changes in the file [CHANGELOG.md](CHANGELOG.md) from below the `## unreleased` header to a new header with
+  the to be released version eg: `## v1.2.3`, and add a fresh empty `## unreleased` header above it
 * Run `npm audit` and `npm audit fix` if needed to update the versions.
 * Add and commit all open changes.
 * Create a merge request.
@@ -41,4 +42,4 @@
 * Login to NPM `npm login` if you not already are logged in
 * Push the Release `npm publish`
 * [Create the Release](https://github.com/valantic/eslint-config-valantic/releases/new) on the GitHub repo with the
-  changes from the [CHANGES.md](CHANGES.md)
+  changes from the [CHANGELOG.md](CHANGELOG.md)

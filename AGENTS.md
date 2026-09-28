@@ -66,6 +66,30 @@ itself, run against fixture files under `tests/` and checked against expected er
   `typescript-eslint`) is only a devDependency here but must be installed by the consumer per the README's install
   instructions.
 
+## Changelog (required for every task)
+
+`CHANGELOG.md` follows the convention shared by all valantic shared-frontend repos.
+
+- Every change that alters behavior, fixes a bug, or adds/removes something consumers can see gets one entry under
+  `## unreleased` in the same change — do not defer it to a follow-up task.
+- Format: `- [type] Description.` — one entry per logical change, kept as a flat list (no "Added"/"Fixed" category
+  subheadings), so each entry stays self-contained and merge conflicts can be resolved line by line.
+- Allowed prefixes ([Conventional Commits](https://www.conventionalcommits.org/) types): `[feat]`, `[fix]`,
+  `[refactor]`, `[perf]`, `[docs]`, `[test]`, `[build]`, `[ci]`, `[chore]`, `[revert]`. Older prefixes in released
+  sections (`[ENHANCEMENT]`, `(Change)`, …) are history — do not reuse them and do not rewrite old entries.
+- Write the description so it is understandable without the diff: name the affected module and the effect for
+  consumers.
+- Breaking changes are grouped under a `### Breaking Changes` subheading placed directly under `## unreleased`, above
+  the regular entries. They keep their prefix and must end with a **Migration:** sentence stating what consumers
+  have to do.
+- A change is breaking if it raises the major version of a required peer (e.g. `eslint`), drops a supported
+  Node.js/ESLint/Vue version, or removes/renames an exported config file (`index.js`, `typescript.js`, `vue.js`,
+  `fix.js`, `prettier.js`, `prettier-vue.js`). A new or stricter rule that only makes consumers fix their code is not
+  breaking: log it as `[feat]` naming the rule, and release it as at least a minor version.
+- Headings: title `# Changelog`, unreleased section `## unreleased` (exact, lowercase — release tooling matches it
+  literally), released sections `## vX.Y.Z`. Only the unreleased section is edited; released sections stay as they
+  are.
+
 ## Documentation
 
 This repo keeps its own feature docs in a `docs/` folder (with an index at `docs/README.md`) — this is separate from
