@@ -2,6 +2,9 @@
 
 ## unreleased
 
+- [docs] Added `docs/` with one file per exported config flavor (`base-config`, `typescript`, `vue`, `fix`,
+  `prettier`, `prettier-vue`) plus `overview` and `rule-organization`, indexed in `docs/README.md`, moved out of the
+  workspace-level knowledge base into this repo.
 - [ci] Aligned `.github/workflows/test.yml` with the other shared-frontend repos: job `test`, step "Run tests"
   (the old label claimed checks that don't run here), Node version read from `.nvmrc`, token limited to
   `contents: read`.
