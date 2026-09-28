@@ -217,6 +217,10 @@ In case your PhpStorm is using `@return` instead of the required `@returns`: Wri
 select the correct type from the suggestion list. PhpStorm will keep your last preference and use it from now on. See
 also https://youtrack.jetbrains.com/issue/WEB-7516#comment=27-611256
 
+## Contributing
+
+How to contribute and how releases are made is described in [CONTRIBUTING.md](./CONTRIBUTING.md).
+
 ---
 
 <div align="center">

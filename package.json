@@ -11,9 +11,9 @@
     "npm": ">=10 <12"
   },
   "scripts": {
-    "release": "npm version patch -m 'Release %s' && git push --follow-tags",
-    "release:minor": "npm version minor -m 'Release %s' && git push --follow-tags",
-    "release:major": "npm version major -m 'Release %s' && git push --follow-tags",
+    "release": "node scripts/release.mjs patch",
+    "release:minor": "node scripts/release.mjs minor",
+    "release:major": "node scripts/release.mjs major",
     "test": "node test-setup.ts js && node test-setup.ts ts && node test-setup.ts vue",
     "test:ci": "node test-setup.ts js ci && node test-setup.ts ts ci && node test-setup.ts vue ci",
     "test:raw": "node test-setup.ts js raw && node test-setup.ts ts raw && node test-setup.ts vue raw",

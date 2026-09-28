@@ -34,8 +34,12 @@ There is no build step — `main` is `index.js` and the package ships its root J
   intentionally changing rule output.
 - To run a single flavor directly (e.g. only Vue): `node test-setup.ts vue` (or `ts`/`js`), optionally followed by
   `raw` or `ci` as a second argument.
-- `npm run release` / `release:minor` / `release:major` — bumps the version and pushes tags. Do not run these unless
-  explicitly asked.
+- `npm run release[:minor|:major]` — runs `scripts/release.mjs` (shared, identical in every shared-frontend repo):
+  checks for a clean, up-to-date `main` and a non-empty `## unreleased`, bumps the version, renames
+  `## unreleased` to `## vX.Y.Z`, updates the README version pin, commits, creates the annotated `vX.Y.Z` tag and
+  pushes. The `Release` workflow (`.github/workflows/release.yml`) then creates the GitHub release from that
+  changelog section. Publishing to npm (`npm publish`) is a separate, manual step afterwards. See `CONTRIBUTING.md`. **Never run a release script or `npm publish` unless explicitly
+  asked.**
 
 There is no linter script for the repo's own source files and no separate unit test runner — the "tests" are ESLint
 itself, run against fixture files under `tests/` and checked against expected error/warning counts and snapshots.
