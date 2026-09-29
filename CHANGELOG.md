@@ -2,6 +2,11 @@
 
 ## unreleased
 
+- [fix] `.editorconfig`: removed a stray space in the `[{*.js, *.ts}]` glob (`[{*.js,*.ts}]`) that prevented it from
+  matching `*.ts` files.
+- [fix] `generate-vuln-report.py`: `worst_severity()` no longer raises `ValueError` and aborts the report step when
+  every vulnerability for a package has a severity outside `SEVERITIES` — it now falls back to the lowest rank.
+
 - [docs] Added `docs/` with one file per exported config flavor (`base-config`, `typescript`, `vue`, `fix`,
   `prettier`, `prettier-vue`) plus `overview` and `rule-organization`, indexed in `docs/README.md`, moved out of the
   workspace-level knowledge base into this repo.
