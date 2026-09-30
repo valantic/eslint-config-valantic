@@ -2,6 +2,8 @@
 
 ## unreleased
 
+- [chore] moved `vue-eslint-parser` to dev depedencies
+
 ## v18.1.1
 
 - [chore] `scripts/release.mjs`: dropped the temporary `master` fallback from `RELEASE_BRANCHES` now that
@@ -12,8 +14,8 @@
   every vulnerability for a package has a severity outside `SEVERITIES` — it now falls back to the lowest rank.
 - [fix] Added `vue-eslint-parser` as a direct dependency. It's required by `eslint-plugin-vue`'s `flat/recommended`
   config (used in `vue.js`), but was only ever present via npm's implicit peer-dependency auto-install; a stale
-  `package-lock.json` entry lost its `peer` marker at some point, so `npm ci` (used in CI) stopped installing it
-  while `npm install` (used locally) still did, causing `Cannot find module 'vue-eslint-parser'` only on CI.
+  `package-lock.json` entry lost its `peer` marker at some point, so `npm ci` (used in CI) stopped installing it while
+  `npm install` (used locally) still did, causing `Cannot find module 'vue-eslint-parser'` only on CI.
 
 - [docs] Added `docs/` with one file per exported config flavor (`base-config`, `typescript`, `vue`, `fix`,
   `prettier`, `prettier-vue`) plus `overview` and `rule-organization`, indexed in `docs/README.md`, moved out of the
@@ -21,14 +23,14 @@
 - [ci] Aligned `.github/workflows/test.yml` with the other shared-frontend repos: job `test`, step "Run tests"
   (the old label claimed checks that don't run here), Node version read from `.nvmrc`, token limited to
   `contents: read`.
-- [ci] Added the shared `Security Scan` workflow (`.github/workflows/security.yml`, Trivy): scans the dependencies
-  daily and on pull requests, opens/updates a `security` issue on CRITICAL/HIGH findings, closes it when clean, and
-  uploads the results to the GitHub Security tab.
+- [ci] Added the shared `Security Scan` workflow (`.github/workflows/security.yml`, Trivy): scans the dependencies daily
+  and on pull requests, opens/updates a `security` issue on CRITICAL/HIGH findings, closes it when clean, and uploads
+  the results to the GitHub Security tab.
 - [ci] `security.yml` now posts (and keeps updated) a pull request comment with the vulnerability breakdown when the
   Trivy scan fails a PR check, instead of only failing the job with no feedback beyond the raw log.
-- [fix] `security.yml`: steps gated on `steps.trivy-sarif.outcome` now also require `always()`. Without it,
-  GitHub Actions implicitly ANDs a bare `if:` with `success()`, so those steps were skipped exactly when the
-  Trivy step failed — the case they exist to handle.
+- [fix] `security.yml`: steps gated on `steps.trivy-sarif.outcome` now also require `always()`. Without it, GitHub
+  Actions implicitly ANDs a bare `if:` with `success()`, so those steps were skipped exactly when the Trivy step
+  failed — the case they exist to handle.
 - [chore] Harmonized the copyright line in `LICENSE` to `2017-present, valantic CEC Schweiz AG`, matching the README.
 - [docs] Restructured `AGENTS.md` to the shared outline and added the shared `## Working rules` section (git rules, no
   release/publish or dependency changes without approval, engineering priorities, `npm test` before finishing).
@@ -45,14 +47,14 @@
   (`unreleased` / `vX.Y.Z` headings, `[feat]`/`[fix]`/… prefixes, `### Breaking Changes` with migration notes),
   documented in `AGENTS.md` and `CONTRIBUTING.md`. Released version headings were normalized to `## vX.Y.Z`; their
   entries are unchanged.
-- [ci] Renamed the CI workflow to "CI Test" and updated it to `actions/checkout@v7`, `actions/setup-node@v7`,
-  and Node 25.
+- [ci] Renamed the CI workflow to "CI Test" and updated it to `actions/checkout@v7`, `actions/setup-node@v7`, and Node
+  25.
 - [docs] Streamlined `PULL_REQUEST_TEMPLATE.md` by removing the obsolete checklist sections.
 - [feat] Allows to use 'ok' as a property name on id-length (Fetch `Response#ok`).
 - [build] Added a `files` allow-list to `package.json` (and removed the now-redundant `.npmignore`) so the published
   package only ships `index.js`, `fix.js`, `prettier.js`, `prettier-vue.js`, `typescript.js`, `vue.js`, `rules/`,
-  `package.json`, `LICENSE` and `README.md` — dev/test files (`tests/`, `snapshots/`, `test-setup.ts`, docs, CI
-  config) are no longer installed by consumers.
+  `package.json`, `LICENSE` and `README.md` — dev/test files (`tests/`, `snapshots/`, `test-setup.ts`, docs, CI config)
+  are no longer installed by consumers.
 
 ## v18.1.0
 
@@ -70,8 +72,8 @@
   style.
 * (Breaking) Removes support for Node.js versions prior to 18. The minimum version is now Node.js 18.
 * (Breaking) Removes support for Vue 2. The minimum version is now Vue 3.
-* (Breaking) We changed our base ruleset from airbnb to
-  eslint-plugin-unicorn (https://github.com/sindresorhus/eslint-plugin-unicorn).
+* (Breaking) We changed our base ruleset from airbnb to eslint-plugin-unicorn
+  (https://github.com/sindresorhus/eslint-plugin-unicorn).
 
 ## v17.0.0
 
@@ -89,8 +91,8 @@
 
 * (Breaking) Adds `@typescript-eslint/naming-convention` rule to prevent type prefixing.
 * (Breaking) NPM updates
-    * .eslintignore files are no longer supported. Use `ignores` in the .eslintrc.js.
-      @see https://eslint.org/docs/latest/use/configure/configuration-files-new#globally-ignoring-files-with-ignores
+  * .eslintignore files are no longer supported. Use `ignores` in the .eslintrc.js.
+    @see https://eslint.org/docs/latest/use/configure/configuration-files-new#globally-ignoring-files-with-ignores
 * (Breaking) `vue/require-prop-comment` now enforces prop comments.
 * (Breaking) `vue/multiline-ternary` disallows the use of line breaks in template ternaries.
 
@@ -116,7 +118,7 @@
 
 ## v14.2.1
 
-* (Bugfix) Changes order of rule imports in vue(3).js to fix an issue, where 'indent' was enabled again by the
+* (Bugfix) Changes order of rule imports in vue (3).js to fix an issue, where 'indent' was enabled again by the
   vue-recommendations.
 
 ## v14.2.0
