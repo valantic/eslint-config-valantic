@@ -2,6 +2,8 @@
 
 ## unreleased
 
+## v18.1.2
+
 - [chore] moved `vue-eslint-parser` to dev depedencies
 
 ## v18.1.1
