@@ -51,5 +51,8 @@
   "peerDependencies": {
     "eslint": ">= 9",
     "eslint-plugin-import": "2.x"
+  },
+  "dependencies": {
+    "vue-eslint-parser": "~10.4.1"
   }
 }

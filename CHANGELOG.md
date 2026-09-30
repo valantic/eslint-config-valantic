@@ -8,6 +8,10 @@
   matching `*.ts` files.
 - [fix] `generate-vuln-report.py`: `worst_severity()` no longer raises `ValueError` and aborts the report step when
   every vulnerability for a package has a severity outside `SEVERITIES` — it now falls back to the lowest rank.
+- [fix] Added `vue-eslint-parser` as a direct dependency. It's required by `eslint-plugin-vue`'s `flat/recommended`
+  config (used in `vue.js`), but was only ever present via npm's implicit peer-dependency auto-install; a stale
+  `package-lock.json` entry lost its `peer` marker at some point, so `npm ci` (used in CI) stopped installing it
+  while `npm install` (used locally) still did, causing `Cannot find module 'vue-eslint-parser'` only on CI.
 
 - [docs] Added `docs/` with one file per exported config flavor (`base-config`, `typescript`, `vue`, `fix`,
   `prettier`, `prettier-vue`) plus `overview` and `rule-organization`, indexed in `docs/README.md`, moved out of the
