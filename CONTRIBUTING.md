@@ -35,9 +35,8 @@ Releases are made directly from `main`. Tags are always `vX.Y.Z`.
    [CHANGELOG.md](CHANGELOG.md).
    Run `npm audit` beforehand and merge any needed `npm audit fix` updates like any other change.
 2. On an up-to-date `main`, run one of these (see [SemVer](https://semver.org/)):
-   - `npm run release` — patch
-   - `npm run release:minor` — minor
-   - `npm run release:major` — major
+   - `npm run release` — asks which release type to make (patch, minor or major)
+   - `npm run release:patch`, `npm run release:minor`, `npm run release:major` — skip the question
 
    `scripts/release.mjs` aborts without changing anything if the working tree is not clean, `main` is behind
    `origin/main`, or `## unreleased` is empty. Otherwise it bumps the version in `package.json` and

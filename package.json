@@ -11,7 +11,8 @@
     "npm": ">=10 <12"
   },
   "scripts": {
-    "release": "node scripts/release.mjs patch",
+    "release": "node scripts/release.mjs",
+    "release:patch": "node scripts/release.mjs patch",
     "release:minor": "node scripts/release.mjs minor",
     "release:major": "node scripts/release.mjs major",
     "test": "node test-setup.ts js && node test-setup.ts ts && node test-setup.ts vue",
