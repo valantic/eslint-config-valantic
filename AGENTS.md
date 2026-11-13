@@ -34,7 +34,7 @@ There is no build step — `main` is `index.js` and the package ships its root J
   intentionally changing rule output.
 - To run a single flavor directly (e.g. only Vue): `node test-setup.ts vue` (or `ts`/`js`), optionally followed by
   `raw` or `ci` as a second argument.
-- `npm run release[:minor|:major]` — runs `scripts/release.mjs` (shared, identical in every shared-frontend repo):
+- `npm run release[:patch|:minor|:major]` — asks for the release type unless a suffix is given; runs `scripts/release.mjs` (shared, identical in every shared-frontend repo):
   checks for a clean, up-to-date `main` and a non-empty `## unreleased`, bumps the version, renames
   `## unreleased` to `## vX.Y.Z`, updates the README version pin, commits, creates the annotated `vX.Y.Z` tag and
   pushes. The `Release` workflow (`.github/workflows/release.yml`) then creates the GitHub release from that
